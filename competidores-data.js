@@ -64,22 +64,6 @@ window.SEED_COMPETITORS = [
     "instagramStatus": "ok"
   },
   {
-    "id": "ig-traderlabacademy",
-    "name": "Traderlab Academy 🧪",
-    "username": "traderlabcaademy",
-    "instagramUrl": "https://www.instagram.com/traderlabcaademy/",
-    "youtubeUrl": "",
-    "priority": "Crítica",
-    "followers": 2,
-    "followersUpdatedAt": "2026-08-03T10:45:00.000Z",
-    "studied": false,
-    "notes": "referencia testiomonios · BUENOS CARRUSELES · PAGINA WED ACADEMIA",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 5,
-    "instagramStatus": "ok"
-  },
-  {
     "id": "ig-sr.machadofx",
     "name": "Jorge Machado",
     "username": "sr.machadofx",
@@ -269,22 +253,6 @@ window.SEED_COMPETITORS = [
     "source": "Excel original",
     "mailerfind": null,
     "manualOrder": 17,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "ig-joellfx",
-    "name": "Joel Briones | Trader",
-    "username": "joellfx_oficial",
-    "instagramUrl": "https://www.instagram.com/joellfx_oficial/",
-    "youtubeUrl": "",
-    "priority": "Media",
-    "followers": 418,
-    "followersUpdatedAt": "2026-08-03T10:45:00.000Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 18,
     "instagramStatus": "ok"
   },
   {
@@ -1037,22 +1005,6 @@ window.SEED_COMPETITORS = [
     "source": "Excel original",
     "mailerfind": null,
     "manualOrder": 65,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "ig-eddieokafor_",
-    "name": "Eddie Okafor",
-    "username": "eddieokafor_",
-    "instagramUrl": "https://www.instagram.com/eddieokafor_/",
-    "youtubeUrl": "https://www.youtube.com/@eddietrades1",
-    "priority": "Alta",
-    "followers": 7,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 66,
     "instagramStatus": "ok"
   },
   {
@@ -2384,38 +2336,6 @@ window.SEED_COMPETITORS = [
     "instagramStatus": "ok"
   },
   {
-    "id": "ig-mfh_trading",
-    "name": "Manu | MFH_trading",
-    "username": "mfh_trading",
-    "instagramUrl": "https://www.instagram.com/mfh_trading/",
-    "youtubeUrl": "",
-    "priority": "Media",
-    "followers": 194,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 150,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "ig-pedropk.fx",
-    "name": "PEDRO FX | TRADER",
-    "username": "pedropk.fx",
-    "instagramUrl": "https://www.instagram.com/pedropk.fx/",
-    "youtubeUrl": "",
-    "priority": "Media",
-    "followers": 410,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 151,
-    "instagramStatus": "ok"
-  },
-  {
     "id": "ig-juanditrade.xau",
     "name": "Juandi Martinez || Propfirm Trader",
     "username": "juanditrade.xau",
@@ -2928,22 +2848,6 @@ window.SEED_COMPETITORS = [
     "instagramStatus": "ok"
   },
   {
-    "id": "ig-sheikonomics",
-    "name": "sheik",
-    "username": "sheikonomics",
-    "instagramUrl": "https://www.instagram.com/sheikonomics/",
-    "youtubeUrl": "https://www.youtube.com/@joshgtrades",
-    "priority": "Alta",
-    "followers": 233,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 184,
-    "instagramStatus": "ok"
-  },
-  {
     "id": "ig-joshgtrades",
     "name": "JoshG",
     "username": "joshgtrades",
@@ -3165,22 +3069,6 @@ window.SEED_COMPETITORS = [
     "source": "Excel original",
     "mailerfind": null,
     "manualOrder": 198,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "academy-tradersenlaarena",
-    "name": "Tradersenlaarena",
-    "username": "tradersenlaarena",
-    "instagramUrl": "https://www.instagram.com/tradersenlaarena/",
-    "youtubeUrl": "",
-    "priority": "Alta",
-    "followers": 233,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "lading ig",
-    "source": "Hoja academias",
-    "mailerfind": null,
-    "manualOrder": 199,
     "instagramStatus": "ok"
   },
   {
@@ -3741,22 +3629,6 @@ window.SEED_COMPETITORS = [
     "source": "Excel original",
     "mailerfind": null,
     "manualOrder": 234,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "ig-traderyeray",
-    "name": "Yeray Trader - Day Trader PRM 📈",
-    "username": "sr.traderyeray",
-    "instagramUrl": "https://www.instagram.com/sr.traderyeray/",
-    "youtubeUrl": "",
-    "priority": "Media",
-    "followers": 363,
-    "followersUpdatedAt": "2026-08-03T10:45:00.000Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 235,
     "instagramStatus": "ok"
   },
   {
