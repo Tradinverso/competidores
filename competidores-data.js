@@ -48,6 +48,38 @@ window.SEED_COMPETITORS = [
     "instagramStatus": "ok"
   },
   {
+    "id": "ig-tradinglab.es",
+    "name": "TradingLab | Academia de Trading",
+    "username": "tradinglab.es",
+    "instagramUrl": "https://www.instagram.com/tradinglab.es/",
+    "youtubeUrl": "",
+    "priority": "Crítica",
+    "followers": 29859,
+    "followersUpdatedAt": "2026-08-03T08:52:00.000Z",
+    "studied": false,
+    "notes": "Relacionado con Alex Ruiz",
+    "source": "Añadido prioritario",
+    "mailerfind": null,
+    "instagramStatus": "ok",
+    "manualOrder": 4
+  },
+  {
+    "id": "ig-maldotrading",
+    "name": "Iñigo Maldonado",
+    "username": "maldotrading",
+    "instagramUrl": "https://www.instagram.com/maldotrading/",
+    "youtubeUrl": "https://www.youtube.com/@maldotrading",
+    "priority": "Crítica",
+    "followers": 10967,
+    "followersUpdatedAt": "2026-08-03T08:52:00.000Z",
+    "studied": false,
+    "notes": "",
+    "source": "Excel original",
+    "mailerfind": null,
+    "manualOrder": 5,
+    "instagramStatus": "ok"
+  },
+  {
     "id": "ig-tradeando",
     "name": "Tradeando.net",
     "username": "tradeando",
@@ -60,7 +92,7 @@ window.SEED_COMPETITORS = [
     "notes": "landing page",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 4,
+    "manualOrder": 6,
     "instagramStatus": "ok"
   },
   {
@@ -76,7 +108,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Añadido prioritario",
     "mailerfind": null,
-    "manualOrder": 5,
+    "manualOrder": 7,
     "instagramStatus": "ok"
   },
   {
@@ -92,7 +124,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 6,
+    "manualOrder": 8,
     "instagramStatus": "ok"
   },
   {
@@ -108,7 +140,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 7,
+    "manualOrder": 9,
     "instagramStatus": "ok"
   },
   {
@@ -124,7 +156,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 8,
+    "manualOrder": 10,
     "instagramStatus": "ok"
   },
   {
@@ -140,7 +172,7 @@ window.SEED_COMPETITORS = [
     "notes": "referencia testiomonios · BUENOS CARRUSELES · PAGINA WED ACADEMIA",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 9,
+    "manualOrder": 11,
     "instagramStatus": "ok"
   },
   {
@@ -156,7 +188,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 10,
+    "manualOrder": 12,
     "instagramStatus": "ok"
   },
   {
@@ -172,7 +204,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 11,
+    "manualOrder": 13,
     "instagramStatus": "ok"
   },
   {
@@ -188,7 +220,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 12,
+    "manualOrder": 14,
     "instagramStatus": "ok"
   },
   {
@@ -205,7 +237,7 @@ window.SEED_COMPETITORS = [
     "source": "Añadido prioritario",
     "mailerfind": null,
     "instagramStatus": "ok",
-    "manualOrder": 13
+    "manualOrder": 15
   },
   {
     "id": "ig-amandix.fx",
@@ -221,7 +253,7 @@ window.SEED_COMPETITORS = [
     "source": "Añadido prioritario",
     "mailerfind": null,
     "instagramStatus": "ok",
-    "manualOrder": 14
+    "manualOrder": 16
   },
   {
     "id": "ig-alekayfx",
@@ -236,7 +268,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 15,
+    "manualOrder": 17,
     "instagramStatus": "ok"
   },
   {
@@ -252,7 +284,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 16,
+    "manualOrder": 18,
     "instagramStatus": "ok"
   },
   {
@@ -268,7 +300,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 17,
+    "manualOrder": 19,
     "instagramStatus": "ok"
   },
   {
@@ -284,7 +316,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 18,
+    "manualOrder": 20,
     "instagramStatus": "ok"
   },
   {
@@ -300,7 +332,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 19,
+    "manualOrder": 21,
     "instagramStatus": "ok"
   },
   {
@@ -316,7 +348,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 20,
+    "manualOrder": 22,
     "instagramStatus": "ok"
   },
   {
@@ -332,7 +364,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 21,
+    "manualOrder": 23,
     "instagramStatus": "ok"
   },
   {
@@ -348,7 +380,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 22,
+    "manualOrder": 24,
     "instagramStatus": "ok"
   },
   {
@@ -364,7 +396,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 23,
+    "manualOrder": 25,
     "instagramStatus": "ok"
   },
   {
@@ -380,7 +412,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 24,
+    "manualOrder": 26,
     "instagramStatus": "ok"
   },
   {
@@ -396,7 +428,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 25,
+    "manualOrder": 27,
     "instagramStatus": "ok"
   },
   {
@@ -412,7 +444,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 26,
+    "manualOrder": 28,
     "instagramStatus": "ok"
   },
   {
@@ -428,7 +460,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 27,
+    "manualOrder": 29,
     "instagramStatus": "ok"
   },
   {
@@ -444,7 +476,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 28,
+    "manualOrder": 30,
     "instagramStatus": "ok"
   },
   {
@@ -460,7 +492,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 29,
+    "manualOrder": 31,
     "instagramStatus": "ok"
   },
   {
@@ -476,7 +508,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 30,
+    "manualOrder": 32,
     "instagramStatus": "ok"
   },
   {
@@ -492,7 +524,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 31,
+    "manualOrder": 33,
     "instagramStatus": "ok"
   },
   {
@@ -508,7 +540,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 32,
+    "manualOrder": 34,
     "instagramStatus": "ok"
   },
   {
@@ -524,7 +556,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 33,
+    "manualOrder": 35,
     "instagramStatus": "ok"
   },
   {
@@ -540,7 +572,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 34,
+    "manualOrder": 36,
     "instagramStatus": "ok"
   },
   {
@@ -556,7 +588,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 35,
+    "manualOrder": 37,
     "instagramStatus": "ok"
   },
   {
@@ -572,7 +604,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 36,
+    "manualOrder": 38,
     "instagramStatus": "ok"
   },
   {
@@ -588,7 +620,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 37,
+    "manualOrder": 39,
     "instagramStatus": "ok"
   },
   {
@@ -604,7 +636,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 38,
+    "manualOrder": 40,
     "instagramStatus": "ok"
   },
   {
@@ -620,7 +652,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 39,
+    "manualOrder": 41,
     "instagramStatus": "ok"
   },
   {
@@ -636,7 +668,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 40,
+    "manualOrder": 42,
     "instagramStatus": "ok"
   },
   {
@@ -652,7 +684,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 41,
+    "manualOrder": 43,
     "instagramStatus": "ok"
   },
   {
@@ -668,7 +700,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 42,
+    "manualOrder": 44,
     "instagramStatus": "ok"
   },
   {
@@ -684,7 +716,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 43,
+    "manualOrder": 45,
     "instagramStatus": "ok"
   },
   {
@@ -700,7 +732,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 44,
+    "manualOrder": 46,
     "instagramStatus": "ok"
   },
   {
@@ -716,7 +748,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 45,
+    "manualOrder": 47,
     "instagramStatus": "ok"
   },
   {
@@ -732,7 +764,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 46,
+    "manualOrder": 48,
     "instagramStatus": "ok"
   },
   {
@@ -748,7 +780,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 47,
+    "manualOrder": 49,
     "instagramStatus": "ok"
   },
   {
@@ -764,7 +796,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 48,
+    "manualOrder": 50,
     "instagramStatus": "ok"
   },
   {
@@ -780,7 +812,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 49,
+    "manualOrder": 51,
     "instagramStatus": "ok"
   },
   {
@@ -796,7 +828,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 50,
+    "manualOrder": 52,
     "instagramStatus": "ok"
   },
   {
@@ -812,7 +844,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 51,
+    "manualOrder": 53,
     "instagramStatus": "ok"
   },
   {
@@ -828,7 +860,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 52,
+    "manualOrder": 54,
     "instagramStatus": "ok"
   },
   {
@@ -844,7 +876,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 53,
+    "manualOrder": 55,
     "instagramStatus": "ok"
   },
   {
@@ -860,7 +892,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 54,
+    "manualOrder": 56,
     "instagramStatus": "ok"
   },
   {
@@ -876,7 +908,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 55,
+    "manualOrder": 57,
     "instagramStatus": "ok"
   },
   {
@@ -892,7 +924,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 56,
+    "manualOrder": 58,
     "instagramStatus": "ok"
   },
   {
@@ -908,7 +940,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 57,
+    "manualOrder": 59,
     "instagramStatus": "ok"
   },
   {
@@ -924,7 +956,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 58,
+    "manualOrder": 60,
     "instagramStatus": "ok"
   },
   {
@@ -940,7 +972,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 59,
+    "manualOrder": 61,
     "instagramStatus": "ok"
   },
   {
@@ -956,7 +988,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 60,
+    "manualOrder": 62,
     "instagramStatus": "ok"
   },
   {
@@ -972,7 +1004,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 61,
+    "manualOrder": 63,
     "instagramStatus": "ok"
   },
   {
@@ -988,7 +1020,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 62,
+    "manualOrder": 64,
     "instagramStatus": "ok"
   },
   {
@@ -1004,7 +1036,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 63,
+    "manualOrder": 65,
     "instagramStatus": "ok"
   },
   {
@@ -1020,7 +1052,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 64,
+    "manualOrder": 66,
     "instagramStatus": "ok"
   },
   {
@@ -1036,7 +1068,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 65,
+    "manualOrder": 67,
     "instagramStatus": "ok"
   },
   {
@@ -1052,7 +1084,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 66,
+    "manualOrder": 68,
     "instagramStatus": "ok"
   },
   {
@@ -1068,7 +1100,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 67,
+    "manualOrder": 69,
     "instagramStatus": "ok"
   },
   {
@@ -1084,7 +1116,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 68,
+    "manualOrder": 70,
     "instagramStatus": "ok"
   },
   {
@@ -1100,7 +1132,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 69,
+    "manualOrder": 71,
     "instagramStatus": "ok"
   },
   {
@@ -1116,7 +1148,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 70,
+    "manualOrder": 72,
     "instagramStatus": "ok"
   },
   {
@@ -1132,7 +1164,7 @@ window.SEED_COMPETITORS = [
     "notes": "https://www.instagram.com/ttcnetwork/ · https://www.instagram.com/thefundedrobot/ · EJEMPLO",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 71,
+    "manualOrder": 73,
     "instagramStatus": "ok"
   },
   {
@@ -1148,7 +1180,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 72,
+    "manualOrder": 74,
     "instagramStatus": "ok"
   },
   {
@@ -1164,7 +1196,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 73,
+    "manualOrder": 75,
     "instagramStatus": "ok"
   },
   {
@@ -1180,7 +1212,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 74,
+    "manualOrder": 76,
     "instagramStatus": "ok"
   },
   {
@@ -1196,7 +1228,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 75,
+    "manualOrder": 77,
     "instagramStatus": "ok"
   },
   {
@@ -1212,7 +1244,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 76,
+    "manualOrder": 78,
     "instagramStatus": "ok"
   },
   {
@@ -1228,7 +1260,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 77,
+    "manualOrder": 79,
     "instagramStatus": "ok"
   },
   {
@@ -1244,7 +1276,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 78,
+    "manualOrder": 80,
     "instagramStatus": "ok"
   },
   {
@@ -1260,23 +1292,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 79,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "ig-maldotrading",
-    "name": "Iñigo Maldonado",
-    "username": "maldotrading",
-    "instagramUrl": "https://www.instagram.com/maldotrading/",
-    "youtubeUrl": "https://www.youtube.com/@maldotrading",
-    "priority": "Alta",
-    "followers": 10967,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 80,
+    "manualOrder": 81,
     "instagramStatus": "ok"
   },
   {
@@ -1292,7 +1308,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 81,
+    "manualOrder": 82,
     "instagramStatus": "ok"
   },
   {
@@ -1308,7 +1324,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 82,
+    "manualOrder": 83,
     "instagramStatus": "ok"
   },
   {
@@ -1324,7 +1340,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 83,
+    "manualOrder": 84,
     "instagramStatus": "ok"
   },
   {
@@ -1340,7 +1356,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 84,
+    "manualOrder": 85,
     "instagramStatus": "ok"
   },
   {
@@ -1356,7 +1372,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 85,
+    "manualOrder": 86,
     "instagramStatus": "ok"
   },
   {
@@ -1372,7 +1388,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 86,
+    "manualOrder": 87,
     "instagramStatus": "ok"
   },
   {
@@ -1388,7 +1404,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 87,
+    "manualOrder": 88,
     "instagramStatus": "ok"
   },
   {
@@ -1404,7 +1420,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 88,
+    "manualOrder": 89,
     "instagramStatus": "ok"
   },
   {
@@ -1420,7 +1436,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 89,
+    "manualOrder": 90,
     "instagramStatus": "ok"
   },
   {
@@ -1436,7 +1452,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 90,
+    "manualOrder": 91,
     "instagramStatus": "ok"
   },
   {
@@ -1452,7 +1468,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 91,
+    "manualOrder": 92,
     "instagramStatus": "ok"
   },
   {
@@ -1468,7 +1484,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 92,
+    "manualOrder": 93,
     "instagramStatus": "ok"
   },
   {
@@ -1484,7 +1500,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 93,
+    "manualOrder": 94,
     "instagramStatus": "ok"
   },
   {
@@ -1500,7 +1516,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 94,
+    "manualOrder": 95,
     "instagramStatus": "ok"
   },
   {
@@ -1516,7 +1532,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 95,
+    "manualOrder": 96,
     "instagramStatus": "ok"
   },
   {
@@ -1532,7 +1548,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 96,
+    "manualOrder": 97,
     "instagramStatus": "ok"
   },
   {
@@ -1548,7 +1564,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 97,
+    "manualOrder": 98,
     "instagramStatus": "ok"
   },
   {
@@ -1564,7 +1580,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 98,
+    "manualOrder": 99,
     "instagramStatus": "ok"
   },
   {
@@ -1580,7 +1596,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 99,
+    "manualOrder": 100,
     "instagramStatus": "ok"
   },
   {
@@ -1596,7 +1612,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 100,
+    "manualOrder": 101,
     "instagramStatus": "ok"
   },
   {
@@ -1612,7 +1628,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 101,
+    "manualOrder": 102,
     "instagramStatus": "ok"
   },
   {
@@ -1628,7 +1644,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 102,
+    "manualOrder": 103,
     "instagramStatus": "ok"
   },
   {
@@ -1644,7 +1660,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 103,
+    "manualOrder": 104,
     "instagramStatus": "ok"
   },
   {
@@ -1660,7 +1676,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 104,
+    "manualOrder": 105,
     "instagramStatus": "ok"
   },
   {
@@ -1676,7 +1692,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 105,
+    "manualOrder": 106,
     "instagramStatus": "ok"
   },
   {
@@ -1692,7 +1708,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 106,
+    "manualOrder": 107,
     "instagramStatus": "ok"
   },
   {
@@ -1708,7 +1724,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 107,
+    "manualOrder": 108,
     "instagramStatus": "ok"
   },
   {
@@ -1724,7 +1740,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 108,
+    "manualOrder": 109,
     "instagramStatus": "ok"
   },
   {
@@ -1740,7 +1756,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 109,
+    "manualOrder": 110,
     "instagramStatus": "ok"
   },
   {
@@ -1756,7 +1772,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 110,
+    "manualOrder": 111,
     "instagramStatus": "ok"
   },
   {
@@ -1772,7 +1788,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 111,
+    "manualOrder": 112,
     "instagramStatus": "ok"
   },
   {
@@ -1788,7 +1804,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 112,
+    "manualOrder": 113,
     "instagramStatus": "ok"
   },
   {
@@ -1804,7 +1820,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 113,
+    "manualOrder": 114,
     "instagramStatus": "ok"
   },
   {
@@ -1820,7 +1836,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 114,
+    "manualOrder": 115,
     "instagramStatus": "ok"
   },
   {
@@ -1836,7 +1852,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 115,
+    "manualOrder": 116,
     "instagramStatus": "ok"
   },
   {
@@ -1852,7 +1868,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 116,
+    "manualOrder": 117,
     "instagramStatus": "ok"
   },
   {
@@ -1868,7 +1884,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 117,
+    "manualOrder": 118,
     "instagramStatus": "ok"
   },
   {
@@ -1884,7 +1900,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 118,
+    "manualOrder": 119,
     "instagramStatus": "ok"
   },
   {
@@ -1900,7 +1916,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 119,
+    "manualOrder": 120,
     "instagramStatus": "ok"
   },
   {
@@ -1916,7 +1932,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 120,
+    "manualOrder": 121,
     "instagramStatus": "ok"
   },
   {
@@ -1932,7 +1948,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 121,
+    "manualOrder": 122,
     "instagramStatus": "ok"
   },
   {
@@ -1948,7 +1964,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 122,
+    "manualOrder": 123,
     "instagramStatus": "ok"
   },
   {
@@ -1964,7 +1980,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 123,
+    "manualOrder": 124,
     "instagramStatus": "ok"
   },
   {
@@ -1980,7 +1996,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 124,
+    "manualOrder": 125,
     "instagramStatus": "ok"
   },
   {
@@ -1996,7 +2012,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 125,
+    "manualOrder": 126,
     "instagramStatus": "ok"
   },
   {
@@ -2012,7 +2028,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 126,
+    "manualOrder": 127,
     "instagramStatus": "ok"
   },
   {
@@ -2028,7 +2044,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 127,
+    "manualOrder": 128,
     "instagramStatus": "ok"
   },
   {
@@ -2044,7 +2060,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 128,
+    "manualOrder": 129,
     "instagramStatus": "ok"
   },
   {
@@ -2060,7 +2076,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 129,
+    "manualOrder": 130,
     "instagramStatus": "ok"
   },
   {
@@ -2076,7 +2092,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 130,
+    "manualOrder": 131,
     "instagramStatus": "ok"
   },
   {
@@ -2092,7 +2108,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 131,
+    "manualOrder": 132,
     "instagramStatus": "ok"
   },
   {
@@ -2108,7 +2124,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 132,
+    "manualOrder": 133,
     "instagramStatus": "ok"
   },
   {
@@ -2124,7 +2140,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 133,
+    "manualOrder": 134,
     "instagramStatus": "ok"
   },
   {
@@ -2140,7 +2156,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 134,
+    "manualOrder": 135,
     "instagramStatus": "ok"
   },
   {
@@ -2156,7 +2172,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 135,
+    "manualOrder": 136,
     "instagramStatus": "ok"
   },
   {
@@ -2172,7 +2188,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 136,
+    "manualOrder": 137,
     "instagramStatus": "ok"
   },
   {
@@ -2188,7 +2204,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 137,
+    "manualOrder": 138,
     "instagramStatus": "ok"
   },
   {
@@ -2204,7 +2220,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 138,
+    "manualOrder": 139,
     "instagramStatus": "ok"
   },
   {
@@ -2220,7 +2236,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 139,
+    "manualOrder": 140,
     "instagramStatus": "ok"
   },
   {
@@ -2236,7 +2252,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 140,
+    "manualOrder": 141,
     "instagramStatus": "ok"
   },
   {
@@ -2252,7 +2268,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 141,
+    "manualOrder": 142,
     "instagramStatus": "ok"
   },
   {
@@ -2268,7 +2284,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 142,
+    "manualOrder": 143,
     "instagramStatus": "ok"
   },
   {
@@ -2284,7 +2300,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 143,
+    "manualOrder": 144,
     "instagramStatus": "ok"
   },
   {
@@ -2300,7 +2316,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 144,
+    "manualOrder": 145,
     "instagramStatus": "ok"
   },
   {
@@ -2316,7 +2332,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 145,
+    "manualOrder": 146,
     "instagramStatus": "ok"
   },
   {
@@ -2332,7 +2348,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 146,
+    "manualOrder": 147,
     "instagramStatus": "ok"
   },
   {
@@ -2348,7 +2364,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 147,
+    "manualOrder": 148,
     "instagramStatus": "ok"
   },
   {
@@ -2364,7 +2380,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 148,
+    "manualOrder": 149,
     "instagramStatus": "ok"
   },
   {
@@ -2380,7 +2396,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 149,
+    "manualOrder": 150,
     "instagramStatus": "ok"
   },
   {
@@ -2396,7 +2412,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 150,
+    "manualOrder": 151,
     "instagramStatus": "ok"
   },
   {
@@ -2412,7 +2428,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 151,
+    "manualOrder": 152,
     "instagramStatus": "ok"
   },
   {
@@ -2428,7 +2444,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 152,
+    "manualOrder": 153,
     "instagramStatus": "ok"
   },
   {
@@ -2444,7 +2460,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 153,
+    "manualOrder": 154,
     "instagramStatus": "ok"
   },
   {
@@ -2460,7 +2476,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 154,
+    "manualOrder": 155,
     "instagramStatus": "ok"
   },
   {
@@ -2476,7 +2492,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 155,
+    "manualOrder": 156,
     "instagramStatus": "ok"
   },
   {
@@ -2492,7 +2508,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 156,
+    "manualOrder": 157,
     "instagramStatus": "ok"
   },
   {
@@ -2508,7 +2524,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 157,
+    "manualOrder": 158,
     "instagramStatus": "ok"
   },
   {
@@ -2524,7 +2540,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 158,
+    "manualOrder": 159,
     "instagramStatus": "ok"
   },
   {
@@ -2540,7 +2556,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 159,
+    "manualOrder": 160,
     "instagramStatus": "ok"
   },
   {
@@ -2556,7 +2572,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 160,
+    "manualOrder": 161,
     "instagramStatus": "ok"
   },
   {
@@ -2572,7 +2588,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 161,
+    "manualOrder": 162,
     "instagramStatus": "ok"
   },
   {
@@ -2588,7 +2604,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 162,
+    "manualOrder": 163,
     "instagramStatus": "ok"
   },
   {
@@ -2604,7 +2620,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 163,
+    "manualOrder": 164,
     "instagramStatus": "ok"
   },
   {
@@ -2620,7 +2636,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 164,
+    "manualOrder": 165,
     "instagramStatus": "ok"
   },
   {
@@ -2636,7 +2652,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 165,
+    "manualOrder": 166,
     "instagramStatus": "ok"
   },
   {
@@ -2652,7 +2668,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 166,
+    "manualOrder": 167,
     "instagramStatus": "ok"
   },
   {
@@ -2668,7 +2684,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 167,
+    "manualOrder": 168,
     "instagramStatus": "ok"
   },
   {
@@ -2684,7 +2700,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 168,
+    "manualOrder": 169,
     "instagramStatus": "ok"
   },
   {
@@ -2700,7 +2716,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 169,
+    "manualOrder": 170,
     "instagramStatus": "ok"
   },
   {
@@ -2716,7 +2732,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 170,
+    "manualOrder": 171,
     "instagramStatus": "ok"
   },
   {
@@ -2732,7 +2748,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 171,
+    "manualOrder": 172,
     "instagramStatus": "ok"
   },
   {
@@ -2748,7 +2764,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 172,
+    "manualOrder": 173,
     "instagramStatus": "ok"
   },
   {
@@ -2764,7 +2780,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 173,
+    "manualOrder": 174,
     "instagramStatus": "ok"
   },
   {
@@ -2780,7 +2796,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 174,
+    "manualOrder": 175,
     "instagramStatus": "ok"
   },
   {
@@ -2796,7 +2812,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 175,
+    "manualOrder": 176,
     "instagramStatus": "ok"
   },
   {
@@ -2812,7 +2828,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 176,
+    "manualOrder": 177,
     "instagramStatus": "ok"
   },
   {
@@ -2828,7 +2844,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 177,
+    "manualOrder": 178,
     "instagramStatus": "ok"
   },
   {
@@ -2844,7 +2860,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 178,
+    "manualOrder": 179,
     "instagramStatus": "ok"
   },
   {
@@ -2860,7 +2876,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 179,
+    "manualOrder": 180,
     "instagramStatus": "ok"
   },
   {
@@ -2876,7 +2892,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 180,
+    "manualOrder": 181,
     "instagramStatus": "ok"
   },
   {
@@ -2892,7 +2908,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 181,
+    "manualOrder": 182,
     "instagramStatus": "ok"
   },
   {
@@ -2908,7 +2924,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 182,
+    "manualOrder": 183,
     "instagramStatus": "ok"
   },
   {
@@ -2924,7 +2940,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 183,
+    "manualOrder": 184,
     "instagramStatus": "ok"
   },
   {
@@ -2940,7 +2956,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 184,
+    "manualOrder": 185,
     "instagramStatus": "ok"
   },
   {
@@ -2956,7 +2972,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 185,
+    "manualOrder": 186,
     "instagramStatus": "ok"
   },
   {
@@ -2972,7 +2988,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 186,
+    "manualOrder": 187,
     "instagramStatus": "ok"
   },
   {
@@ -2988,7 +3004,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 187,
+    "manualOrder": 188,
     "instagramStatus": "ok"
   },
   {
@@ -3004,7 +3020,7 @@ window.SEED_COMPETITORS = [
     "notes": "lading ig",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 188,
+    "manualOrder": 189,
     "instagramStatus": "ok"
   },
   {
@@ -3020,7 +3036,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 189,
+    "manualOrder": 190,
     "instagramStatus": "ok"
   },
   {
@@ -3036,7 +3052,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 190,
+    "manualOrder": 191,
     "instagramStatus": "ok"
   },
   {
@@ -3052,7 +3068,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 191,
+    "manualOrder": 192,
     "instagramStatus": "ok"
   },
   {
@@ -3068,7 +3084,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 192,
+    "manualOrder": 193,
     "instagramStatus": "ok"
   },
   {
@@ -3084,7 +3100,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 193,
+    "manualOrder": 194,
     "instagramStatus": "ok"
   },
   {
@@ -3100,7 +3116,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 194,
+    "manualOrder": 195,
     "instagramStatus": "ok"
   },
   {
@@ -3116,7 +3132,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 195,
+    "manualOrder": 196,
     "instagramStatus": "ok"
   },
   {
@@ -3132,7 +3148,7 @@ window.SEED_COMPETITORS = [
     "notes": "lading ig",
     "source": "Hoja academias",
     "mailerfind": null,
-    "manualOrder": 196,
+    "manualOrder": 197,
     "instagramStatus": "ok"
   },
   {
@@ -3148,7 +3164,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 197,
+    "manualOrder": 198,
     "instagramStatus": "ok"
   },
   {
@@ -3164,7 +3180,7 @@ window.SEED_COMPETITORS = [
     "notes": "lading ig",
     "source": "Hoja academias",
     "mailerfind": null,
-    "manualOrder": 198,
+    "manualOrder": 199,
     "instagramStatus": "ok"
   },
   {
@@ -3180,7 +3196,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 199,
+    "manualOrder": 200,
     "instagramStatus": "ok"
   },
   {
@@ -3196,7 +3212,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 200,
+    "manualOrder": 201,
     "instagramStatus": "ok"
   },
   {
@@ -3212,7 +3228,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 201,
+    "manualOrder": 202,
     "instagramStatus": "ok"
   },
   {
@@ -3228,7 +3244,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 202,
+    "manualOrder": 203,
     "instagramStatus": "ok"
   },
   {
@@ -3244,7 +3260,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 203,
+    "manualOrder": 204,
     "instagramStatus": "ok"
   },
   {
@@ -3260,7 +3276,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 204,
+    "manualOrder": 205,
     "instagramStatus": "ok"
   },
   {
@@ -3276,7 +3292,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 205,
+    "manualOrder": 206,
     "instagramStatus": "ok"
   },
   {
@@ -3292,7 +3308,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 206,
+    "manualOrder": 207,
     "instagramStatus": "ok"
   },
   {
@@ -3308,7 +3324,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 207,
+    "manualOrder": 208,
     "instagramStatus": "ok"
   },
   {
@@ -3324,7 +3340,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 208,
+    "manualOrder": 209,
     "instagramStatus": "ok"
   },
   {
@@ -3340,7 +3356,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 209,
+    "manualOrder": 210,
     "instagramStatus": "ok"
   },
   {
@@ -3356,7 +3372,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 210,
+    "manualOrder": 211,
     "instagramStatus": "ok"
   },
   {
@@ -3372,7 +3388,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 211,
+    "manualOrder": 212,
     "instagramStatus": "ok"
   },
   {
@@ -3388,7 +3404,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 212,
+    "manualOrder": 213,
     "instagramStatus": "ok"
   },
   {
@@ -3404,7 +3420,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 213,
+    "manualOrder": 214,
     "instagramStatus": "ok"
   },
   {
@@ -3420,7 +3436,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 214,
+    "manualOrder": 215,
     "instagramStatus": "ok"
   },
   {
@@ -3436,7 +3452,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 215,
+    "manualOrder": 216,
     "instagramStatus": "ok"
   },
   {
@@ -3452,7 +3468,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 216,
+    "manualOrder": 217,
     "instagramStatus": "ok"
   },
   {
@@ -3468,7 +3484,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 217,
+    "manualOrder": 218,
     "instagramStatus": "ok"
   },
   {
@@ -3484,7 +3500,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 218,
+    "manualOrder": 219,
     "instagramStatus": "ok"
   },
   {
@@ -3500,7 +3516,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 219,
+    "manualOrder": 220,
     "instagramStatus": "ok"
   },
   {
@@ -3516,7 +3532,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 220,
+    "manualOrder": 221,
     "instagramStatus": "ok"
   },
   {
@@ -3532,7 +3548,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 221,
+    "manualOrder": 222,
     "instagramStatus": "ok"
   },
   {
@@ -3548,7 +3564,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 222,
+    "manualOrder": 223,
     "instagramStatus": "ok"
   },
   {
@@ -3564,7 +3580,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 223,
+    "manualOrder": 224,
     "instagramStatus": "ok"
   },
   {
@@ -3580,7 +3596,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 224,
+    "manualOrder": 225,
     "instagramStatus": "ok"
   },
   {
@@ -3596,7 +3612,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 225,
+    "manualOrder": 226,
     "instagramStatus": "ok"
   },
   {
@@ -3612,7 +3628,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 226,
+    "manualOrder": 227,
     "instagramStatus": "ok"
   },
   {
@@ -3628,7 +3644,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 227,
+    "manualOrder": 228,
     "instagramStatus": "ok"
   },
   {
@@ -3644,7 +3660,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 228,
+    "manualOrder": 229,
     "instagramStatus": "ok"
   },
   {
@@ -3660,7 +3676,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 229,
+    "manualOrder": 230,
     "instagramStatus": "ok"
   },
   {
@@ -3676,7 +3692,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 230,
+    "manualOrder": 231,
     "instagramStatus": "ok"
   },
   {
@@ -3692,7 +3708,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 231,
+    "manualOrder": 232,
     "instagramStatus": "ok"
   },
   {
@@ -3708,7 +3724,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 232,
+    "manualOrder": 233,
     "instagramStatus": "ok"
   },
   {
@@ -3724,7 +3740,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 233,
+    "manualOrder": 234,
     "instagramStatus": "ok"
   },
   {
@@ -3740,7 +3756,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 234,
+    "manualOrder": 235,
     "instagramStatus": "ok"
   },
   {
@@ -3756,7 +3772,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 235,
+    "manualOrder": 236,
     "instagramStatus": "ok"
   },
   {
@@ -3772,7 +3788,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 236,
+    "manualOrder": 237,
     "instagramStatus": "ok"
   },
   {
@@ -3788,7 +3804,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 237,
+    "manualOrder": 238,
     "instagramStatus": "ok"
   },
   {
@@ -3804,7 +3820,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 238,
+    "manualOrder": 239,
     "instagramStatus": "ok"
   },
   {
@@ -3820,7 +3836,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 239,
+    "manualOrder": 240,
     "instagramStatus": "ok"
   },
   {
@@ -3836,7 +3852,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 240,
+    "manualOrder": 241,
     "instagramStatus": "ok"
   },
   {
@@ -3852,7 +3868,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 241,
+    "manualOrder": 242,
     "instagramStatus": "ok"
   },
   {
@@ -3868,7 +3884,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 242,
+    "manualOrder": 243,
     "instagramStatus": "ok"
   },
   {
@@ -3884,7 +3900,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 243,
+    "manualOrder": 244,
     "instagramStatus": "ok"
   },
   {
@@ -3900,7 +3916,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 244,
+    "manualOrder": 245,
     "instagramStatus": "ok"
   },
   {
@@ -3916,7 +3932,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 245,
+    "manualOrder": 246,
     "instagramStatus": "ok"
   },
   {
@@ -3932,7 +3948,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 246,
+    "manualOrder": 247,
     "instagramStatus": "ok"
   },
   {
@@ -3948,7 +3964,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 247,
+    "manualOrder": 248,
     "instagramStatus": "ok"
   },
   {
@@ -3964,7 +3980,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 248,
+    "manualOrder": 249,
     "instagramStatus": "ok"
   },
   {
@@ -3980,7 +3996,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 249,
+    "manualOrder": 250,
     "instagramStatus": "ok"
   },
   {
@@ -3996,7 +4012,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 250,
+    "manualOrder": 251,
     "instagramStatus": "ok"
   },
   {
@@ -4012,7 +4028,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 251,
+    "manualOrder": 252,
     "instagramStatus": "ok"
   },
   {
@@ -4028,7 +4044,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 252,
+    "manualOrder": 253,
     "instagramStatus": "ok"
   },
   {
@@ -4044,7 +4060,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 253,
+    "manualOrder": 254,
     "instagramStatus": "ok"
   },
   {
@@ -4060,7 +4076,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 254,
+    "manualOrder": 255,
     "instagramStatus": "ok"
   },
   {
@@ -4076,7 +4092,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 255,
+    "manualOrder": 256,
     "instagramStatus": "ok"
   },
   {
@@ -4092,7 +4108,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 256,
+    "manualOrder": 257,
     "instagramStatus": "ok"
   },
   {
@@ -4108,7 +4124,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 257,
+    "manualOrder": 258,
     "instagramStatus": "ok"
   },
   {
@@ -4124,7 +4140,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 258,
+    "manualOrder": 259,
     "instagramStatus": "ok"
   },
   {
@@ -4140,7 +4156,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 259,
+    "manualOrder": 260,
     "instagramStatus": "ok"
   },
   {
@@ -4156,7 +4172,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 260,
+    "manualOrder": 261,
     "instagramStatus": "ok"
   },
   {
@@ -4172,7 +4188,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 261,
+    "manualOrder": 262,
     "instagramStatus": "ok"
   },
   {
@@ -4188,7 +4204,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 262,
+    "manualOrder": 263,
     "instagramStatus": "ok"
   },
   {
@@ -4204,7 +4220,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 263,
+    "manualOrder": 264,
     "instagramStatus": "ok"
   },
   {
@@ -4220,7 +4236,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 264,
+    "manualOrder": 265,
     "instagramStatus": "ok"
   },
   {
@@ -4236,7 +4252,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 265,
+    "manualOrder": 266,
     "instagramStatus": "ok"
   },
   {
@@ -4252,7 +4268,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 266,
+    "manualOrder": 267,
     "instagramStatus": "ok"
   },
   {
@@ -4268,7 +4284,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 267,
+    "manualOrder": 268,
     "instagramStatus": "ok"
   },
   {
@@ -4284,7 +4300,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 268,
+    "manualOrder": 269,
     "instagramStatus": "ok"
   },
   {
@@ -4300,7 +4316,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 269,
+    "manualOrder": 270,
     "instagramStatus": "ok"
   },
   {
@@ -4316,7 +4332,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 270,
+    "manualOrder": 271,
     "instagramStatus": "ok"
   },
   {
@@ -4332,7 +4348,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 271,
+    "manualOrder": 272,
     "instagramStatus": "ok"
   },
   {
@@ -4348,7 +4364,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 272,
+    "manualOrder": 273,
     "instagramStatus": "ok"
   },
   {
@@ -4364,7 +4380,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 273,
+    "manualOrder": 274,
     "instagramStatus": "ok"
   },
   {
@@ -4380,7 +4396,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 274,
+    "manualOrder": 275,
     "instagramStatus": "ok"
   },
   {
@@ -4396,7 +4412,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 275,
+    "manualOrder": 276,
     "instagramStatus": "ok"
   },
   {
@@ -4412,7 +4428,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 276,
+    "manualOrder": 277,
     "instagramStatus": "ok"
   },
   {
@@ -4428,7 +4444,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 277,
+    "manualOrder": 278,
     "instagramStatus": "ok"
   },
   {
@@ -4444,7 +4460,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 278,
+    "manualOrder": 279,
     "instagramStatus": "ok"
   },
   {
@@ -4460,7 +4476,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 279,
+    "manualOrder": 280,
     "instagramStatus": "ok"
   },
   {
@@ -4476,7 +4492,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 280,
+    "manualOrder": 281,
     "instagramStatus": "ok"
   },
   {
@@ -4492,7 +4508,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 281,
+    "manualOrder": 282,
     "instagramStatus": "ok"
   }
 ];

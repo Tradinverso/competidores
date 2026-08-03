@@ -22,22 +22,24 @@ test("renderiza el radar actualizado", async () => {
   const html = await response.text();
   assert.match(html, /<title>Radar de Competidores \| Tradingverso<\/title>/i);
   assert.match(html, /Tu mapa competitivo/);
-  assert.match(html, /281/);
+  assert.match(html, /282/);
   assert.match(html, /Enrique Moris/);
   assert.match(html, /@enrique\.vv/);
   assert.match(html, /Mario Casanova/);
   assert.match(html, /@amandix\.fx/);
+  assert.match(html, /TradingLab \| Academia de Trading/);
+  assert.match(html, /Iñigo Maldonado/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {
   const seed = JSON.parse(await readFile(new URL("../app/data/seed.json", import.meta.url), "utf8"));
   const expectedTop = [
-    "fxtrading.lab", "alexosorio.fx", "alexruizn7", "tradeando", "enrique.vv", "merytrader212",
+    "fxtrading.lab", "alexosorio.fx", "alexruizn7", "tradinglab.es", "maldotrading", "tradeando", "enrique.vv", "merytrader212",
     "fondeapro", "belikethealgo", "traderlabcaademy", "sr.machadofx", "elsensei",
     "senseiprofe", "jacko_fxc", "amandix.fx", "alekayfx",
   ];
 
-  assert.equal(seed.length, 281);
+  assert.equal(seed.length, 282);
   assert.deepEqual(seed.slice(0, expectedTop.length).map((item) => item.username), expectedTop);
   assert.ok(seed.slice(0, expectedTop.length).every((item) => item.priority === "Crítica"));
   assert.ok(seed.every((item) => item.instagramStatus === "ok"));
