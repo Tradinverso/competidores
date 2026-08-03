@@ -1,0 +1,439 @@
+{
+  "checkedAt": "2026-08-03T10:45:00.000Z",
+  "summary": {
+    "originalProfiles": 322,
+    "invalidProfilesReviewed": 56,
+    "correctedUsernames": 12,
+    "validProfilesRecoveredWithoutRename": 2,
+    "removedProfiles": 42,
+    "addedPriorityProfiles": 2,
+    "finalProfiles": 281,
+    "duplicateRowsRemoved": 1
+  },
+  "prioritized": [
+    "fxtrading.lab",
+    "alexruizn7",
+    "tradeando",
+    "enrique.vv",
+    "merytrader212",
+    "fondeapro",
+    "belikethealgo",
+    "traderlabcaademy",
+    "sr.machadofx",
+    "elsensei",
+    "senseiprofe",
+    "jacko_fxc",
+    "amandix.fx",
+    "alekayfx"
+  ],
+  "corrected": [
+    {
+      "id": "ig-traderlabacademy",
+      "from": "traderlabacademy",
+      "to": "traderlabcaademy"
+    },
+    {
+      "id": "ig-joellfx",
+      "from": "joellfx",
+      "to": "joellfx_oficial"
+    },
+    {
+      "id": "ig-alexflamas_fx",
+      "from": "alexflamas_fx",
+      "to": "alexflamas__.fx"
+    },
+    {
+      "id": "ig-wsfunded",
+      "from": "wsfunded",
+      "to": "wsfundedglobal"
+    },
+    {
+      "id": "ig-ceejaylife",
+      "from": "ceejaylife",
+      "to": "ceejay_life"
+    },
+    {
+      "id": "ig-melero.trades",
+      "from": "melero.trades",
+      "to": "melero.trades21"
+    },
+    {
+      "id": "ig-jadtrades.nq",
+      "from": "jadtrades.nq",
+      "to": "jad.nq"
+    },
+    {
+      "id": "ig-ricardo_skytrader",
+      "from": "ricardo_skytrader",
+      "to": "ricardoskytrader"
+    },
+    {
+      "id": "ig-titanesdeltrading",
+      "from": "titanesdeltrading",
+      "to": "pedro.bogni"
+    },
+    {
+      "id": "ig-traderyeray",
+      "from": "traderyeray",
+      "to": "sr.traderyeray"
+    },
+    {
+      "id": "ig-carlosdaza.trading",
+      "from": "carlosdaza.trading",
+      "to": "soycarlosdaza"
+    },
+    {
+      "id": "ig-pacopereztrading",
+      "from": "pacopereztrading",
+      "to": "pacopereztradijng"
+    }
+  ],
+  "recovered": [
+    {
+      "from": "traderlabacademy",
+      "username": "traderlabcaademy",
+      "name": "Traderlab Academy 🧪",
+      "followers": 2
+    },
+    {
+      "from": "diamantcapital",
+      "username": "diamantcapital",
+      "name": "Drilon Mehmeti - Forex Trading",
+      "followers": 79175
+    },
+    {
+      "from": "joellfx",
+      "username": "joellfx_oficial",
+      "name": "Joel Briones | Trader",
+      "followers": 418
+    },
+    {
+      "from": "alexflamas_fx",
+      "username": "alexflamas__.fx",
+      "name": "Alex Bolaño",
+      "followers": 894
+    },
+    {
+      "from": "wsfunded",
+      "username": "wsfundedglobal",
+      "name": "WALL STREET FUNDED",
+      "followers": 17562
+    },
+    {
+      "from": "geraldcala",
+      "username": "geraldcala",
+      "name": "Gerald Cala",
+      "followers": 38010
+    },
+    {
+      "from": "ceejaylife",
+      "username": "ceejay_life",
+      "name": "Day Trader | Stocks",
+      "followers": 5702
+    },
+    {
+      "from": "melero.trades",
+      "username": "melero.trades21",
+      "name": "Melero Trades",
+      "followers": 1168
+    },
+    {
+      "from": "jadtrades.nq",
+      "username": "jad.nq",
+      "name": "Jad Trades",
+      "followers": 1283
+    },
+    {
+      "from": "ricardo_skytrader",
+      "username": "ricardoskytrader",
+      "name": "Ricardo Belda | Gold Trader & Mentor",
+      "followers": 6879
+    },
+    {
+      "from": "titanesdeltrading",
+      "username": "pedro.bogni",
+      "name": "Titanes del Trading | Pedro Bogni",
+      "followers": 18377
+    },
+    {
+      "from": "traderyeray",
+      "username": "sr.traderyeray",
+      "name": "Yeray Trader - Day Trader PRM 📈",
+      "followers": 363
+    },
+    {
+      "from": "carlosdaza.trading",
+      "username": "soycarlosdaza",
+      "name": "Carlos Daza | Trading de Futuros",
+      "followers": 6565
+    },
+    {
+      "from": "pacopereztrading",
+      "username": "pacopereztradijng",
+      "name": "Paco Perez Trading.",
+      "followers": 6007
+    }
+  ],
+  "removed": [
+    {
+      "id": "ig-fx.vdriixn",
+      "name": "Adrian A. Rodriguez",
+      "username": "fx.vdriixn",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-thesouproom_",
+      "name": "The Soup Room  (ingles)",
+      "username": "thesouproom_",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-xauusd_alan",
+      "name": "Alan Trader XAUUSD",
+      "username": "xauusd_alan",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-tradingmentormatch",
+      "name": "Trading Mentor Match 🚦",
+      "username": "tradingmentormatch",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-rrbinvestors",
+      "name": "Roberto | RRBINVESTORS",
+      "username": "rrbinvestors",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-fxdsniper",
+      "name": "Darek Kargul | Forex Trader & Entrepreneur  (ingles)",
+      "username": "fxdsniper",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-atradez_",
+      "name": "Almog Tradez",
+      "username": "atradez_",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-msnr.uz",
+      "name": "𝐢𝐬𝐜𝐓𝐫𝐚𝐝𝐞𝐫 𓂀",
+      "username": "msnr.uz",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-orionfunded.es",
+      "name": "Orion Funded",
+      "username": "orionfunded.es",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-nolimit.afl",
+      "name": "NoLimitAFL",
+      "username": "nolimit.afl",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-ameyali.orea",
+      "name": "Ameyali Orea",
+      "username": "ameyali.orea",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-trade.informator",
+      "name": "TRADE INFO",
+      "username": "trade.informator",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-trade_withme999",
+      "name": "Trade with me",
+      "username": "trade_withme999",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-ttcnetwork",
+      "name": "TTC | Trading Mentorship",
+      "username": "ttcnetwork",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-leoxpurnell",
+      "name": "Leo J",
+      "username": "leoxpurnell",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-stanfxofficial",
+      "name": "Stanfx",
+      "username": "stanfxofficial",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-evertrader_crypto",
+      "name": "evertrader",
+      "username": "evertrader_crypto",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-kaelhq007",
+      "name": "Kaelhq",
+      "username": "kaelhq007",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-elchamufx",
+      "name": "Samuel Márquez | Forex Trader",
+      "username": "elchamufx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-clutifx_",
+      "name": "Carles Clotet | Professional Trader and Mentor",
+      "username": "clutifx_",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-rhysdwilliams_",
+      "name": "Rhys Williams | Sales Consultant",
+      "username": "rhysdwilliams_",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-tonimauraoficial",
+      "name": "Toni Maura | Mentor de Trading",
+      "username": "tonimauraoficial",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-aurusclubfx",
+      "name": "Trading Bots | Mentores | Gestores de capital",
+      "username": "aurusclubfx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-algo_trader",
+      "name": "Mike LP",
+      "username": "algo_trader",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-tradingconraulcastro",
+      "name": "Raul Castro | Trading",
+      "username": "tradingconraulcastro",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-heectrades",
+      "name": "Héctor Muerza",
+      "username": "heectrades",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-scotttaylorfx",
+      "name": "Scott Taylor",
+      "username": "scotttaylorfx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-mickeysmile_fx",
+      "name": "Micaela González | TRADER 🇦🇷",
+      "username": "mickeysmile_fx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-geny.jr",
+      "name": "GCAP",
+      "username": "geny.jr",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-estrategiasfx",
+      "name": "ESTRATEGIASFX",
+      "username": "estrategiasfx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-swingtradinglab",
+      "name": "Alex Gonzalez",
+      "username": "swingtradinglab",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-laloduke",
+      "name": "Lalo Duke/ Hip-Hop&Trading ⛩️",
+      "username": "laloduke",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-dancheungfx",
+      "name": "Dan Cheung",
+      "username": "dancheungfx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-jaumemontfortfx",
+      "name": "Jaume Montfort | Mentor de Trading Halal",
+      "username": "jaumemontfortfx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-merlijnthetrader",
+      "name": "The Wizard In Trading",
+      "username": "merlijnthetrader",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-alan___luna",
+      "name": "Alan luna | Trader profesional",
+      "username": "alan___luna",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-henry.tradesfx",
+      "name": "H.Trades 📉",
+      "username": "henry.tradesfx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-samu.traderlife",
+      "name": "samu.traderlife",
+      "username": "samu.traderlife",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-slimp.trading",
+      "name": "Cayetano Garcia",
+      "username": "slimp.trading",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-demonf.x",
+      "name": "GERARD BAS | Trading Futuros",
+      "username": "demonf.x",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-sergiovalerofx",
+      "name": "Sergio Valero | Trader capital propio",
+      "username": "sergiovalerofx",
+      "previousStatus": "unavailable"
+    },
+    {
+      "id": "ig-tori.trades",
+      "name": "Victoria Duke",
+      "username": "tori.trades",
+      "previousStatus": "unavailable"
+    }
+  ],
+  "duplicatesRemoved": [
+    {
+      "id": "ig-goldtrader_dan",
+      "name": "",
+      "username": "",
+      "instagramUrl": "https://www.instagram.com/goldtrader_dan/"
+    }
+  ]
+}
