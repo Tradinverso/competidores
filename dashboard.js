@@ -492,7 +492,7 @@
     button.textContent = "Entrar";
     elements.cloudMessage.hidden = false;
     if (error) {
-      elements.cloudMessage.textContent = "La contraseña no es correcta. Inténtalo de nuevo.";
+      elements.cloudMessage.textContent = `No se pudo entrar: ${error.message}`;
       elements.cloudMessage.classList.add("isError");
       return;
     }
