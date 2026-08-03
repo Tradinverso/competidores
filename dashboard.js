@@ -68,12 +68,24 @@
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       const data = stored ? mergeSavedData(JSON.parse(stored), true) : structuredClone(window.SEED_COMPETITORS || []);
-      const promoted = applyMeryPriority(data);
+      const promoted = applyMeryPriority(removeSmallProfiles(data));
       if (promoted !== data) localStorage.setItem(STORAGE_KEY, JSON.stringify(promoted));
       return promoted;
     } catch (_) {
-      return applyMeryPriority(structuredClone(window.SEED_COMPETITORS || []));
+      return applyMeryPriority(removeSmallProfiles(structuredClone(window.SEED_COMPETITORS || [])));
     }
+  }
+
+  function removeSmallProfiles(items) {
+    const cleaned = items.filter(item => {
+      if (item.followers == null || item.followers === "") return true;
+      const followers = Number(item.followers);
+      return !Number.isFinite(followers) || followers >= 500;
+    });
+    if (cleaned.length === items.length) return items;
+    return cleaned
+      .sort((a, b) => (a.manualOrder ?? Number.MAX_SAFE_INTEGER) - (b.manualOrder ?? Number.MAX_SAFE_INTEGER))
+      .map((item, index) => ({ ...item, manualOrder: index + 1 }));
   }
 
   function applyMeryPriority(items) {
@@ -173,7 +185,7 @@
       .maybeSingle();
     if (error) throw error;
     if (data && Array.isArray(data.competitors)) {
-      competitors = applyMeryPriority(mergeSavedData(data.competitors, false));
+      competitors = applyMeryPriority(removeSmallProfiles(mergeSavedData(data.competitors, false)));
       localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
       render();
       scheduleCloudSave();
