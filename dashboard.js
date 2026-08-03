@@ -4,6 +4,7 @@
   const STORAGE_KEY = "radar-competidores-github-v1";
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const CLOUD_BUCKET = "mailerfind";
+  const CLOUD_EMAIL = "tradinverso@gmail.com";
   const cloudConfig = window.SUPABASE_CONFIG || {};
   const cloudClient = window.supabase && cloudConfig.url && cloudConfig.publishableKey
     ? window.supabase.createClient(cloudConfig.url, cloudConfig.publishableKey)
@@ -33,7 +34,6 @@
     cloudButton: document.getElementById("cloudAccessButton"),
     cloudDialog: document.getElementById("cloudDialog"),
     cloudForm: document.getElementById("cloudForm"),
-    cloudEmail: document.getElementById("cloudEmail"),
     cloudMessage: document.getElementById("cloudMessage")
   };
 
@@ -484,7 +484,7 @@
     elements.cloudMessage.hidden = true;
     elements.cloudMessage.classList.remove("isError");
     const { error } = await cloudClient.auth.signInWithOtp({
-      email: elements.cloudEmail.value.trim(),
+      email: CLOUD_EMAIL,
       options: { emailRedirectTo: "https://tradinverso.github.io/competidores/" }
     });
     button.disabled = false;
