@@ -34,6 +34,7 @@
     cloudButton: document.getElementById("cloudAccessButton"),
     cloudDialog: document.getElementById("cloudDialog"),
     cloudForm: document.getElementById("cloudForm"),
+    cloudPassword: document.getElementById("cloudPassword"),
     cloudMessage: document.getElementById("cloudMessage")
   };
 
@@ -480,22 +481,23 @@
     if (!cloudClient) return notify("La conexión con la nube no está disponible.");
     const button = document.getElementById("sendCloudLinkButton");
     button.disabled = true;
-    button.textContent = "Enviando…";
+    button.textContent = "Entrando…";
     elements.cloudMessage.hidden = true;
     elements.cloudMessage.classList.remove("isError");
-    const { error } = await cloudClient.auth.signInWithOtp({
+    const { error } = await cloudClient.auth.signInWithPassword({
       email: CLOUD_EMAIL,
-      options: { emailRedirectTo: "https://tradinverso.github.io/competidores/" }
+      password: elements.cloudPassword.value
     });
     button.disabled = false;
-    button.textContent = "Enviar enlace de acceso";
+    button.textContent = "Entrar";
     elements.cloudMessage.hidden = false;
     if (error) {
-      elements.cloudMessage.textContent = "No se pudo enviar el enlace. Revisa el correo e inténtalo de nuevo.";
+      elements.cloudMessage.textContent = "La contraseña no es correcta. Inténtalo de nuevo.";
       elements.cloudMessage.classList.add("isError");
       return;
     }
-    elements.cloudMessage.textContent = "Enlace enviado. Abre el correo y pulsa el botón para entrar.";
+    elements.cloudPassword.value = "";
+    elements.cloudDialog.close();
   });
 
   render();
