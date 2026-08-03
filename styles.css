@@ -27,6 +27,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .topActions { display: flex; align-items: center; gap: 8px; }
 .saveState { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; margin-right: 8px; }
 .saveState i { width: 7px; height: 7px; background: var(--green-bright); border-radius: 50%; box-shadow: 0 0 0 4px rgba(70, 211, 154, .15); }
+.saveState.isSyncing i { background: #e6aa45; box-shadow: 0 0 0 4px rgba(230, 170, 69, .16); }
+.saveState.isOffline i { background: #98a09b; box-shadow: 0 0 0 4px rgba(152, 160, 155, .14); }
+.cloudButton { max-width: 190px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .button { border: 1px solid transparent; border-radius: 10px; height: 40px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; font-weight: 700; font-size: 13px; transition: transform .18s ease, background .18s ease, border-color .18s ease; }
 .button:hover { transform: translateY(-1px); }
 .button.primary { background: var(--green); color: white; box-shadow: 0 8px 18px rgba(22, 79, 62, .18); }
@@ -160,6 +163,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .modal label > small { color: #9ba19d; text-transform: none; letter-spacing: 0; }
 .modal input, .modal select { height: 43px; font-size: 12px; }
 .modalActions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px; }
+.cloudMessage { border-radius: 9px; background: #e9f5ef; color: #1f6a4d !important; padding: 11px 12px; margin: 14px 0 0 !important; }
+.cloudMessage.isError { background: #f8e9e7; color: #9a3b31 !important; }
 .toast { position: fixed; z-index: 100; top: 88px; left: 50%; transform: translateX(-50%); background: #101c17; color: white; border-radius: 10px; padding: 12px 17px; box-shadow: 0 12px 35px rgba(0,0,0,.22); font-size: 12px; animation: toastIn .22s ease both; }
 .toast[hidden] { display: none; }
 .staticDialog { width: 100%; max-width: none; height: 100%; max-height: none; border: 0; padding: 20px; background: transparent; }
