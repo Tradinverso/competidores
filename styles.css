@@ -90,11 +90,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .tableWrap { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: 0 12px 35px rgba(22, 33, 29, .045); }
 .tableHeader, .competitorRow { display: grid; grid-template-columns: 70px minmax(210px, 1.65fr) 120px 120px repeat(3, 72px) 130px 105px 40px; align-items: center; gap: 10px; }
 .tableHeader { min-height: 42px; padding: 0 17px; background: #ecece7; color: #7b847f; text-transform: uppercase; font-family: var(--font-geist-mono); font-size: 9px; letter-spacing: .08em; }
-.competitor { border-top: 1px solid #e8e9e4; transition: background .15s ease; }
+.competitor { border-top: 1px solid #e8e9e4; transition: background .18s ease, box-shadow .18s ease; }
 .competitor:first-child { border-top: 0; }
 .competitor:hover { background: #eef6ff; }
-.competitor.isStudied { background: #f7faf7; }
-.competitor.isStudied:hover { background: #eef6ff; }
+.competitor.isStudied { background: #dcecff; box-shadow: inset 4px 0 0 #2d89ff; }
+.competitor.isStudied:hover { background: #d1e5ff; }
+.competitor:has(.campaignSentToggle input:checked) { background: #ddf4e5; box-shadow: inset 4px 0 0 #0b8a57; }
+.competitor:has(.campaignSentToggle input:checked):hover { background: #d2eddd; }
 .competitor[draggable="true"], .competitor[draggable="true"] .competitorRow { cursor: default; }
 .competitor.isDragging { opacity: .45; }
 .competitor.isDropTarget { border-top: 3px solid var(--blue); }
@@ -107,8 +109,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .moveButtons button:disabled { opacity: .25; cursor: default; }
 .identity { min-width: 0; display: flex; align-items: center; gap: 12px; }
 .avatarText { flex: 0 0 auto; width: 37px; height: 37px; border-radius: 11px; display: grid; place-items: center; background: #e6ede9; color: var(--green); font-size: 11px; font-weight: 830; letter-spacing: -.03em; transition: background .18s ease, color .18s ease; }
-.competitor.isStudied .avatarText { background: #d8eaff; color: #0756ac; }
-.competitor:has(.campaignSentToggle input:checked) .avatarText { background: #d9f3e5; color: #087b4a; }
+.competitor.isStudied .avatarText { background: #2d89ff; color: #ffffff; }
+.competitor:has(.campaignSentToggle input:checked) .avatarText { background: #0b8a57; color: #ffffff; }
 .identity > span:last-child { display: flex; flex-direction: column; min-width: 0; }
 .identity strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
 .identity small { color: #89918d; font-size: 11px; margin-top: 4px; }
@@ -130,12 +132,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .csvState small { color: #a0a6a2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px; margin-top: 2px; font-size: 8px; font-weight: 450; }
 .studiedToggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 10px; font-weight: 650; color: #717a75; }
 .studiedToggle input { width: 17px; height: 17px; accent-color: var(--green); }
-.isStudied .studiedToggle { color: var(--green); }
+.isStudied .statusCell .studiedToggle:first-child { color: #0756ac; font-weight: 800; }
 .statusCell { display: grid; gap: 5px; }
 .statusCell .studiedToggle { gap: 5px; font-size: 9px; }
 .statusCell .studiedToggle input { width: 14px; height: 14px; }
-.campaignSentToggle { color: var(--blue); }
-.campaignSentToggle input { accent-color: var(--blue); }
+.campaignSentToggle { color: #6d7886; }
+.campaignSentToggle input { accent-color: #0b8a57; }
+.campaignSentToggle:has(input:checked) { color: #087b4a; font-weight: 800; }
 .campaignToggle { min-height: 30px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 8px; padding: 0 6px; color: var(--muted); font-size: 10px; font-weight: 720; cursor: pointer; background: #fff; }
 .campaignToggle:has(input:checked) { color: var(--green); border-color: #9fceb8; background: #edf8f1; }
 .campaignToggle input { accent-color: var(--green); margin: 0; }
