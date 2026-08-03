@@ -61,19 +61,17 @@ test("elimina perfiles retirados sin borrar altas manuales", async () => {
 });
 
 test("sincroniza datos y CSV con Supabase sin exponer claves privadas", async () => {
-  const [html, dashboard, config, vendor] = await Promise.all([
+  const [html, dashboard, config] = await Promise.all([
     readFile(new URL("../index.html", import.meta.url), "utf8"),
     readFile(new URL("../dashboard.js", import.meta.url), "utf8"),
     readFile(new URL("../supabase-config.js", import.meta.url), "utf8"),
-    readFile(new URL("../vendor/supabase.js", import.meta.url), "utf8"),
   ]);
 
   assert.match(html, /id="cloudAccessButton"/);
-  assert.ok(html.indexOf("vendor/supabase.js") < html.indexOf("dashboard.js"));
+  assert.ok(html.indexOf("@supabase/supabase-js@2.111.0") < html.indexOf("dashboard.js"));
   assert.match(config, /sb_publishable_/);
   assert.doesNotMatch(config, /service_role|sb_secret_/);
   assert.match(dashboard, /signInWithOtp/);
   assert.match(dashboard, /from\("dashboard_state"\)\.upsert/);
   assert.match(dashboard, /storage\.from\(CLOUD_BUCKET\)\.upload/);
-  assert.ok(vendor.length > 100000);
 });
