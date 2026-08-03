@@ -3,8 +3,17 @@
 
   const STORAGE_KEY = "radar-competidores-github-v1";
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
+  const CLOUD_BUCKET = "mailerfind";
+  const cloudConfig = window.SUPABASE_CONFIG || {};
+  const cloudClient = window.supabase && cloudConfig.url && cloudConfig.publishableKey
+    ? window.supabase.createClient(cloudConfig.url, cloudConfig.publishableKey)
+    : null;
   const priorities = ["Crítica", "Alta", "Media", "Baja"];
   const priorityWeight = { "Crítica": 0, "Alta": 1, "Media": 2, "Baja": 3 };
+  let cloudSession = null;
+  let cloudSaveTimer = null;
+  let cloudSaving = false;
+  let cloudSaveQueued = false;
   let competitors = loadData();
   let expandedId = null;
   let visibleCount = 40;
@@ -19,15 +28,18 @@
     sort: document.getElementById("sortSelect"),
     dialog: document.getElementById("addDialog"),
     addForm: document.getElementById("addForm"),
-    toast: document.getElementById("toast")
+    toast: document.getElementById("toast"),
+    saveState: document.getElementById("saveState"),
+    cloudButton: document.getElementById("cloudAccessButton"),
+    cloudDialog: document.getElementById("cloudDialog"),
+    cloudForm: document.getElementById("cloudForm"),
+    cloudEmail: document.getElementById("cloudEmail"),
+    cloudMessage: document.getElementById("cloudMessage")
   };
 
-  function loadData() {
-    try {
+  function mergeSavedData(saved, migrateSeedOrder) {
       const seed = structuredClone(window.SEED_COMPETITORS || []);
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (!stored) return seed;
-      const saved = JSON.parse(stored);
+      if (!Array.isArray(saved)) return seed;
       const freshById = new Map(seed.map(item => [item.id, item]));
       const merged = saved
         .filter(item => freshById.has(item.id) || item.source === "Añadido manualmente")
@@ -40,13 +52,19 @@
         });
       const savedIds = new Set(merged.map(item => item.id));
       let next = [...merged, ...seed.filter(item => !savedIds.has(item.id))];
-      if (localStorage.getItem(SEED_ORDER_MIGRATION_KEY) !== "done") {
+      if (migrateSeedOrder && localStorage.getItem(SEED_ORDER_MIGRATION_KEY) !== "done") {
         next = next
           .sort((a, b) => (freshById.get(a.id)?.manualOrder ?? Number.MAX_SAFE_INTEGER) - (freshById.get(b.id)?.manualOrder ?? Number.MAX_SAFE_INTEGER))
           .map((item, index) => ({ ...item, priority: freshById.get(item.id)?.priority ?? item.priority, manualOrder: index + 1 }));
         localStorage.setItem(SEED_ORDER_MIGRATION_KEY, "done");
       }
       return next;
+  }
+
+  function loadData() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return stored ? mergeSavedData(JSON.parse(stored), true) : structuredClone(window.SEED_COMPETITORS || []);
     } catch (_) {
       return structuredClone(window.SEED_COMPETITORS || []);
     }
@@ -54,6 +72,7 @@
 
   function saveData() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
+    if (cloudSession) scheduleCloudSave();
   }
 
   function escapeHtml(value) {
@@ -79,6 +98,104 @@
     elements.toast.hidden = false;
     clearTimeout(notify.timer);
     notify.timer = setTimeout(() => { elements.toast.hidden = true; }, 3600);
+  }
+
+  function setSaveState(label, mode) {
+    elements.saveState.classList.toggle("isSyncing", mode === "syncing");
+    elements.saveState.classList.toggle("isOffline", mode === "offline");
+    elements.saveState.querySelector("span").textContent = label;
+  }
+
+  function renderCloudAccount() {
+    if (cloudSession) {
+      elements.cloudButton.textContent = "Salir de la nube";
+      elements.cloudButton.title = cloudSession.user.email || "Sesión activa";
+      setSaveState("Guardado en la nube", "cloud");
+    } else {
+      elements.cloudButton.textContent = "Entrar";
+      elements.cloudButton.removeAttribute("title");
+      setSaveState("Guardado local", "offline");
+    }
+  }
+
+  function scheduleCloudSave() {
+    clearTimeout(cloudSaveTimer);
+    setSaveState("Sincronizando…", "syncing");
+    cloudSaveTimer = setTimeout(saveCloudData, 650);
+  }
+
+  async function saveCloudData() {
+    if (!cloudClient || !cloudSession) return;
+    if (cloudSaving) {
+      cloudSaveQueued = true;
+      return;
+    }
+    cloudSaving = true;
+    const snapshot = structuredClone(competitors);
+    const { error } = await cloudClient.from("dashboard_state").upsert({
+      user_id: cloudSession.user.id,
+      competitors: snapshot,
+      updated_at: new Date().toISOString()
+    }, { onConflict: "user_id" });
+    cloudSaving = false;
+    if (error) {
+      setSaveState("Error de sincronización", "offline");
+      notify("No se pudo guardar en la nube. La copia local sigue intacta.");
+    } else {
+      setSaveState("Guardado en la nube", "cloud");
+    }
+    if (cloudSaveQueued) {
+      cloudSaveQueued = false;
+      scheduleCloudSave();
+    }
+  }
+
+  async function loadCloudData(session) {
+    setSaveState("Cargando nube…", "syncing");
+    const { data, error } = await cloudClient
+      .from("dashboard_state")
+      .select("competitors")
+      .eq("user_id", session.user.id)
+      .maybeSingle();
+    if (error) throw error;
+    if (data && Array.isArray(data.competitors)) {
+      competitors = mergeSavedData(data.competitors, false);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
+      render();
+      scheduleCloudSave();
+      return;
+    }
+    await saveCloudData();
+    render();
+  }
+
+  async function activateCloud(session) {
+    cloudSession = session;
+    renderCloudAccount();
+    try {
+      await loadCloudData(session);
+      notify("Radar sincronizado con la nube.");
+    } catch (_) {
+      setSaveState("Error de sincronización", "offline");
+      notify("No se pudo cargar la nube. La copia local sigue disponible.");
+    }
+  }
+
+  async function setupCloud() {
+    renderCloudAccount();
+    if (!cloudClient) return;
+    const { data } = await cloudClient.auth.getSession();
+    if (data.session) await activateCloud(data.session);
+    cloudClient.auth.onAuthStateChange((_event, session) => {
+      setTimeout(async () => {
+        if (session && session.user.id !== cloudSession?.user?.id) await activateCloud(session);
+        if (!session && cloudSession) {
+          cloudSession = null;
+          renderCloudAccount();
+          notify("Has salido de la nube. Esta copia queda guardada en el navegador.");
+        }
+      }, 0);
+    });
   }
 
   function getFiltered() {
@@ -226,6 +343,37 @@
     return result;
   }
 
+  function safeFileName(fileName) {
+    return String(fileName || "mailerfind.csv")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-zA-Z0-9._-]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "mailerfind.csv";
+  }
+
+  async function uploadCsvToCloud(id, file, text, previousPath) {
+    const path = `${cloudSession.user.id}/${encodeURIComponent(id)}/${Date.now()}-${safeFileName(file.name)}`;
+    const { error } = await cloudClient.storage.from(CLOUD_BUCKET).upload(
+      path,
+      new Blob([text], { type: file.type || "text/csv;charset=utf-8" }),
+      { contentType: file.type || "text/csv", upsert: false }
+    );
+    if (error) throw error;
+    if (previousPath) await cloudClient.storage.from(CLOUD_BUCKET).remove([previousPath]);
+    return path;
+  }
+
+  async function downloadCsvFile(item) {
+    if (cloudSession && item.mailerfind?.storagePath) {
+      const { data, error } = await cloudClient.storage.from(CLOUD_BUCKET).download(item.mailerfind.storagePath);
+      if (error) throw error;
+      return { fileName: item.mailerfind.fileName, blob: data };
+    }
+    const stored = await retrieveCsv(item.id);
+    if (!stored) return null;
+    return { fileName: stored.fileName, blob: new Blob([stored.text], { type: "text/csv;charset=utf-8" }) };
+  }
+
   elements.list.addEventListener("click", async event => {
     const button = event.target.closest("[data-action]");
     if (!button) return;
@@ -234,10 +382,15 @@
     if (button.dataset.action === "down") move(id, 1);
     if (button.dataset.action === "expand") { expandedId = expandedId === id ? null : id; render(); }
     if (button.dataset.action === "download-csv") {
-      const stored = await retrieveCsv(id);
-      if (!stored) return notify("El CSV original no está disponible en este navegador.");
-      const url = URL.createObjectURL(new Blob([stored.text], { type: "text/csv;charset=utf-8" }));
-      const link = document.createElement("a"); link.href = url; link.download = stored.fileName; link.click(); URL.revokeObjectURL(url);
+      try {
+        const item = competitors.find(candidate => candidate.id === id);
+        const stored = item ? await downloadCsvFile(item) : null;
+        if (!stored) return notify("El CSV original no está disponible en este navegador.");
+        const url = URL.createObjectURL(stored.blob);
+        const link = document.createElement("a"); link.href = url; link.download = stored.fileName; link.click(); URL.revokeObjectURL(url);
+      } catch (_) {
+        notify("No se pudo descargar el CSV desde la nube.");
+      }
     }
   });
 
@@ -259,9 +412,16 @@
       const text = await file.text();
       const rows = parseCsv(text);
       if (!rows.length) return notify("El CSV está vacío o no se ha podido leer.");
-      await storeCsv(id, file.name, text);
-      update(id, { mailerfind: { fileName: file.name, importedAt: new Date().toISOString(), rows: Math.max(rows.length - 1, 0), columns: rows[0], preview: rows.slice(1, 5) } });
-      notify("CSV asociado al competidor.");
+      try {
+        const current = competitors.find(item => item.id === id);
+        let storagePath = null;
+        if (cloudSession) storagePath = await uploadCsvToCloud(id, file, text, current?.mailerfind?.storagePath);
+        else await storeCsv(id, file.name, text);
+        update(id, { mailerfind: { fileName: file.name, importedAt: new Date().toISOString(), rows: Math.max(rows.length - 1, 0), columns: rows[0], preview: rows.slice(1, 5), storagePath } });
+        notify(cloudSession ? "CSV guardado en la nube." : "CSV asociado en este navegador.");
+      } catch (_) {
+        notify("No se pudo guardar el CSV. Prueba de nuevo.");
+      }
     }
   });
 
@@ -301,5 +461,43 @@
     event.target.value = "";
   });
 
+  elements.cloudButton.addEventListener("click", async () => {
+    if (cloudSession) {
+      clearTimeout(cloudSaveTimer);
+      await saveCloudData();
+      await cloudClient.auth.signOut();
+      return;
+    }
+    elements.cloudMessage.hidden = true;
+    elements.cloudMessage.classList.remove("isError");
+    elements.cloudDialog.showModal();
+  });
+  document.getElementById("closeCloudButton").addEventListener("click", () => elements.cloudDialog.close());
+  document.getElementById("cancelCloudButton").addEventListener("click", () => elements.cloudDialog.close());
+
+  elements.cloudForm.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (!cloudClient) return notify("La conexión con la nube no está disponible.");
+    const button = document.getElementById("sendCloudLinkButton");
+    button.disabled = true;
+    button.textContent = "Enviando…";
+    elements.cloudMessage.hidden = true;
+    elements.cloudMessage.classList.remove("isError");
+    const { error } = await cloudClient.auth.signInWithOtp({
+      email: elements.cloudEmail.value.trim(),
+      options: { emailRedirectTo: "https://tradinverso.github.io/competidores/" }
+    });
+    button.disabled = false;
+    button.textContent = "Enviar enlace de acceso";
+    elements.cloudMessage.hidden = false;
+    if (error) {
+      elements.cloudMessage.textContent = "No se pudo enviar el enlace. Revisa el correo e inténtalo de nuevo.";
+      elements.cloudMessage.classList.add("isError");
+      return;
+    }
+    elements.cloudMessage.textContent = "Enlace enviado. Abre el correo y pulsa el botón para entrar.";
+  });
+
   render();
+  setupCloud();
 })();
