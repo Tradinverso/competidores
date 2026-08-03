@@ -71,7 +71,7 @@ test("sincroniza datos y CSV con Supabase sin exponer claves privadas", async ()
   assert.ok(html.indexOf("@supabase/supabase-js@2.111.0") < html.indexOf("dashboard.js"));
   assert.match(config, /sb_publishable_/);
   assert.doesNotMatch(config, /service_role|sb_secret_/);
-  assert.match(dashboard, /signInWithOtp/);
+  assert.match(dashboard, /signInWithPassword/);
   assert.match(dashboard, /from\("dashboard_state"\)\.upsert/);
   assert.match(dashboard, /storage\.from\(CLOUD_BUCKET\)\.upload/);
 });
