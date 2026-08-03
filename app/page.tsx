@@ -125,7 +125,9 @@ export default function Home() {
       if (stored) {
         const saved = JSON.parse(stored) as Competitor[];
         const freshById = new Map((seedData as Competitor[]).map((item) => [item.id, item]));
-        const merged = saved.map((item) => {
+        const merged = saved
+          .filter((item) => freshById.has(item.id) || item.source === "Añadido manualmente")
+          .map((item) => {
           const fresh = freshById.get(item.id);
           if (!fresh) return item;
           const freshTime = fresh.followersUpdatedAt ? Date.parse(fresh.followersUpdatedAt) : 0;
@@ -135,8 +137,8 @@ export default function Home() {
             instagramStatus: fresh.instagramStatus,
             ...(fresh.followers != null && freshTime > savedTime ? { followers: fresh.followers, followersUpdatedAt: fresh.followersUpdatedAt } : {}),
           };
-        });
-        const savedIds = new Set(saved.map((item) => item.id));
+          });
+        const savedIds = new Set(merged.map((item) => item.id));
         setCompetitors([...merged, ...(seedData as Competitor[]).filter((item) => !savedIds.has(item.id))]);
       }
     } catch {

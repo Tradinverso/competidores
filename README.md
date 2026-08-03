@@ -25,6 +25,8 @@ Los datos de trabajo se guardan localmente en el navegador. Los CSV se almacenan
 
 Los seguidores de Instagram se comprobaron desde una sesión autenticada el 3 de agosto de 2026. El archivo `data/instagram-followers-2026-08-03.json` conserva el resultado y distingue cifras válidas, cuentas no disponibles y contadores no localizados.
 
+Las cuentas que inicialmente dieron error se buscaron de nuevo en Instagram. Se conservaron únicamente las coincidencias claras relacionadas con trading, se corrigieron sus nombres de usuario cuando fue necesario y se eliminaron las cuentas inexistentes, ambiguas o ajenas al sector. El detalle queda registrado en `data/instagram-cleanup-2026-08-03.json`.
+
 ## Fuente inicial
 
 La primera carga se generó desde `data/competencia-original.xlsx`. No se importaron las columnas de avatar, seguimiento propio ni verificación.
