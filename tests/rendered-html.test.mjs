@@ -32,7 +32,7 @@ test("renderiza el radar actualizado", async () => {
 test("mantiene la lista limpia y el orden prioritario", async () => {
   const seed = JSON.parse(await readFile(new URL("../app/data/seed.json", import.meta.url), "utf8"));
   const expectedTop = [
-    "fxtrading.lab", "alexruizn7", "tradeando", "enrique.vv", "merytrader212",
+    "fxtrading.lab", "alexosorio.fx", "alexruizn7", "tradeando", "enrique.vv", "merytrader212",
     "fondeapro", "belikethealgo", "traderlabcaademy", "sr.machadofx", "elsensei",
     "senseiprofe", "jacko_fxc", "amandix.fx", "alekayfx",
   ];
@@ -53,5 +53,6 @@ test("elimina perfiles retirados sin borrar altas manuales", async () => {
   for (const source of [page, dashboard]) {
     assert.match(source, /freshById\.has\(item\.id\) \|\| item\.source === "Añadido manualmente"/);
     assert.match(source, /new Set\(merged\.map/);
+    assert.match(source, /SEED_ORDER_MIGRATION_KEY/);
   }
 });

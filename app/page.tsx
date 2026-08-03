@@ -31,6 +31,7 @@ type Competitor = {
 };
 
 const STORAGE_KEY = "radar-competidores-v1";
+const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-alex-osorio";
 const priorities: Priority[] = ["Crítica", "Alta", "Media", "Baja"];
 const priorityWeight: Record<Priority, number> = { Crítica: 0, Alta: 1, Media: 2, Baja: 3 };
 
@@ -139,7 +140,18 @@ export default function Home() {
           };
           });
         const savedIds = new Set(merged.map((item) => item.id));
-        setCompetitors([...merged, ...(seedData as Competitor[]).filter((item) => !savedIds.has(item.id))]);
+        let next = [...merged, ...(seedData as Competitor[]).filter((item) => !savedIds.has(item.id))];
+        if (localStorage.getItem(SEED_ORDER_MIGRATION_KEY) !== "done") {
+          next = next
+            .sort((a, b) => (freshById.get(a.id)?.manualOrder ?? Number.MAX_SAFE_INTEGER) - (freshById.get(b.id)?.manualOrder ?? Number.MAX_SAFE_INTEGER))
+            .map((item, index) => ({
+              ...item,
+              priority: freshById.get(item.id)?.priority ?? item.priority,
+              manualOrder: index + 1,
+            }));
+          localStorage.setItem(SEED_ORDER_MIGRATION_KEY, "done");
+        }
+        setCompetitors(next);
       }
     } catch {
       setToast("No se pudo recuperar la copia local. Se han cargado los datos iniciales.");

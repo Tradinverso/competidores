@@ -2,6 +2,7 @@
   "use strict";
 
   const STORAGE_KEY = "radar-competidores-github-v1";
+  const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-alex-osorio";
   const priorities = ["Crítica", "Alta", "Media", "Baja"];
   const priorityWeight = { "Crítica": 0, "Alta": 1, "Media": 2, "Baja": 3 };
   let competitors = loadData();
@@ -38,7 +39,14 @@
         return { ...item, instagramStatus: fresh.instagramStatus, ...(fresh.followers != null && freshTime > savedTime ? { followers: fresh.followers, followersUpdatedAt: fresh.followersUpdatedAt } : {}) };
         });
       const savedIds = new Set(merged.map(item => item.id));
-      return [...merged, ...seed.filter(item => !savedIds.has(item.id))];
+      let next = [...merged, ...seed.filter(item => !savedIds.has(item.id))];
+      if (localStorage.getItem(SEED_ORDER_MIGRATION_KEY) !== "done") {
+        next = next
+          .sort((a, b) => (freshById.get(a.id)?.manualOrder ?? Number.MAX_SAFE_INTEGER) - (freshById.get(b.id)?.manualOrder ?? Number.MAX_SAFE_INTEGER))
+          .map((item, index) => ({ ...item, priority: freshById.get(item.id)?.priority ?? item.priority, manualOrder: index + 1 }));
+        localStorage.setItem(SEED_ORDER_MIGRATION_KEY, "done");
+      }
+      return next;
     } catch (_) {
       return structuredClone(window.SEED_COMPETITORS || []);
     }

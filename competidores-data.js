@@ -16,6 +16,22 @@ window.SEED_COMPETITORS = [
     "instagramStatus": "ok"
   },
   {
+    "id": "ig-alexosorio.fx",
+    "name": "Alexander Osorio",
+    "username": "alexosorio.fx",
+    "instagramUrl": "https://www.instagram.com/alexosorio.fx/",
+    "youtubeUrl": "",
+    "priority": "Crítica",
+    "followers": 81588,
+    "followersUpdatedAt": "2026-08-03T08:46:33.793Z",
+    "studied": false,
+    "notes": "",
+    "source": "Excel original",
+    "mailerfind": null,
+    "manualOrder": 2,
+    "instagramStatus": "ok"
+  },
+  {
     "id": "ig-alexruizn7",
     "name": "Alex Ruiz",
     "username": "alexruizn7",
@@ -28,7 +44,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 2,
+    "manualOrder": 3,
     "instagramStatus": "ok"
   },
   {
@@ -44,7 +60,7 @@ window.SEED_COMPETITORS = [
     "notes": "landing page",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 3,
+    "manualOrder": 4,
     "instagramStatus": "ok"
   },
   {
@@ -60,7 +76,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Añadido prioritario",
     "mailerfind": null,
-    "manualOrder": 4,
+    "manualOrder": 5,
     "instagramStatus": "ok"
   },
   {
@@ -76,7 +92,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 5,
+    "manualOrder": 6,
     "instagramStatus": "ok"
   },
   {
@@ -92,7 +108,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 6,
+    "manualOrder": 7,
     "instagramStatus": "ok"
   },
   {
@@ -108,7 +124,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 7,
+    "manualOrder": 8,
     "instagramStatus": "ok"
   },
   {
@@ -124,7 +140,7 @@ window.SEED_COMPETITORS = [
     "notes": "referencia testiomonios · BUENOS CARRUSELES · PAGINA WED ACADEMIA",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 8,
+    "manualOrder": 9,
     "instagramStatus": "ok"
   },
   {
@@ -140,7 +156,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 9,
+    "manualOrder": 10,
     "instagramStatus": "ok"
   },
   {
@@ -156,7 +172,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 10,
+    "manualOrder": 11,
     "instagramStatus": "ok"
   },
   {
@@ -172,7 +188,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 11,
+    "manualOrder": 12,
     "instagramStatus": "ok"
   },
   {
@@ -189,7 +205,7 @@ window.SEED_COMPETITORS = [
     "source": "Añadido prioritario",
     "mailerfind": null,
     "instagramStatus": "ok",
-    "manualOrder": 12
+    "manualOrder": 13
   },
   {
     "id": "ig-amandix.fx",
@@ -205,7 +221,7 @@ window.SEED_COMPETITORS = [
     "source": "Añadido prioritario",
     "mailerfind": null,
     "instagramStatus": "ok",
-    "manualOrder": 13
+    "manualOrder": 14
   },
   {
     "id": "ig-alekayfx",
@@ -220,7 +236,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 14,
+    "manualOrder": 15,
     "instagramStatus": "ok"
   },
   {
@@ -236,7 +252,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 15,
+    "manualOrder": 16,
     "instagramStatus": "ok"
   },
   {
@@ -252,7 +268,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 16,
+    "manualOrder": 17,
     "instagramStatus": "ok"
   },
   {
@@ -268,7 +284,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 17,
+    "manualOrder": 18,
     "instagramStatus": "ok"
   },
   {
@@ -284,7 +300,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 18,
+    "manualOrder": 19,
     "instagramStatus": "ok"
   },
   {
@@ -300,7 +316,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 19,
+    "manualOrder": 20,
     "instagramStatus": "ok"
   },
   {
@@ -316,7 +332,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 20,
+    "manualOrder": 21,
     "instagramStatus": "ok"
   },
   {
@@ -332,7 +348,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 21,
+    "manualOrder": 22,
     "instagramStatus": "ok"
   },
   {
@@ -348,7 +364,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 22,
+    "manualOrder": 23,
     "instagramStatus": "ok"
   },
   {
@@ -364,7 +380,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 23,
+    "manualOrder": 24,
     "instagramStatus": "ok"
   },
   {
@@ -380,7 +396,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 24,
+    "manualOrder": 25,
     "instagramStatus": "ok"
   },
   {
@@ -396,7 +412,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 25,
+    "manualOrder": 26,
     "instagramStatus": "ok"
   },
   {
@@ -412,7 +428,7 @@ window.SEED_COMPETITORS = [
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 26,
+    "manualOrder": 27,
     "instagramStatus": "ok"
   },
   {
@@ -423,22 +439,6 @@ window.SEED_COMPETITORS = [
     "youtubeUrl": "",
     "priority": "Baja",
     "followers": 108327,
-    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
-    "studied": false,
-    "notes": "",
-    "source": "Excel original",
-    "mailerfind": null,
-    "manualOrder": 27,
-    "instagramStatus": "ok"
-  },
-  {
-    "id": "ig-alexosorio.fx",
-    "name": "Alexander Osorio",
-    "username": "alexosorio.fx",
-    "instagramUrl": "https://www.instagram.com/alexosorio.fx/",
-    "youtubeUrl": "",
-    "priority": "Baja",
-    "followers": 81588,
     "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
