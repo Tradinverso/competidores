@@ -19,6 +19,7 @@
   let competitors = loadData();
   let expandedId = null;
   let visibleCount = 40;
+  let draggedCompetitorId = null;
 
   const elements = {
     list: document.getElementById("competitorList"),
@@ -218,7 +219,7 @@
       .filter(item => elements.priority.value === "Todas" || item.priority === elements.priority.value)
       .filter(item => {
         if (elements.status.value === "Pendientes") return !item.studied;
-        if (elements.status.value === "Estudiados") return item.studied;
+        if (elements.status.value === "Información extraída") return item.studied;
         if (elements.status.value === "Con CSV") return Boolean(item.mailerfind);
         if (elements.status.value === "Sin CSV") return !item.mailerfind;
         return true;
@@ -272,7 +273,12 @@
     const profileClose = instagram ? "</a>" : "</span>";
     const channelToggle = (channel, label) => `<label class="campaignToggle" title="${label}"><input type="checkbox" data-action="channel" data-channel="${channel}" data-id="${item.id}"${channels[channel] ? " checked" : ""} /><span>${label}</span></label>`;
 
-    return `<article class="competitor${item.studied ? " isStudied" : ""}" data-id="${item.id}">
+    const statusCell = `<div class="statusCell">
+      <label class="studiedToggle"><input type="checkbox" data-action="studied" data-id="${item.id}"${item.studied ? " checked" : ""} /><span>Info extraída</span></label>
+      <label class="studiedToggle campaignSentToggle"><input type="checkbox" data-action="campaign-sent" data-id="${item.id}"${item.campaignSent ? " checked" : ""} /><span>Campaña</span></label>
+    </div>`;
+
+    return `<article class="competitor${item.studied ? " isStudied" : ""}" data-id="${item.id}" draggable="${elements.sort.value === "manual"}">
       <div class="competitorRow">
         <div class="orderCell"><strong>${item.manualOrder}</strong><span class="moveButtons"><button data-action="up" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↑</button><button data-action="down" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↓</button></span></div>
         <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span>${profile}<span><strong>${escapeHtml(item.name)}</strong><small>${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span>${profileClose}</div>
@@ -282,7 +288,7 @@
         ${channelToggle("traffic", "Tráfico")}
         ${channelToggle("vsl", "VSL")}
         ${csvState}
-        <label class="studiedToggle"><input type="checkbox" data-action="studied" data-id="${item.id}"${item.studied ? " checked" : ""} /><span>${item.studied ? "Estudiado" : "Pendiente"}</span></label>
+        ${statusCell}
         <button class="expandButton" data-action="expand" data-id="${item.id}" type="button">${open ? "×" : "•••"}</button>
       </div>
       ${open ? `<div class="detailsPanel">
@@ -314,6 +320,19 @@
     ordered[index].manualOrder = ordered[target].manualOrder;
     ordered[target].manualOrder = order;
     competitors = ordered.sort((a, b) => a.manualOrder - b.manualOrder);
+    saveData();
+    render();
+  }
+
+  function moveToPosition(id, targetId) {
+    if (id === targetId) return;
+    const ordered = [...competitors].sort((a, b) => a.manualOrder - b.manualOrder);
+    const from = ordered.findIndex(item => item.id === id);
+    const to = ordered.findIndex(item => item.id === targetId);
+    if (from < 0 || to < 0) return;
+    const [item] = ordered.splice(from, 1);
+    ordered.splice(to, 0, item);
+    competitors = ordered.map((candidate, index) => ({ ...candidate, manualOrder: index + 1 }));
     saveData();
     render();
   }
@@ -430,12 +449,52 @@
     }
   });
 
+  elements.list.addEventListener("dragstart", event => {
+    const row = event.target.closest(".competitor[draggable='true']");
+    if (!row) return;
+    draggedCompetitorId = row.dataset.id;
+    event.dataTransfer.effectAllowed = "move";
+    row.classList.add("isDragging");
+  });
+
+  elements.list.addEventListener("dragover", event => {
+    const row = event.target.closest(".competitor[draggable='true']");
+    if (!row || !draggedCompetitorId || row.dataset.id === draggedCompetitorId) return;
+    event.preventDefault();
+    row.classList.add("isDropTarget");
+  });
+
+  elements.list.addEventListener("dragleave", event => {
+    event.target.closest(".competitor")?.classList.remove("isDropTarget");
+  });
+
+  elements.list.addEventListener("dragend", event => {
+    event.target.closest(".competitor")?.classList.remove("isDragging");
+    elements.list.querySelectorAll(".isDropTarget").forEach(row => row.classList.remove("isDropTarget"));
+    draggedCompetitorId = null;
+  });
+
+  elements.list.addEventListener("drop", event => {
+    const row = event.target.closest(".competitor[draggable='true']");
+    if (!row || !draggedCompetitorId) return;
+    event.preventDefault();
+    moveToPosition(draggedCompetitorId, row.dataset.id);
+  });
+
   elements.list.addEventListener("change", async event => {
     const target = event.target;
     const id = target.dataset.id;
     if (!id) return;
     if (target.dataset.action === "priority") update(id, { priority: target.value });
     if (target.dataset.action === "studied") update(id, { studied: target.checked });
+    if (target.dataset.action === "campaign-sent") {
+      const item = competitors.find(candidate => candidate.id === id);
+      if (target.checked && !item?.studied) {
+        target.checked = false;
+        return notify("Primero marca la información como extraída.");
+      }
+      update(id, { campaignSent: target.checked });
+    }
     if (target.dataset.action === "channel") {
       const item = competitors.find(candidate => candidate.id === id);
       update(id, { channels: { ...(item?.channels || {}), [target.dataset.channel]: target.checked } });
@@ -476,7 +535,7 @@
     const instagramUrl = document.getElementById("newInstagram").value.trim();
     const username = (instagramUrl.match(/instagram\.com\/([^/?#]+)/i) || [])[1] || "";
     const id = `manual-${Date.now()}`;
-    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, notes: "", channels: { email: false, traffic: false, vsl: false }, source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
+    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, campaignSent: false, notes: "", channels: { email: false, traffic: false, vsl: false }, source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
     saveData();
     elements.addForm.reset();
     elements.dialog.close();
