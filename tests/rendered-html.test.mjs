@@ -34,9 +34,10 @@ test("renderiza el radar actualizado", async () => {
 test("mantiene la lista limpia y el orden prioritario", async () => {
   const seed = JSON.parse(await readFile(new URL("../app/data/seed.json", import.meta.url), "utf8"));
   const expectedTop = [
-    "fxtrading.lab", "alexosorio.fx", "alexruizn7", "tradinglab.es", "maldotrading", "tradeando", "enrique.vv", "merytrader212",
-    "fondeapro", "belikethealgo", "traderlabcaademy", "sr.machadofx", "elsensei",
-    "senseiprofe", "jacko_fxc", "amandix.fx", "alekayfx",
+    "alexruizn7", "tradinglab.es", "tradeando", "enrique.vv", "traderlabcaademy",
+    "sr.machadofx", "amandix.fx", "merytrader212", "fondeapro", "fxtrading.lab",
+    "alexosorio.fx", "maldotrading", "belikethealgo", "elsensei", "senseiprofe",
+    "jacko_fxc", "alekayfx",
   ];
 
   assert.equal(seed.length, 282);

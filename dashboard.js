@@ -2,7 +2,7 @@
   "use strict";
 
   const STORAGE_KEY = "radar-competidores-github-v1";
-  const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-tradinglab-maldo";
+  const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const priorities = ["Crítica", "Alta", "Media", "Baja"];
   const priorityWeight = { "Crítica": 0, "Alta": 1, "Media": 2, "Baja": 3 };
   let competitors = loadData();
