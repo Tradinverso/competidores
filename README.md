@@ -23,6 +23,8 @@ Para publicarla en GitHub, sube el contenido de esta carpeta a un repositorio y 
 
 Los datos de trabajo se guardan localmente en el navegador. Los CSV se almacenan en el mismo dispositivo mediante el almacenamiento interno del navegador.
 
+Los seguidores de Instagram se comprobaron desde una sesión autenticada el 3 de agosto de 2026. El archivo `data/instagram-followers-2026-08-03.json` conserva el resultado y distingue cifras válidas, cuentas no disponibles y contadores no localizados.
+
 ## Fuente inicial
 
 La primera carga se generó desde `data/competencia-original.xlsx`. No se importaron las columnas de avatar, seguimiento propio ni verificación.

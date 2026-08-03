@@ -27,6 +27,7 @@ type Competitor = {
   source: string;
   mailerfind: MailerfindMeta | null;
   manualOrder: number;
+  instagramStatus?: "ok" | "unavailable" | "not_found" | "missing_url" | "not_checked";
 };
 
 const STORAGE_KEY = "radar-competidores-v1";
@@ -121,7 +122,23 @@ export default function Home() {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setCompetitors(JSON.parse(stored));
+      if (stored) {
+        const saved = JSON.parse(stored) as Competitor[];
+        const freshById = new Map((seedData as Competitor[]).map((item) => [item.id, item]));
+        const merged = saved.map((item) => {
+          const fresh = freshById.get(item.id);
+          if (!fresh) return item;
+          const freshTime = fresh.followersUpdatedAt ? Date.parse(fresh.followersUpdatedAt) : 0;
+          const savedTime = item.followersUpdatedAt ? Date.parse(item.followersUpdatedAt) : 0;
+          return {
+            ...item,
+            instagramStatus: fresh.instagramStatus,
+            ...(fresh.followers != null && freshTime > savedTime ? { followers: fresh.followers, followersUpdatedAt: fresh.followersUpdatedAt } : {}),
+          };
+        });
+        const savedIds = new Set(saved.map((item) => item.id));
+        setCompetitors([...merged, ...(seedData as Competitor[]).filter((item) => !savedIds.has(item.id))]);
+      }
     } catch {
       setToast("No se pudo recuperar la copia local. Se han cargado los datos iniciales.");
     }
@@ -203,6 +220,7 @@ export default function Home() {
       source: "Añadido manualmente",
       mailerfind: null,
       manualOrder: current.length + 1,
+      instagramStatus: "not_checked",
     }]);
     setNewItem({ name: "", instagramUrl: "", youtubeUrl: "", priority: "Media" });
     setShowAdd(false);
@@ -354,7 +372,7 @@ export default function Home() {
                   <select className={`prioritySelect priority-${competitor.priority.toLowerCase()}`} value={competitor.priority} onChange={(event) => updateCompetitor(competitor.id, { priority: event.target.value as Priority })} aria-label={`Prioridad de ${competitor.name}`}>
                     {priorities.map((priority) => <option key={priority}>{priority}</option>)}
                   </select>
-                  <button className="followersButton" onClick={() => setExpandedId(expandedId === competitor.id ? null : competitor.id)}>{formatFollowers(competitor.followers)}<small>{competitor.followersUpdatedAt ? "actualizado" : "añadir dato"}</small></button>
+                  <button className="followersButton" onClick={() => setExpandedId(expandedId === competitor.id ? null : competitor.id)}>{competitor.instagramStatus === "unavailable" ? "No disponible" : competitor.instagramStatus === "missing_url" ? "Sin URL" : formatFollowers(competitor.followers)}<small>{competitor.followersUpdatedAt ? "Instagram · 03 ago" : competitor.instagramStatus === "not_found" ? "contador no visible" : "revisar perfil"}</small></button>
                   <span className={`csvState ${competitor.mailerfind ? "ready" : ""}`}>{competitor.mailerfind ? <><b>✓</b><span>{competitor.mailerfind.rows} registros<small>{competitor.mailerfind.fileName}</small></span></> : <><b>＋</b><span>Sin CSV<small>pendiente</small></span></>}</span>
                   <label className="studiedToggle"><input type="checkbox" checked={competitor.studied} onChange={(event) => updateCompetitor(competitor.id, { studied: event.target.checked })} /><span>{competitor.studied ? "Estudiado" : "Pendiente"}</span></label>
                   <button className="expandButton" onClick={() => setExpandedId(expandedId === competitor.id ? null : competitor.id)} aria-expanded={expandedId === competitor.id}>{expandedId === competitor.id ? "×" : "•••"}</button>

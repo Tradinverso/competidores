@@ -6,13 +6,14 @@
     "instagramUrl": "https://www.instagram.com/fxtrading.lab/",
     "youtubeUrl": "https://www.youtube.com/@InstitucionalTradingLab",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 71320,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "lading page",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 1
+    "manualOrder": 1,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alexruizn7",
@@ -21,13 +22,14 @@
     "instagramUrl": "https://www.instagram.com/alexruizn7/",
     "youtubeUrl": "",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 113801,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 2
+    "manualOrder": 2,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradeando",
@@ -36,13 +38,14 @@
     "instagramUrl": "https://www.instagram.com/tradeando/",
     "youtubeUrl": "",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 123861,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "landing page",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 3
+    "manualOrder": 3,
+    "instagramStatus": "ok"
   },
   {
     "id": "manual-enrique-moris",
@@ -57,7 +60,8 @@
     "notes": "Perfil pendiente de confirmar",
     "source": "Prioridad indicada",
     "mailerfind": null,
-    "manualOrder": 4
+    "manualOrder": 4,
+    "instagramStatus": "missing_url"
   },
   {
     "id": "ig-merytrader212",
@@ -66,13 +70,14 @@
     "instagramUrl": "https://www.instagram.com/merytrader212/",
     "youtubeUrl": "",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 863,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 5
+    "manualOrder": 5,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fondeapro",
@@ -81,13 +86,14 @@
     "instagramUrl": "https://www.instagram.com/fondeapro/",
     "youtubeUrl": "",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7654,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 6
+    "manualOrder": 6,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-belikethealgo",
@@ -96,13 +102,14 @@
     "instagramUrl": "https://www.instagram.com/belikethealgo/",
     "youtubeUrl": "https://www.youtube.com/@BELIKETHEALGO",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 38359,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 7
+    "manualOrder": 7,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-traderlabacademy",
@@ -117,7 +124,8 @@
     "notes": "referencia testiomonios · BUENOS CARRUSELES · PAGINA WED ACADEMIA",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 8
+    "manualOrder": 8,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-sr.machadofx",
@@ -126,13 +134,14 @@
     "instagramUrl": "https://www.instagram.com/sr.machadofx/",
     "youtubeUrl": "https://www.youtube.com/@sr.machadofx",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 31675,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 9
+    "manualOrder": 9,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-elsensei",
@@ -141,13 +150,14 @@
     "instagramUrl": "https://www.instagram.com/elsensei/",
     "youtubeUrl": "",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 957293,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 10
+    "manualOrder": 10,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-senseiprofe",
@@ -156,13 +166,14 @@
     "instagramUrl": "https://www.instagram.com/senseiprofe/",
     "youtubeUrl": "",
     "priority": "Crítica",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 320276,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 11
+    "manualOrder": 11,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-joellfx",
@@ -177,7 +188,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 12
+    "manualOrder": 12,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-mykeefx",
@@ -186,13 +198,14 @@
     "instagramUrl": "https://www.instagram.com/mykeefx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1729,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 13
+    "manualOrder": 13,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mdta.academy",
@@ -201,13 +214,14 @@
     "instagramUrl": "https://www.instagram.com/mdta.academy/",
     "youtubeUrl": "https://www.youtube.com/@MDTAcademy",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 14260,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 14
+    "manualOrder": 14,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ictfinatic",
@@ -216,13 +230,14 @@
     "instagramUrl": "https://www.instagram.com/ictfinatic/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 82179,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 15
+    "manualOrder": 15,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-diamantcapital",
@@ -237,7 +252,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 16
+    "manualOrder": 16,
+    "instagramStatus": "not_found"
   },
   {
     "id": "ig-francisco.trading",
@@ -246,13 +262,14 @@
     "instagramUrl": "https://www.instagram.com/francisco.trading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 69564,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 17
+    "manualOrder": 17,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-leoveratrader",
@@ -261,13 +278,14 @@
     "instagramUrl": "https://www.instagram.com/leoveratrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 300915,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 18
+    "manualOrder": 18,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-byron.trader",
@@ -276,13 +294,14 @@
     "instagramUrl": "https://www.instagram.com/byron.trader/",
     "youtubeUrl": "https://www.youtube.com/channel/UC7laHH6yrV5nG0nBzYfXg4g",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 14170,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 19
+    "manualOrder": 19,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-cryptofundtrader",
@@ -291,13 +310,14 @@
     "instagramUrl": "https://www.instagram.com/cryptofundtrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 45689,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 20
+    "manualOrder": 20,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ash10hz",
@@ -306,13 +326,14 @@
     "instagramUrl": "https://www.instagram.com/ash10hz/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2812,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 21
+    "manualOrder": 21,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tomasrosalll",
@@ -321,13 +342,14 @@
     "instagramUrl": "https://www.instagram.com/tomasrosalll/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 31154,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 22
+    "manualOrder": 22,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-swushtrading",
@@ -336,13 +358,14 @@
     "instagramUrl": "https://www.instagram.com/swushtrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 8673,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 23
+    "manualOrder": 23,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-danielholmestrades",
@@ -351,13 +374,14 @@
     "instagramUrl": "https://www.instagram.com/danielholmestrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 108327,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 24
+    "manualOrder": 24,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alexosorio.fx",
@@ -366,13 +390,14 @@
     "instagramUrl": "https://www.instagram.com/alexosorio.fx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 81588,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 25
+    "manualOrder": 25,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingsinfronteras",
@@ -381,13 +406,14 @@
     "instagramUrl": "https://www.instagram.com/tradingsinfronteras/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6306,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 26
+    "manualOrder": 26,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-sirpickle__",
@@ -396,13 +422,14 @@
     "instagramUrl": "https://www.instagram.com/sirpickle__/",
     "youtubeUrl": "https://www.youtube.com/@sirpickle_",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 101717,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 27
+    "manualOrder": 27,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fx.vdriixn",
@@ -417,7 +444,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 28
+    "manualOrder": 28,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-thesouproom_",
@@ -432,7 +460,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 29
+    "manualOrder": 29,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-trading.conmike",
@@ -441,13 +470,14 @@
     "instagramUrl": "https://www.instagram.com/trading.conmike/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3892,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 30
+    "manualOrder": 30,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-hamuziprime",
@@ -456,13 +486,14 @@
     "instagramUrl": "https://www.instagram.com/hamuziprime/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 278181,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 31
+    "manualOrder": 31,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-orangejuicetrading",
@@ -471,13 +502,14 @@
     "instagramUrl": "https://www.instagram.com/orangejuicetrading/",
     "youtubeUrl": "https://www.youtube.com/@orangejuicetrading/videos",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1704,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 32
+    "manualOrder": 32,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-javitfx",
@@ -486,13 +518,14 @@
     "instagramUrl": "https://www.instagram.com/javitfx/",
     "youtubeUrl": "https://www.youtube.com/@trading_alchemy",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3710,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 33
+    "manualOrder": 33,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-xauusd_alan",
@@ -507,7 +540,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 34
+    "manualOrder": 34,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-manfxtrade",
@@ -516,13 +550,14 @@
     "instagramUrl": "https://www.instagram.com/manfxtrade/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 57520,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 35
+    "manualOrder": 35,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-thejonescolin",
@@ -531,13 +566,14 @@
     "instagramUrl": "https://www.instagram.com/thejonescolin/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 153124,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 36
+    "manualOrder": 36,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-picadeus",
@@ -546,13 +582,14 @@
     "instagramUrl": "https://www.instagram.com/picadeus/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 22917,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 37
+    "manualOrder": 37,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jorttrades",
@@ -561,13 +598,14 @@
     "instagramUrl": "https://www.instagram.com/jorttrades/",
     "youtubeUrl": "https://www.youtube.com/@Jorttrades",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1687,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 38
+    "manualOrder": 38,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingmentormatch",
@@ -582,7 +620,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 39
+    "manualOrder": 39,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-manueltrading",
@@ -591,13 +630,14 @@
     "instagramUrl": "https://www.instagram.com/manueltrading/",
     "youtubeUrl": "https://www.youtube.com/@ManuelTrading",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 30263,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 40
+    "manualOrder": 40,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jkabrafx",
@@ -606,13 +646,14 @@
     "instagramUrl": "https://www.instagram.com/jkabrafx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 11463,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 41
+    "manualOrder": 41,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-rrbinvestors",
@@ -627,7 +668,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 42
+    "manualOrder": 42,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-ericarrillofx",
@@ -636,13 +678,14 @@
     "instagramUrl": "https://www.instagram.com/ericarrillofx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 22935,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 43
+    "manualOrder": 43,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-kevin.furest",
@@ -651,13 +694,14 @@
     "instagramUrl": "https://www.instagram.com/kevin.furest/",
     "youtubeUrl": "https://www.youtube.com/@Kevinfurest",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 31867,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 44
+    "manualOrder": 44,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-vulcano_trader",
@@ -666,13 +710,14 @@
     "instagramUrl": "https://www.instagram.com/vulcano_trader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2885,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 45
+    "manualOrder": 45,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-aymantrades",
@@ -681,13 +726,14 @@
     "instagramUrl": "https://www.instagram.com/aymantrades/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5002,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 46
+    "manualOrder": 46,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-extratrades_",
@@ -696,13 +742,14 @@
     "instagramUrl": "https://www.instagram.com/extratrades_/",
     "youtubeUrl": "https://www.youtube.com/watch",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 10700,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 47
+    "manualOrder": 47,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fxdsniper",
@@ -717,7 +764,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 48
+    "manualOrder": 48,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-atradez_",
@@ -732,7 +780,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 49
+    "manualOrder": 49,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-claudia.trades",
@@ -741,13 +790,14 @@
     "instagramUrl": "https://www.instagram.com/claudia.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 33155,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 50
+    "manualOrder": 50,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-octavia.trades",
@@ -756,13 +806,14 @@
     "instagramUrl": "https://www.instagram.com/octavia.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 82571,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 51
+    "manualOrder": 51,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-piero.trades",
@@ -771,13 +822,14 @@
     "instagramUrl": "https://www.instagram.com/piero.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 22310,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 52
+    "manualOrder": 52,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-latrades_",
@@ -786,13 +838,14 @@
     "instagramUrl": "https://www.instagram.com/latrades_/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6574,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 53
+    "manualOrder": 53,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fxfalconn",
@@ -801,13 +854,14 @@
     "instagramUrl": "https://www.instagram.com/fxfalconn/",
     "youtubeUrl": "https://www.youtube.com/@thefalcontrader",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1741,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 54
+    "manualOrder": 54,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-msnr.uz",
@@ -822,7 +876,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 55
+    "manualOrder": 55,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-trader_zed",
@@ -831,13 +886,14 @@
     "instagramUrl": "https://www.instagram.com/trader_zed/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 107988,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 56
+    "manualOrder": 56,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-marc_.ftr",
@@ -846,13 +902,14 @@
     "instagramUrl": "https://www.instagram.com/marc_.ftr/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 813,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 57
+    "manualOrder": 57,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-entre.traders",
@@ -861,13 +918,14 @@
     "instagramUrl": "https://www.instagram.com/entre.traders/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3329,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 58
+    "manualOrder": 58,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-orionfunded.es",
@@ -882,7 +940,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 59
+    "manualOrder": 59,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-fxtradewithpat",
@@ -891,13 +950,14 @@
     "instagramUrl": "https://www.instagram.com/fxtradewithpat/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 75938,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 60
+    "manualOrder": 60,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-avaltrades",
@@ -906,13 +966,14 @@
     "instagramUrl": "https://www.instagram.com/avaltrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 124411,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 61
+    "manualOrder": 61,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-nolimit.afl",
@@ -927,7 +988,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 62
+    "manualOrder": 62,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-ict.crt",
@@ -936,13 +998,14 @@
     "instagramUrl": "https://www.instagram.com/ict.crt/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 30882,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 63
+    "manualOrder": 63,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alexflamas_fx",
@@ -957,7 +1020,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 64
+    "manualOrder": 64,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-ameyali.orea",
@@ -972,7 +1036,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 65
+    "manualOrder": 65,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-silaskjerfx",
@@ -981,13 +1046,14 @@
     "instagramUrl": "https://www.instagram.com/silaskjerfx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 12432,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 66
+    "manualOrder": 66,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-asdtrades",
@@ -996,13 +1062,14 @@
     "instagramUrl": "https://www.instagram.com/asdtrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23827,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 67
+    "manualOrder": 67,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jordifoixench",
@@ -1011,13 +1078,14 @@
     "instagramUrl": "https://www.instagram.com/jordifoixench/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6845,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 68
+    "manualOrder": 68,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-miriampuntoele",
@@ -1026,13 +1094,14 @@
     "instagramUrl": "https://www.instagram.com/miriampuntoele/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 4447,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 69
+    "manualOrder": 69,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-miguelnavarro.es",
@@ -1041,13 +1110,14 @@
     "instagramUrl": "https://www.instagram.com/miguelnavarro.es/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 25094,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 70
+    "manualOrder": 70,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-wsfunded",
@@ -1062,7 +1132,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 71
+    "manualOrder": 71,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-eddieokafor_",
@@ -1071,13 +1142,14 @@
     "instagramUrl": "https://www.instagram.com/eddieokafor_/",
     "youtubeUrl": "https://www.youtube.com/@eddietrades1",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 72
+    "manualOrder": 72,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-trade.informator",
@@ -1092,7 +1164,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 73
+    "manualOrder": 73,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-astucefx",
@@ -1101,13 +1174,14 @@
     "instagramUrl": "https://www.instagram.com/astucefx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 81016,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 74
+    "manualOrder": 74,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fundedjp",
@@ -1116,13 +1190,14 @@
     "instagramUrl": "https://www.instagram.com/fundedjp/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 15505,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 75
+    "manualOrder": 75,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-sabevh_",
@@ -1131,13 +1206,14 @@
     "instagramUrl": "https://www.instagram.com/sabevh_/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 756,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 76
+    "manualOrder": 76,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradeifyfunding",
@@ -1146,13 +1222,14 @@
     "instagramUrl": "https://www.instagram.com/tradeifyfunding/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 68846,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 77
+    "manualOrder": 77,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-amas.pft",
@@ -1161,13 +1238,14 @@
     "instagramUrl": "https://www.instagram.com/amas.pft/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 35519,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 78
+    "manualOrder": 78,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-officialtraderjo",
@@ -1176,13 +1254,14 @@
     "instagramUrl": "https://www.instagram.com/officialtraderjo/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 31400,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 79
+    "manualOrder": 79,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-hundredacademy",
@@ -1191,13 +1270,14 @@
     "instagramUrl": "https://www.instagram.com/hundredacademy/",
     "youtubeUrl": "",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6520,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "https://www.instagram.com/ttcnetwork/ · https://www.instagram.com/thefundedrobot/ · EJEMPLO",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 80
+    "manualOrder": 80,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mr.valdes",
@@ -1206,13 +1286,14 @@
     "instagramUrl": "https://www.instagram.com/mr.valdes/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 185477,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 81
+    "manualOrder": 81,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-trade_withme999",
@@ -1227,7 +1308,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 82
+    "manualOrder": 82,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-thepipcollectorr",
@@ -1236,13 +1318,14 @@
     "instagramUrl": "https://www.instagram.com/thepipcollectorr/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 18534,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 83
+    "manualOrder": 83,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-gmatrading",
@@ -1251,13 +1334,14 @@
     "instagramUrl": "https://www.instagram.com/gmatrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1852,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 84
+    "manualOrder": 84,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-geraldcala",
@@ -1272,7 +1356,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 85
+    "manualOrder": 85,
+    "instagramStatus": "not_found"
   },
   {
     "id": "ig-lozano.fx",
@@ -1281,13 +1366,14 @@
     "instagramUrl": "https://www.instagram.com/lozano.fx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 13562,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 86
+    "manualOrder": 86,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ceejaylife",
@@ -1302,7 +1388,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 87
+    "manualOrder": 87,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-crespo.fx",
@@ -1311,13 +1398,14 @@
     "instagramUrl": "https://www.instagram.com/crespo.fx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1482,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 88
+    "manualOrder": 88,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-gpsotrader",
@@ -1326,13 +1414,14 @@
     "instagramUrl": "https://www.instagram.com/gpsotrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 56880,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 89
+    "manualOrder": 89,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-maldotrading",
@@ -1341,13 +1430,14 @@
     "instagramUrl": "https://www.instagram.com/maldotrading/",
     "youtubeUrl": "https://www.youtube.com/@maldotrading",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 10967,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 90
+    "manualOrder": 90,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-hiramedina.scalper",
@@ -1356,13 +1446,14 @@
     "instagramUrl": "https://www.instagram.com/hiramedina.scalper/",
     "youtubeUrl": "https://www.youtube.com/@Hiramedina.scalper",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 116835,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 91
+    "manualOrder": 91,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-psicologiaytrading",
@@ -1371,13 +1462,14 @@
     "instagramUrl": "https://www.instagram.com/psicologiaytrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 21277,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 92
+    "manualOrder": 92,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alphatraderfirm",
@@ -1386,13 +1478,14 @@
     "instagramUrl": "https://www.instagram.com/alphatraderfirm/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 77708,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 93
+    "manualOrder": 93,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-emmanuelfloppy",
@@ -1401,13 +1494,14 @@
     "instagramUrl": "https://www.instagram.com/emmanuelfloppy/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 25039,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 94
+    "manualOrder": 94,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-davidguerrero_93",
@@ -1416,13 +1510,14 @@
     "instagramUrl": "https://www.instagram.com/davidguerrero_93/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 271321,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 95
+    "manualOrder": 95,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-thetradingpool",
@@ -1431,13 +1526,14 @@
     "instagramUrl": "https://www.instagram.com/thetradingpool/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 129008,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 96
+    "manualOrder": 96,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-nq_talks",
@@ -1446,13 +1542,14 @@
     "instagramUrl": "https://www.instagram.com/nq_talks/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 24428,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 97
+    "manualOrder": 97,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ttcnetwork",
@@ -1467,7 +1564,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 98
+    "manualOrder": 98,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-leoxpurnell",
@@ -1482,7 +1580,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 99
+    "manualOrder": 99,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-interequitytrading",
@@ -1491,13 +1590,14 @@
     "instagramUrl": "https://www.instagram.com/interequitytrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 42071,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 100
+    "manualOrder": 100,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-liliane._zein",
@@ -1506,13 +1606,14 @@
     "instagramUrl": "https://www.instagram.com/liliane._zein/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 70103,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 101
+    "manualOrder": 101,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-frankz.trades",
@@ -1521,13 +1622,14 @@
     "instagramUrl": "https://www.instagram.com/frankz.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 10029,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 102
+    "manualOrder": 102,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-itsparis.89",
@@ -1536,13 +1638,14 @@
     "instagramUrl": "https://www.instagram.com/itsparis.89/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6407,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 103
+    "manualOrder": 103,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alex.sanixen",
@@ -1551,13 +1654,14 @@
     "instagramUrl": "https://www.instagram.com/alex.sanixen/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 69042,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 104
+    "manualOrder": 104,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-thefundedrobot.global",
@@ -1566,13 +1670,14 @@
     "instagramUrl": "https://www.instagram.com/thefundedrobot.global/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3466,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 105
+    "manualOrder": 105,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-viktor_ice",
@@ -1581,13 +1686,14 @@
     "instagramUrl": "https://www.instagram.com/viktor_ice/",
     "youtubeUrl": "https://www.youtube.com/@cryptoguyV",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 19962,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 106
+    "manualOrder": 106,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-stanfxofficial",
@@ -1602,7 +1708,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 107
+    "manualOrder": 107,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-nqmuros",
@@ -1611,13 +1718,14 @@
     "instagramUrl": "https://www.instagram.com/nqmuros/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7227,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 108
+    "manualOrder": 108,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-juandpaladines",
@@ -1626,13 +1734,14 @@
     "instagramUrl": "https://www.instagram.com/juandpaladines/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 69207,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 109
+    "manualOrder": 109,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-evertrader_crypto",
@@ -1647,7 +1756,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 110
+    "manualOrder": 110,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-dwx.trades",
@@ -1656,13 +1766,14 @@
     "instagramUrl": "https://www.instagram.com/dwx.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 8981,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 111
+    "manualOrder": 111,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-kaelhq007",
@@ -1677,7 +1788,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 112
+    "manualOrder": 112,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-sac.traders",
@@ -1686,13 +1798,14 @@
     "instagramUrl": "https://www.instagram.com/sac.traders/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 187589,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 113
+    "manualOrder": 113,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-rajabanks",
@@ -1701,13 +1814,14 @@
     "instagramUrl": "https://www.instagram.com/rajabanks/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 648885,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 114
+    "manualOrder": 114,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-arelisfx",
@@ -1716,13 +1830,14 @@
     "instagramUrl": "https://www.instagram.com/arelisfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 103011,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 115
+    "manualOrder": 115,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-gregorytrejo",
@@ -1731,13 +1846,14 @@
     "instagramUrl": "https://www.instagram.com/gregorytrejo/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 52714,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 116
+    "manualOrder": 116,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-carlosjara__",
@@ -1746,13 +1862,14 @@
     "instagramUrl": "https://www.instagram.com/carlosjara__/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 19419,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 117
+    "manualOrder": 117,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-juanespinal.trading",
@@ -1761,13 +1878,14 @@
     "instagramUrl": "https://www.instagram.com/juanespinal.trading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 30171,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 118
+    "manualOrder": 118,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mairowtrades",
@@ -1776,13 +1894,14 @@
     "instagramUrl": "https://www.instagram.com/mairowtrades/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5140,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 119
+    "manualOrder": 119,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mariolopezemprendedor",
@@ -1791,13 +1910,14 @@
     "instagramUrl": "https://www.instagram.com/mariolopezemprendedor/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3096,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 120
+    "manualOrder": 120,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-el_consejo_de_traders",
@@ -1806,13 +1926,14 @@
     "instagramUrl": "https://www.instagram.com/el_consejo_de_traders/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23434,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 121
+    "manualOrder": 121,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-pc.trader",
@@ -1821,13 +1942,14 @@
     "instagramUrl": "https://www.instagram.com/pc.trader/",
     "youtubeUrl": "https://www.youtube.com/@pctradersacademy/videos",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 51848,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 122
+    "manualOrder": 122,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tmacfutures",
@@ -1836,13 +1958,14 @@
     "instagramUrl": "https://www.instagram.com/tmacfutures/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 10511,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 123
+    "manualOrder": 123,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-esau.trades",
@@ -1851,13 +1974,14 @@
     "instagramUrl": "https://www.instagram.com/esau.trades/",
     "youtubeUrl": "https://www.youtube.com/channel/UCURSyHVAfJHi-tIRNRl6-iQ",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7874,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 124
+    "manualOrder": 124,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-thecurlytrader",
@@ -1866,13 +1990,14 @@
     "instagramUrl": "https://www.instagram.com/thecurlytrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 50052,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 125
+    "manualOrder": 125,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-elchamufx",
@@ -1887,7 +2012,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 126
+    "manualOrder": 126,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-zak.elga",
@@ -1896,13 +2022,14 @@
     "instagramUrl": "https://www.instagram.com/zak.elga/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 22227,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 127
+    "manualOrder": 127,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-traderdaye",
@@ -1911,13 +2038,14 @@
     "instagramUrl": "https://www.instagram.com/traderdaye/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 27339,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 128
+    "manualOrder": 128,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradermayne",
@@ -1926,13 +2054,14 @@
     "instagramUrl": "https://www.instagram.com/tradermayne/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23403,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 129
+    "manualOrder": 129,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-josht.fx",
@@ -1941,13 +2070,14 @@
     "instagramUrl": "https://www.instagram.com/josht.fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 46252,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 130
+    "manualOrder": 130,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-casper_smc",
@@ -1956,13 +2086,14 @@
     "instagramUrl": "https://www.instagram.com/casper_smc/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 580538,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 131
+    "manualOrder": 131,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-justkimmel",
@@ -1971,13 +2102,14 @@
     "instagramUrl": "https://www.instagram.com/justkimmel/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 47746,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 132
+    "manualOrder": 132,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-cryptobillions_",
@@ -1986,13 +2118,14 @@
     "instagramUrl": "https://www.instagram.com/cryptobillions_/",
     "youtubeUrl": "https://www.youtube.com/channel/UCwfuKaLLpRzGBLc1f5Kl_5A",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 36396,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 133
+    "manualOrder": 133,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-pomaxo",
@@ -2001,13 +2134,14 @@
     "instagramUrl": "https://www.instagram.com/pomaxo/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 11720,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 134
+    "manualOrder": 134,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-inviertecomoax",
@@ -2016,13 +2150,14 @@
     "instagramUrl": "https://www.instagram.com/inviertecomoax/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 167243,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 135
+    "manualOrder": 135,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alefloreztrader",
@@ -2031,13 +2166,14 @@
     "instagramUrl": "https://www.instagram.com/alefloreztrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 43499,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 136
+    "manualOrder": 136,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-andreeatrade",
@@ -2046,13 +2182,14 @@
     "instagramUrl": "https://www.instagram.com/andreeatrade/",
     "youtubeUrl": "https://youtube.com/watch",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 130785,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 137
+    "manualOrder": 137,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-melero.trades",
@@ -2067,7 +2204,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 138
+    "manualOrder": 138,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-jadtrades.nq",
@@ -2082,7 +2220,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 139
+    "manualOrder": 139,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-ricardo_skytrader",
@@ -2097,7 +2236,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 140
+    "manualOrder": 140,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-cere.fx",
@@ -2106,13 +2246,14 @@
     "instagramUrl": "https://www.instagram.com/cere.fx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2782,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 141
+    "manualOrder": 141,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ramsescalderon_",
@@ -2121,13 +2262,14 @@
     "instagramUrl": "https://www.instagram.com/ramsescalderon_/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 75486,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 142
+    "manualOrder": 142,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-chapotoofamous",
@@ -2136,13 +2278,14 @@
     "instagramUrl": "https://www.instagram.com/chapotoofamous/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 690746,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 143
+    "manualOrder": 143,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-calltrades",
@@ -2151,13 +2294,14 @@
     "instagramUrl": "https://www.instagram.com/calltrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 20443,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 144
+    "manualOrder": 144,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingforextv",
@@ -2166,13 +2310,14 @@
     "instagramUrl": "https://www.instagram.com/tradingforextv/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 20030,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 145
+    "manualOrder": 145,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-titanesdeltrading",
@@ -2187,7 +2332,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 146
+    "manualOrder": 146,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-theeurotrader1",
@@ -2196,13 +2342,14 @@
     "instagramUrl": "https://www.instagram.com/theeurotrader1/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5789,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 147
+    "manualOrder": 147,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-miguelangel.goldencapital",
@@ -2211,13 +2358,14 @@
     "instagramUrl": "https://www.instagram.com/miguelangel.goldencapital/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 96121,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 148
+    "manualOrder": 148,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-clutifx_",
@@ -2232,7 +2380,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 149
+    "manualOrder": 149,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-creative.trader",
@@ -2241,13 +2390,14 @@
     "instagramUrl": "https://www.instagram.com/creative.trader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 32549,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 150
+    "manualOrder": 150,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-iakashgul",
@@ -2256,13 +2406,14 @@
     "instagramUrl": "https://www.instagram.com/iakashgul/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 85663,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 151
+    "manualOrder": 151,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-huss.trades",
@@ -2271,13 +2422,14 @@
     "instagramUrl": "https://www.instagram.com/huss.trades/",
     "youtubeUrl": "https://www.youtube.com/@husstrades",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 38173,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 152
+    "manualOrder": 152,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-xauvictor",
@@ -2286,13 +2438,14 @@
     "instagramUrl": "https://www.instagram.com/xauvictor/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 31869,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 153
+    "manualOrder": 153,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ztradez_",
@@ -2301,13 +2454,14 @@
     "instagramUrl": "https://www.instagram.com/ztradez_/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 45282,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 154
+    "manualOrder": 154,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-bigchartrades",
@@ -2316,13 +2470,14 @@
     "instagramUrl": "https://www.instagram.com/bigchartrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 88152,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 155
+    "manualOrder": 155,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jacktradessss",
@@ -2331,13 +2486,14 @@
     "instagramUrl": "https://www.instagram.com/jacktradessss/",
     "youtubeUrl": "https://youtube.com/@Jacktradesofficial",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 131145,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 156
+    "manualOrder": 156,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tomcampcoaching",
@@ -2346,13 +2502,14 @@
     "instagramUrl": "https://www.instagram.com/tomcampcoaching/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 423312,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 157
+    "manualOrder": 157,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-sullysadvice",
@@ -2361,13 +2518,14 @@
     "instagramUrl": "https://www.instagram.com/sullysadvice/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2755,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 158
+    "manualOrder": 158,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-itstomtrades",
@@ -2376,13 +2534,14 @@
     "instagramUrl": "https://www.instagram.com/itstomtrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 183877,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 159
+    "manualOrder": 159,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-wannabechamp",
@@ -2391,13 +2550,14 @@
     "instagramUrl": "https://www.instagram.com/wannabechamp/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 261042,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 160
+    "manualOrder": 160,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-garland.trader",
@@ -2406,13 +2566,14 @@
     "instagramUrl": "https://www.instagram.com/garland.trader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 26563,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 161
+    "manualOrder": 161,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-_fxtoni",
@@ -2421,13 +2582,14 @@
     "instagramUrl": "https://www.instagram.com/_fxtoni/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2124,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 162
+    "manualOrder": 162,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-gstrades",
@@ -2436,13 +2598,14 @@
     "instagramUrl": "https://www.instagram.com/gstrades/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 46997,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 163
+    "manualOrder": 163,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-rhysdwilliams_",
@@ -2457,7 +2620,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 164
+    "manualOrder": 164,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-pbblake",
@@ -2466,13 +2630,14 @@
     "instagramUrl": "https://www.instagram.com/pbblake/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 144985,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 165
+    "manualOrder": 165,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tonimauraoficial",
@@ -2487,7 +2652,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 166
+    "manualOrder": 166,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-mrcruztribuinv",
@@ -2496,13 +2662,14 @@
     "instagramUrl": "https://www.instagram.com/mrcruztribuinv/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2468,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 167
+    "manualOrder": 167,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mfh_trading",
@@ -2511,13 +2678,14 @@
     "instagramUrl": "https://www.instagram.com/mfh_trading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 194,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 168
+    "manualOrder": 168,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-pedropk.fx",
@@ -2526,13 +2694,14 @@
     "instagramUrl": "https://www.instagram.com/pedropk.fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 410,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 169
+    "manualOrder": 169,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-juanditrade.xau",
@@ -2541,13 +2710,14 @@
     "instagramUrl": "https://www.instagram.com/juanditrade.xau/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 15332,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 170
+    "manualOrder": 170,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-elgallofx",
@@ -2556,13 +2726,14 @@
     "instagramUrl": "https://www.instagram.com/elgallofx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 38607,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 171
+    "manualOrder": 171,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-estebangoldfx",
@@ -2571,13 +2742,14 @@
     "instagramUrl": "https://www.instagram.com/estebangoldfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23957,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 172
+    "manualOrder": 172,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-anghietto",
@@ -2586,13 +2758,14 @@
     "instagramUrl": "https://www.instagram.com/anghietto/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 106318,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 173
+    "manualOrder": 173,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-stevencampazsc",
@@ -2601,13 +2774,14 @@
     "instagramUrl": "https://www.instagram.com/stevencampazsc/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 10175,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 174
+    "manualOrder": 174,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-chloectrades",
@@ -2616,13 +2790,14 @@
     "instagramUrl": "https://www.instagram.com/chloectrades/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 261513,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 175
+    "manualOrder": 175,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-thestrongtrader",
@@ -2631,13 +2806,14 @@
     "instagramUrl": "https://www.instagram.com/thestrongtrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 45252,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 176
+    "manualOrder": 176,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-aurusclubfx",
@@ -2652,7 +2828,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 177
+    "manualOrder": 177,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-matimauccione_ok",
@@ -2661,13 +2838,14 @@
     "instagramUrl": "https://www.instagram.com/matimauccione_ok/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 9755,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 178
+    "manualOrder": 178,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-ashleyruiz____",
@@ -2676,13 +2854,14 @@
     "instagramUrl": "https://www.instagram.com/ashleyruiz____/",
     "youtubeUrl": "https://www.youtube.com/@Ashleyruiztrades/featured",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 22246,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 179
+    "manualOrder": 179,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-davetraderfx",
@@ -2691,13 +2870,14 @@
     "instagramUrl": "https://www.instagram.com/davetraderfx/",
     "youtubeUrl": "https://www.youtube.com/channel/UCdXspiaUZ-k6x1V9xkiUpUQ",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 9831,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 180
+    "manualOrder": 180,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-natttrades",
@@ -2706,13 +2886,14 @@
     "instagramUrl": "https://www.instagram.com/natttrades/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 147336,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 181
+    "manualOrder": 181,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-afrotraderfx",
@@ -2721,13 +2902,14 @@
     "instagramUrl": "https://www.instagram.com/afrotraderfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 59954,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 182
+    "manualOrder": 182,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-diegoaguirrefx",
@@ -2736,13 +2918,14 @@
     "instagramUrl": "https://www.instagram.com/diegoaguirrefx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 155821,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 183
+    "manualOrder": 183,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-josue.melero",
@@ -2751,13 +2934,14 @@
     "instagramUrl": "https://www.instagram.com/josue.melero/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 42579,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 184
+    "manualOrder": 184,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-santanafxpro",
@@ -2766,13 +2950,14 @@
     "instagramUrl": "https://www.instagram.com/santanafxpro/",
     "youtubeUrl": "https://www.youtube.com/channel/UCaDsWWGq7eZJEI1-6vZkNrQ",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 52514,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 185
+    "manualOrder": 185,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-kojoforex",
@@ -2781,13 +2966,14 @@
     "instagramUrl": "https://www.instagram.com/kojoforex/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 770022,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 186
+    "manualOrder": 186,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-astoldbyro",
@@ -2796,13 +2982,14 @@
     "instagramUrl": "https://www.instagram.com/astoldbyro/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 10830,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 187
+    "manualOrder": 187,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jmayo_trader",
@@ -2811,13 +2998,14 @@
     "instagramUrl": "https://www.instagram.com/jmayo_trader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1821,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 188
+    "manualOrder": 188,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-dcm_fx",
@@ -2826,13 +3014,14 @@
     "instagramUrl": "https://www.instagram.com/dcm_fx/",
     "youtubeUrl": "https://www.youtube.com/watch",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 36329,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 189
+    "manualOrder": 189,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-raulfxpro",
@@ -2841,13 +3030,14 @@
     "instagramUrl": "https://www.instagram.com/raulfxpro/",
     "youtubeUrl": "https://youtube.com/@raulfxpro",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 37733,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 190
+    "manualOrder": 190,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fxsergii",
@@ -2856,13 +3046,14 @@
     "instagramUrl": "https://www.instagram.com/fxsergii/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 9487,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 191
+    "manualOrder": 191,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-noctorial.hq",
@@ -2871,13 +3062,14 @@
     "instagramUrl": "https://www.instagram.com/noctorial.hq/",
     "youtubeUrl": "https://www.youtube.com/@NoctorialHQ",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 11476,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 192
+    "manualOrder": 192,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-the.real.trader.tom",
@@ -2886,13 +3078,14 @@
     "instagramUrl": "https://www.instagram.com/the.real.trader.tom/",
     "youtubeUrl": "https://www.youtube.com/@TraderTom",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 49739,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 193
+    "manualOrder": 193,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-matijtrader",
@@ -2901,13 +3094,14 @@
     "instagramUrl": "https://www.instagram.com/matijtrader/",
     "youtubeUrl": "https://youtube.com/playlist",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5371,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 194
+    "manualOrder": 194,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-algo_trader",
@@ -2922,7 +3116,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 195
+    "manualOrder": 195,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-jadecapofficial",
@@ -2931,13 +3126,14 @@
     "instagramUrl": "https://www.instagram.com/jadecapofficial/",
     "youtubeUrl": "https://www.youtube.com/@JadeCap",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 282820,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 196
+    "manualOrder": 196,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-matt_loeber",
@@ -2946,13 +3142,14 @@
     "instagramUrl": "https://www.instagram.com/matt_loeber/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 26357,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 197
+    "manualOrder": 197,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tanjatrades",
@@ -2961,13 +3158,14 @@
     "instagramUrl": "https://www.instagram.com/tanjatrades/",
     "youtubeUrl": "https://www.youtube.com/@tanjatrades",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 64063,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 198
+    "manualOrder": 198,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-emmitt.trades",
@@ -2976,13 +3174,14 @@
     "instagramUrl": "https://www.instagram.com/emmitt.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 14466,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 199
+    "manualOrder": 199,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mambafx",
@@ -2991,13 +3190,14 @@
     "instagramUrl": "https://www.instagram.com/mambafx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1120840,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 200
+    "manualOrder": 200,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-joovier_",
@@ -3006,13 +3206,14 @@
     "instagramUrl": "https://www.instagram.com/joovier_/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 421629,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 201
+    "manualOrder": 201,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-cristiantoledano94",
@@ -3021,13 +3222,14 @@
     "instagramUrl": "https://www.instagram.com/cristiantoledano94/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 8126,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 202
+    "manualOrder": 202,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-emigarcia.fx",
@@ -3036,13 +3238,14 @@
     "instagramUrl": "https://www.instagram.com/emigarcia.fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 14398,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 203
+    "manualOrder": 203,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-sheikonomics",
@@ -3051,13 +3254,14 @@
     "instagramUrl": "https://www.instagram.com/sheikonomics/",
     "youtubeUrl": "https://www.youtube.com/@joshgtrades",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 233,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 204
+    "manualOrder": 204,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-joshgtrades",
@@ -3066,13 +3270,14 @@
     "instagramUrl": "https://www.instagram.com/joshgtrades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 54359,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 205
+    "manualOrder": 205,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingconraulcastro",
@@ -3087,7 +3292,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 206
+    "manualOrder": 206,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-rp.profits",
@@ -3096,13 +3302,14 @@
     "instagramUrl": "https://www.instagram.com/rp.profits/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 376632,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 207
+    "manualOrder": 207,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-aj.currency",
@@ -3111,13 +3318,14 @@
     "instagramUrl": "https://www.instagram.com/aj.currency/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 480277,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 208
+    "manualOrder": 208,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-hale.trades",
@@ -3126,13 +3334,14 @@
     "instagramUrl": "https://www.instagram.com/hale.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 76605,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 209
+    "manualOrder": 209,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-elliott_traders",
@@ -3141,13 +3350,14 @@
     "instagramUrl": "https://www.instagram.com/elliott_traders/",
     "youtubeUrl": "",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2889,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "lading ig",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 210
+    "manualOrder": 210,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-noeliacrypto",
@@ -3156,13 +3366,14 @@
     "instagramUrl": "https://www.instagram.com/noeliacrypto/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 11072,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 211
+    "manualOrder": 211,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-plan.btc",
@@ -3171,13 +3382,14 @@
     "instagramUrl": "https://www.instagram.com/plan.btc/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 173401,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 212
+    "manualOrder": 212,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-klysstt",
@@ -3186,13 +3398,14 @@
     "instagramUrl": "https://www.instagram.com/klysstt/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 24134,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 213
+    "manualOrder": 213,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-heectrades",
@@ -3207,7 +3420,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 214
+    "manualOrder": 214,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-lorenztrader",
@@ -3216,13 +3430,14 @@
     "instagramUrl": "https://www.instagram.com/lorenztrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3091,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 215
+    "manualOrder": 215,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-scotttaylorfx",
@@ -3237,7 +3452,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 216
+    "manualOrder": 216,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-imfxdiego",
@@ -3246,13 +3462,14 @@
     "instagramUrl": "https://www.instagram.com/imfxdiego/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5039,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 217
+    "manualOrder": 217,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fxdiegod",
@@ -3261,13 +3478,14 @@
     "instagramUrl": "https://www.instagram.com/fxdiegod/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 52614,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 218
+    "manualOrder": 218,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mickeysmile_fx",
@@ -3282,7 +3500,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 219
+    "manualOrder": 219,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-danielgutierreztrading",
@@ -3291,13 +3510,14 @@
     "instagramUrl": "https://www.instagram.com/danielgutierreztrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23729,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 220
+    "manualOrder": 220,
+    "instagramStatus": "ok"
   },
   {
     "id": "academy-dreamersfx.academy",
@@ -3306,13 +3526,14 @@
     "instagramUrl": "https://www.instagram.com/dreamersfx.academy",
     "youtubeUrl": "",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 15553,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "lading ig",
     "source": "Hoja academias",
     "mailerfind": null,
-    "manualOrder": 221
+    "manualOrder": 221,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-kds.trades",
@@ -3321,13 +3542,14 @@
     "instagramUrl": "https://www.instagram.com/kds.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 12554,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 222
+    "manualOrder": 222,
+    "instagramStatus": "ok"
   },
   {
     "id": "academy-tradersenlaarena",
@@ -3336,13 +3558,14 @@
     "instagramUrl": "https://www.instagram.com/tradersenlaarena/",
     "youtubeUrl": "",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 233,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "lading ig",
     "source": "Hoja academias",
     "mailerfind": null,
-    "manualOrder": 223
+    "manualOrder": 223,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-oskar_giner",
@@ -3351,13 +3574,14 @@
     "instagramUrl": "https://www.instagram.com/oskar_giner/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5602,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 224
+    "manualOrder": 224,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mauristacks",
@@ -3366,13 +3590,14 @@
     "instagramUrl": "https://www.instagram.com/mauristacks/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 319280,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 225
+    "manualOrder": 225,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-geny.jr",
@@ -3387,7 +3612,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 226
+    "manualOrder": 226,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-santiagosimaleza",
@@ -3396,13 +3622,14 @@
     "instagramUrl": "https://www.instagram.com/santiagosimaleza/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 37650,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 227
+    "manualOrder": 227,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingconnery",
@@ -3411,13 +3638,14 @@
     "instagramUrl": "https://www.instagram.com/tradingconnery/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 30162,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 228
+    "manualOrder": 228,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-pjtradesnq",
@@ -3426,13 +3654,14 @@
     "instagramUrl": "https://www.instagram.com/pjtradesnq/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 244937,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 229
+    "manualOrder": 229,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fedeesses_",
@@ -3441,13 +3670,14 @@
     "instagramUrl": "https://www.instagram.com/fedeesses_/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 186912,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 230
+    "manualOrder": 230,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-estrategiasfx",
@@ -3462,7 +3692,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 231
+    "manualOrder": 231,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-sanchezzfx",
@@ -3471,13 +3702,14 @@
     "instagramUrl": "https://www.instagram.com/sanchezzfx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 21735,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 232
+    "manualOrder": 232,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-david.trullas",
@@ -3486,13 +3718,14 @@
     "instagramUrl": "https://www.instagram.com/david.trullas/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 13505,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 233
+    "manualOrder": 233,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-marc.fx1",
@@ -3501,13 +3734,14 @@
     "instagramUrl": "https://www.instagram.com/marc.fx1/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 85938,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 234
+    "manualOrder": 234,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fernando.rdv",
@@ -3516,13 +3750,14 @@
     "instagramUrl": "https://www.instagram.com/fernando.rdv/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 81614,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 235
+    "manualOrder": 235,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fxgerardgarcia",
@@ -3531,13 +3766,14 @@
     "instagramUrl": "https://www.instagram.com/fxgerardgarcia/",
     "youtubeUrl": "https://youtube.com/@gerardgarciafx",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 78491,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 236
+    "manualOrder": 236,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-santiamadofx",
@@ -3546,13 +3782,14 @@
     "instagramUrl": "https://www.instagram.com/santiamadofx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 60787,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 237
+    "manualOrder": 237,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-dovy.fx",
@@ -3561,13 +3798,14 @@
     "instagramUrl": "https://www.instagram.com/dovy.fx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 311246,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 238
+    "manualOrder": 238,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-goldtrader_dan",
@@ -3576,13 +3814,14 @@
     "instagramUrl": "https://www.instagram.com/goldtrader_dan/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 233559,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 239
+    "manualOrder": 239,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-swingtradinglab",
@@ -3597,7 +3836,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 240
+    "manualOrder": 240,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-willstreetlife",
@@ -3606,13 +3846,14 @@
     "instagramUrl": "https://www.instagram.com/willstreetlife/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 15203,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 241
+    "manualOrder": 241,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alesscolom",
@@ -3621,13 +3862,14 @@
     "instagramUrl": "https://www.instagram.com/alesscolom/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 425409,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 242
+    "manualOrder": 242,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-lucilapsicotrader",
@@ -3636,13 +3878,14 @@
     "instagramUrl": "https://www.instagram.com/lucilapsicotrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6204,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 243
+    "manualOrder": 243,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-aleix.andreu",
@@ -3651,13 +3894,14 @@
     "instagramUrl": "https://www.instagram.com/aleix.andreu/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 14237,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 244
+    "manualOrder": 244,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jdub_trades",
@@ -3666,13 +3910,14 @@
     "instagramUrl": "https://www.instagram.com/jdub_trades/",
     "youtubeUrl": "https://www.youtube.com/@JdubTrades",
     "priority": "Alta",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 104586,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 245
+    "manualOrder": 245,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fortheculturefx",
@@ -3681,13 +3926,14 @@
     "instagramUrl": "https://www.instagram.com/fortheculturefx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 21071,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 246
+    "manualOrder": 246,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-jaw_trades",
@@ -3696,13 +3942,14 @@
     "instagramUrl": "https://www.instagram.com/jaw_trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 47427,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 247
+    "manualOrder": 247,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-kaycapitals",
@@ -3711,13 +3958,14 @@
     "instagramUrl": "https://www.instagram.com/kaycapitals/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1338230,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 248
+    "manualOrder": 248,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradesbysci",
@@ -3726,13 +3974,14 @@
     "instagramUrl": "https://www.instagram.com/tradesbysci/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 473937,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 249
+    "manualOrder": 249,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alexlara.fx",
@@ -3741,13 +3990,14 @@
     "instagramUrl": "https://www.instagram.com/alexlara.fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7305,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 250
+    "manualOrder": 250,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-laloduke",
@@ -3762,7 +4012,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 251
+    "manualOrder": 251,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-mr_theviz",
@@ -3771,13 +4022,14 @@
     "instagramUrl": "https://www.instagram.com/mr_theviz/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1719,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 252
+    "manualOrder": 252,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-streamingtrading7",
@@ -3786,13 +4038,14 @@
     "instagramUrl": "https://www.instagram.com/streamingtrading7/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 29080,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 253
+    "manualOrder": 253,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-traderdivergent",
@@ -3801,13 +4054,14 @@
     "instagramUrl": "https://www.instagram.com/traderdivergent/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 151018,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 254
+    "manualOrder": 254,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-gorkafx",
@@ -3816,13 +4070,14 @@
     "instagramUrl": "https://www.instagram.com/gorkafx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 18951,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 255
+    "manualOrder": 255,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-luctrannn",
@@ -3831,13 +4086,14 @@
     "instagramUrl": "https://www.instagram.com/luctrannn/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 123356,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 256
+    "manualOrder": 256,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-dancheungfx",
@@ -3852,7 +4108,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 257
+    "manualOrder": 257,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-jaumemontfortfx",
@@ -3867,7 +4124,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 258
+    "manualOrder": 258,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-tradingwizard",
@@ -3876,13 +4134,14 @@
     "instagramUrl": "https://www.instagram.com/tradingwizard/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 162228,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 259
+    "manualOrder": 259,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-merlijnthetrader",
@@ -3897,7 +4156,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 260
+    "manualOrder": 260,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-edu_trades",
@@ -3906,13 +4166,14 @@
     "instagramUrl": "https://www.instagram.com/edu_trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23284,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 261
+    "manualOrder": 261,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingsinfiltros",
@@ -3921,13 +4182,14 @@
     "instagramUrl": "https://www.instagram.com/tradingsinfiltros/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1138,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 262
+    "manualOrder": 262,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-trader_sociologist",
@@ -3936,13 +4198,14 @@
     "instagramUrl": "https://www.instagram.com/trader_sociologist/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 78090,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 263
+    "manualOrder": 263,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mariellangsaez",
@@ -3951,13 +4214,14 @@
     "instagramUrl": "https://www.instagram.com/mariellangsaez/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 56554,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 264
+    "manualOrder": 264,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tania_palma92",
@@ -3966,13 +4230,14 @@
     "instagramUrl": "https://www.instagram.com/tania_palma92/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 3370,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 265
+    "manualOrder": 265,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-traderyeray",
@@ -3987,7 +4252,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 266
+    "manualOrder": 266,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-coso.fx",
@@ -3996,13 +4262,14 @@
     "instagramUrl": "https://www.instagram.com/coso.fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2650,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 267
+    "manualOrder": 267,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-secretosdetraders",
@@ -4011,13 +4278,14 @@
     "instagramUrl": "https://www.instagram.com/secretosdetraders/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1384,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 268
+    "manualOrder": 268,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradernovato24",
@@ -4026,13 +4294,14 @@
     "instagramUrl": "https://www.instagram.com/tradernovato24/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 22789,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 269
+    "manualOrder": 269,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingforexsp",
@@ -4041,13 +4310,14 @@
     "instagramUrl": "https://www.instagram.com/tradingforexsp/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 73135,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 270
+    "manualOrder": 270,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alan___luna",
@@ -4062,7 +4332,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 271
+    "manualOrder": 271,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-carlosdaza.trading",
@@ -4077,7 +4348,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 272
+    "manualOrder": 272,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-micaminodeltrader",
@@ -4086,13 +4358,14 @@
     "instagramUrl": "https://www.instagram.com/micaminodeltrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2162,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 273
+    "manualOrder": 273,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-advicefromtraders",
@@ -4101,13 +4374,14 @@
     "instagramUrl": "https://www.instagram.com/advicefromtraders/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 787900,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 274
+    "manualOrder": 274,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-trader.mamado",
@@ -4116,13 +4390,14 @@
     "instagramUrl": "https://www.instagram.com/trader.mamado/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1422,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 275
+    "manualOrder": 275,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-henry.tradesfx",
@@ -4137,7 +4412,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 276
+    "manualOrder": 276,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-samu.traderlife",
@@ -4152,7 +4428,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 277
+    "manualOrder": 277,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-alvaro__espinosa",
@@ -4161,13 +4438,14 @@
     "instagramUrl": "https://www.instagram.com/alvaro__espinosa/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 30903,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 278
+    "manualOrder": 278,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-slimp.trading",
@@ -4182,7 +4460,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 279
+    "manualOrder": 279,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-thetradingmemes",
@@ -4191,13 +4470,14 @@
     "instagramUrl": "https://www.instagram.com/thetradingmemes/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 257453,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 280
+    "manualOrder": 280,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-fxalexg",
@@ -4206,13 +4486,14 @@
     "instagramUrl": "https://www.instagram.com/fxalexg/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1615248,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 281
+    "manualOrder": 281,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingmanias",
@@ -4221,13 +4502,14 @@
     "instagramUrl": "https://www.instagram.com/tradingmanias/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 14183,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 282
+    "manualOrder": 282,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-chelopsicotrading",
@@ -4236,13 +4518,14 @@
     "instagramUrl": "https://www.instagram.com/chelopsicotrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 4004,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 283
+    "manualOrder": 283,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-pacopereztrading",
@@ -4257,7 +4540,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 284
+    "manualOrder": 284,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-propfirmkid",
@@ -4266,13 +4550,14 @@
     "instagramUrl": "https://www.instagram.com/propfirmkid/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 122938,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 285
+    "manualOrder": 285,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-rex_trader",
@@ -4281,13 +4566,14 @@
     "instagramUrl": "https://www.instagram.com/rex_trader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 6354,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 286
+    "manualOrder": 286,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-landerfx",
@@ -4296,13 +4582,14 @@
     "instagramUrl": "https://www.instagram.com/landerfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 8129,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 287
+    "manualOrder": 287,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-elcerebrodeltrader",
@@ -4311,13 +4598,14 @@
     "instagramUrl": "https://www.instagram.com/elcerebrodeltrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 28095,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 288
+    "manualOrder": 288,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-demonf.x",
@@ -4332,7 +4620,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 289
+    "manualOrder": 289,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-amntrading1",
@@ -4341,13 +4630,14 @@
     "instagramUrl": "https://www.instagram.com/amntrading1/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 145936,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 290
+    "manualOrder": 290,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-hobbiecode",
@@ -4356,13 +4646,14 @@
     "instagramUrl": "https://www.instagram.com/hobbiecode/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 164463,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 291
+    "manualOrder": 291,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-sergiovalerofx",
@@ -4377,7 +4668,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 292
+    "manualOrder": 292,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-magecmoreau.trading",
@@ -4386,13 +4678,14 @@
     "instagramUrl": "https://www.instagram.com/magecmoreau.trading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 13363,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 293
+    "manualOrder": 293,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradinglouisyt",
@@ -4401,13 +4694,14 @@
     "instagramUrl": "https://www.instagram.com/tradinglouisyt/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 110541,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 294
+    "manualOrder": 294,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-finans_trading",
@@ -4416,13 +4710,14 @@
     "instagramUrl": "https://www.instagram.com/finans_trading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 30707,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 295
+    "manualOrder": 295,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-trader_nocturno",
@@ -4431,13 +4726,14 @@
     "instagramUrl": "https://www.instagram.com/trader_nocturno/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 23779,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 296
+    "manualOrder": 296,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-anglerill.fx",
@@ -4446,13 +4742,14 @@
     "instagramUrl": "https://www.instagram.com/anglerill.fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7914,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 297
+    "manualOrder": 297,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-powell.trades",
@@ -4461,13 +4758,14 @@
     "instagramUrl": "https://www.instagram.com/powell.trades/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 101430,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 298
+    "manualOrder": 298,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-franciscaserranotrading",
@@ -4476,13 +4774,14 @@
     "instagramUrl": "https://www.instagram.com/franciscaserranotrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 59821,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 299
+    "manualOrder": 299,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-nduartetrader",
@@ -4491,13 +4790,14 @@
     "instagramUrl": "https://www.instagram.com/nduartetrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 7638,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 300
+    "manualOrder": 300,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-aaroncentelles",
@@ -4506,13 +4806,14 @@
     "instagramUrl": "https://www.instagram.com/aaroncentelles/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 5728,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 301
+    "manualOrder": 301,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-samu_sfx",
@@ -4521,13 +4822,14 @@
     "instagramUrl": "https://www.instagram.com/samu_sfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1218,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 302
+    "manualOrder": 302,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-aalbertoo16",
@@ -4536,13 +4838,14 @@
     "instagramUrl": "https://www.instagram.com/aalbertoo16/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 2618,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 303
+    "manualOrder": 303,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-adri.corleonefx",
@@ -4551,13 +4854,14 @@
     "instagramUrl": "https://www.instagram.com/adri.corleonefx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 13509,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 304
+    "manualOrder": 304,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tradingconpako",
@@ -4566,13 +4870,14 @@
     "instagramUrl": "https://www.instagram.com/tradingconpako/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 262331,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 305
+    "manualOrder": 305,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-alekayfx",
@@ -4581,13 +4886,14 @@
     "instagramUrl": "https://www.instagram.com/alekayfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 54146,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 306
+    "manualOrder": 306,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-youngbullinvestors",
@@ -4596,13 +4902,14 @@
     "instagramUrl": "https://www.instagram.com/youngbullinvestors/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 259644,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 307
+    "manualOrder": 307,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-scarfacetrades_",
@@ -4611,13 +4918,14 @@
     "instagramUrl": "https://www.instagram.com/scarfacetrades_/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 334518,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 308
+    "manualOrder": 308,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-clo.trade",
@@ -4626,13 +4934,14 @@
     "instagramUrl": "https://www.instagram.com/clo.trade/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 39359,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 309
+    "manualOrder": 309,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-zmcapitals",
@@ -4641,13 +4950,14 @@
     "instagramUrl": "https://www.instagram.com/zmcapitals/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 177704,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 310
+    "manualOrder": 310,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-tori.trades",
@@ -4662,7 +4972,8 @@
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 311
+    "manualOrder": 311,
+    "instagramStatus": "unavailable"
   },
   {
     "id": "ig-verawittyfx",
@@ -4671,13 +4982,14 @@
     "instagramUrl": "https://www.instagram.com/verawittyfx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 39524,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 312
+    "manualOrder": 312,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-mariefeandjakesnow",
@@ -4686,13 +4998,14 @@
     "instagramUrl": "https://www.instagram.com/mariefeandjakesnow/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 1664280,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 313
+    "manualOrder": 313,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-neidetsenane",
@@ -4701,13 +5014,14 @@
     "instagramUrl": "https://www.instagram.com/neidetsenane/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 34720,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 314
+    "manualOrder": 314,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-paulavallejosk_fx",
@@ -4716,13 +5030,14 @@
     "instagramUrl": "https://www.instagram.com/paulavallejosk_fx/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 28996,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 315
+    "manualOrder": 315,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-conesatrader",
@@ -4731,13 +5046,14 @@
     "instagramUrl": "https://www.instagram.com/conesatrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 25511,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 316
+    "manualOrder": 316,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-clau.psicotrade",
@@ -4746,13 +5062,14 @@
     "instagramUrl": "https://www.instagram.com/clau.psicotrade/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 13461,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 317
+    "manualOrder": 317,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-33rdtrader",
@@ -4761,13 +5078,14 @@
     "instagramUrl": "https://www.instagram.com/33rdtrader/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 12732,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 318
+    "manualOrder": 318,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-meritrading",
@@ -4776,13 +5094,14 @@
     "instagramUrl": "https://www.instagram.com/meritrading/",
     "youtubeUrl": "",
     "priority": "Media",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 31616,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 319
+    "manualOrder": 319,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-goldtrader_dan",
@@ -4791,13 +5110,14 @@
     "instagramUrl": "https://www.instagram.com/goldtrader_dan/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 233559,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 320
+    "manualOrder": 320,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-pablo.robotedge",
@@ -4806,13 +5126,14 @@
     "instagramUrl": "https://www.instagram.com/pablo.robotedge/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 35622,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 321
+    "manualOrder": 321,
+    "instagramStatus": "ok"
   },
   {
     "id": "ig-adonisismael.fx",
@@ -4821,12 +5142,13 @@
     "instagramUrl": "https://www.instagram.com/adonisismael.fx/",
     "youtubeUrl": "",
     "priority": "Baja",
-    "followers": null,
-    "followersUpdatedAt": null,
+    "followers": 26708,
+    "followersUpdatedAt": "2026-08-03T08:17:57.281Z",
     "studied": false,
     "notes": "",
     "source": "Excel original",
     "mailerfind": null,
-    "manualOrder": 322
+    "manualOrder": 322,
+    "instagramStatus": "ok"
   }
 ]

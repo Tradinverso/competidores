@@ -23,8 +23,20 @@
 
   function loadData() {
     try {
+      const seed = structuredClone(window.SEED_COMPETITORS || []);
       const stored = localStorage.getItem(STORAGE_KEY);
-      return stored ? JSON.parse(stored) : structuredClone(window.SEED_COMPETITORS || []);
+      if (!stored) return seed;
+      const saved = JSON.parse(stored);
+      const freshById = new Map(seed.map(item => [item.id, item]));
+      const merged = saved.map(item => {
+        const fresh = freshById.get(item.id);
+        if (!fresh) return item;
+        const freshTime = fresh.followersUpdatedAt ? Date.parse(fresh.followersUpdatedAt) : 0;
+        const savedTime = item.followersUpdatedAt ? Date.parse(item.followersUpdatedAt) : 0;
+        return { ...item, instagramStatus: fresh.instagramStatus, ...(fresh.followers != null && freshTime > savedTime ? { followers: fresh.followers, followersUpdatedAt: fresh.followersUpdatedAt } : {}) };
+      });
+      const savedIds = new Set(saved.map(item => item.id));
+      return [...merged, ...seed.filter(item => !savedIds.has(item.id))];
     } catch (_) {
       return structuredClone(window.SEED_COMPETITORS || []);
     }
@@ -118,7 +130,7 @@
         <div class="orderCell"><strong>${item.manualOrder}</strong><span class="moveButtons"><button data-action="up" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↑</button><button data-action="down" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↓</button></span></div>
         <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span><span><strong>${escapeHtml(item.name)}</strong><small>${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span></div>
         <select class="prioritySelect priority-${item.priority.toLowerCase()}" data-action="priority" data-id="${item.id}">${priorityOptions}</select>
-        <button class="followersButton" data-action="expand" data-id="${item.id}" type="button">${formatFollowers(item.followers)}<small>${item.followersUpdatedAt ? "actualizado" : "añadir dato"}</small></button>
+        <button class="followersButton" data-action="expand" data-id="${item.id}" type="button">${item.instagramStatus === "unavailable" ? "No disponible" : item.instagramStatus === "missing_url" ? "Sin URL" : formatFollowers(item.followers)}<small>${item.followersUpdatedAt ? "Instagram · 03 ago" : item.instagramStatus === "not_found" ? "contador no visible" : "revisar perfil"}</small></button>
         ${csvState}
         <label class="studiedToggle"><input type="checkbox" data-action="studied" data-id="${item.id}"${item.studied ? " checked" : ""} /><span>${item.studied ? "Estudiado" : "Pendiente"}</span></label>
         <button class="expandButton" data-action="expand" data-id="${item.id}" type="button">${open ? "×" : "•••"}</button>
@@ -254,7 +266,7 @@
     const instagramUrl = document.getElementById("newInstagram").value.trim();
     const username = (instagramUrl.match(/instagram\.com\/([^/?#]+)/i) || [])[1] || "";
     const id = `manual-${Date.now()}`;
-    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, notes: "", source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1 });
+    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, notes: "", source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
     saveData();
     elements.addForm.reset();
     elements.dialog.close();
