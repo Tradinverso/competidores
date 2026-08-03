@@ -1,14 +1,14 @@
 :root {
-  --ink: #16211d;
-  --muted: #66716c;
-  --paper: #f4f3ee;
+  --ink: #06152e;
+  --muted: #566578;
+  --paper: #f5f9ff;
   --panel: #ffffff;
-  --line: #dedfd9;
-  --green: #164f3e;
-  --green-bright: #46d39a;
-  --lime: #d7f36b;
-  --orange: #ed7e48;
-  --blue: #3d75d8;
+  --line: #d9e6fb;
+  --green: #06245c;
+  --green-bright: #2d89ff;
+  --lime: #5db2ff;
+  --orange: #c84d5c;
+  --blue: #2d89ff;
 }
 
 * { box-sizing: border-box; }
@@ -18,7 +18,7 @@ button, input, select, textarea { font: inherit; }
 button, label.fileButton { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(61, 117, 216, .28); outline-offset: 2px; }
 
-.topbar { height: 76px; padding: 0 clamp(20px, 4vw, 64px); display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(22, 33, 29, .12); background: rgba(244, 243, 238, .94); backdrop-filter: blur(16px); position: sticky; top: 0; z-index: 30; }
+.topbar { height: 76px; padding: 0 clamp(20px, 4vw, 64px); display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid rgba(6, 36, 92, .12); background: rgba(245, 249, 255, .94); backdrop-filter: blur(16px); position: sticky; top: 0; z-index: 30; }
 .brand { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 11px; }
 .brandMark { width: 38px; height: 38px; border-radius: 11px; background: var(--green); color: var(--lime); display: grid; place-items: center; font-size: 12px; font-weight: 850; letter-spacing: -.04em; transform: rotate(-3deg); }
 .brand > span:last-child { display: flex; flex-direction: column; line-height: 1; }
@@ -94,6 +94,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .competitor:first-child { border-top: 0; }
 .competitor:hover { background: #fbfbf8; }
 .competitor.isStudied { background: #f7faf7; }
+.competitor[draggable="true"] .competitorRow { cursor: grab; }
+.competitor.isDragging { opacity: .45; }
+.competitor.isDropTarget { border-top: 3px solid var(--blue); }
 .competitorRow { min-height: 78px; padding: 10px 17px; }
 .orderCell { display: flex; align-items: center; gap: 8px; }
 .orderCell > strong { width: 28px; font-family: var(--font-geist-mono); font-size: 12px; color: #6b746f; }
@@ -125,6 +128,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .studiedToggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 10px; font-weight: 650; color: #717a75; }
 .studiedToggle input { width: 17px; height: 17px; accent-color: var(--green); }
 .isStudied .studiedToggle { color: var(--green); }
+.statusCell { display: grid; gap: 5px; }
+.statusCell .studiedToggle { gap: 5px; font-size: 9px; }
+.statusCell .studiedToggle input { width: 14px; height: 14px; }
+.campaignSentToggle { color: var(--blue); }
+.campaignSentToggle input { accent-color: var(--blue); }
 .campaignToggle { min-height: 30px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 8px; padding: 0 6px; color: var(--muted); font-size: 10px; font-weight: 720; cursor: pointer; background: #fff; }
 .campaignToggle:has(input:checked) { color: var(--green); border-color: #9fceb8; background: #edf8f1; }
 .campaignToggle input { accent-color: var(--green); margin: 0; }
@@ -211,7 +219,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .prioritySelect { grid-area: priority; }
   .followersButton { grid-area: followers; margin-left: 49px; }
   .csvState { grid-area: csv; }
-  .studiedToggle { grid-area: state; }
+  .statusCell { grid-area: state; }
+  .statusCell .studiedToggle { grid-area: auto; }
   .expandButton { grid-area: more; }
   .detailsPanel { padding: 0 14px 16px; grid-template-columns: 1fr; }
   .csvBlock { grid-column: auto; }
@@ -233,6 +242,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .avatarText { display: none; }
   .followersButton { margin-left: 0; }
   .studiedToggle span { display: none; }
+  .statusCell .studiedToggle span { display: inline; }
   .orderCell { align-items: flex-start; }
   .moveButtons { display: none; }
   .identity strong { font-size: 11px; }
