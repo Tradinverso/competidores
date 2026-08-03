@@ -5,6 +5,7 @@
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const CLOUD_BUCKET = "mailerfind";
   const CLOUD_EMAIL = "tradinverso@gmail.com";
+  const MERY_ID = "ig-merytrader212";
   const cloudConfig = window.SUPABASE_CONFIG || {};
   const cloudClient = window.supabase && cloudConfig.url && cloudConfig.publishableKey
     ? window.supabase.createClient(cloudConfig.url, cloudConfig.publishableKey)
@@ -65,10 +66,21 @@
   function loadData() {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      return stored ? mergeSavedData(JSON.parse(stored), true) : structuredClone(window.SEED_COMPETITORS || []);
+      const data = stored ? mergeSavedData(JSON.parse(stored), true) : structuredClone(window.SEED_COMPETITORS || []);
+      const promoted = applyMeryPriority(data);
+      if (promoted !== data) localStorage.setItem(STORAGE_KEY, JSON.stringify(promoted));
+      return promoted;
     } catch (_) {
-      return structuredClone(window.SEED_COMPETITORS || []);
+      return applyMeryPriority(structuredClone(window.SEED_COMPETITORS || []));
     }
+  }
+
+  function applyMeryPriority(items) {
+    const mery = items.find(item => item.id === MERY_ID);
+    if (!mery || mery.meryPriorityApplied) return items;
+    return [...items]
+      .sort((a, b) => (a.id === MERY_ID ? -1 : b.id === MERY_ID ? 1 : a.manualOrder - b.manualOrder))
+      .map((item, index) => ({ ...item, manualOrder: index + 1, ...(item.id === MERY_ID ? { meryPriorityApplied: true } : {}) }));
   }
 
   function saveData() {
@@ -160,7 +172,7 @@
       .maybeSingle();
     if (error) throw error;
     if (data && Array.isArray(data.competitors)) {
-      competitors = mergeSavedData(data.competitors, false);
+      competitors = applyMeryPriority(mergeSavedData(data.competitors, false));
       localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
       render();
       scheduleCloudSave();
@@ -253,12 +265,22 @@
       ? `<div class="fileSummary"><span>CSV</span><p><strong>${escapeHtml(item.mailerfind.fileName)}</strong><small>${item.mailerfind.rows} registros · ${item.mailerfind.columns.length} columnas</small></p></div><div class="csvActions"><button class="button ghost small" data-action="download-csv" data-id="${item.id}" type="button">Descargar</button><label class="button ghost small fileButton">Reemplazar<input type="file" accept=".csv,text/csv" data-action="csv" data-id="${item.id}" /></label></div><div class="csvColumns">${item.mailerfind.columns.slice(0, 6).map(column => `<span>${escapeHtml(column || "Sin título")}</span>`).join("")}</div>`
       : `<label class="dropCsv">＋<strong>Subir CSV de Mailerfind</strong><small>Se guardará asociado a este competidor</small><input type="file" accept=".csv,text/csv" data-action="csv" data-id="${item.id}" /></label>`;
 
+    const channels = item.channels || {};
+    const profile = instagram
+      ? `<a class="profileLink" href="${escapeHtml(instagram)}" target="_blank" rel="noreferrer" title="Abrir perfil de Instagram">`
+      : `<span class="profileLink isUnavailable">`;
+    const profileClose = instagram ? "</a>" : "</span>";
+    const channelToggle = (channel, label) => `<label class="campaignToggle" title="${label}"><input type="checkbox" data-action="channel" data-channel="${channel}" data-id="${item.id}"${channels[channel] ? " checked" : ""} /><span>${label}</span></label>`;
+
     return `<article class="competitor${item.studied ? " isStudied" : ""}" data-id="${item.id}">
       <div class="competitorRow">
         <div class="orderCell"><strong>${item.manualOrder}</strong><span class="moveButtons"><button data-action="up" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↑</button><button data-action="down" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↓</button></span></div>
-        <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span><span><strong>${escapeHtml(item.name)}</strong><small>${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span></div>
+        <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span>${profile}<span><strong>${escapeHtml(item.name)}</strong><small>${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span>${profileClose}</div>
         <select class="prioritySelect priority-${item.priority.toLowerCase()}" data-action="priority" data-id="${item.id}">${priorityOptions}</select>
         <button class="followersButton" data-action="expand" data-id="${item.id}" type="button">${item.instagramStatus === "unavailable" ? "No disponible" : item.instagramStatus === "missing_url" ? "Sin URL" : formatFollowers(item.followers)}<small>${item.followersUpdatedAt ? "Instagram · 03 ago" : item.instagramStatus === "not_found" ? "contador no visible" : "revisar perfil"}</small></button>
+        ${channelToggle("email", "Email")}
+        ${channelToggle("traffic", "Tráfico")}
+        ${channelToggle("vsl", "VSL")}
         ${csvState}
         <label class="studiedToggle"><input type="checkbox" data-action="studied" data-id="${item.id}"${item.studied ? " checked" : ""} /><span>${item.studied ? "Estudiado" : "Pendiente"}</span></label>
         <button class="expandButton" data-action="expand" data-id="${item.id}" type="button">${open ? "×" : "•••"}</button>
@@ -269,6 +291,7 @@
           <label>Instagram<div class="inputAction"><input data-field="instagramUrl" data-id="${item.id}" value="${escapeHtml(item.instagramUrl)}" placeholder="https://instagram.com/usuario" />${instagram ? `<a href="${escapeHtml(instagram)}" target="_blank" rel="noreferrer">Abrir ↗</a>` : ""}</div></label>
           <label>YouTube<div class="inputAction"><input data-field="youtubeUrl" data-id="${item.id}" value="${escapeHtml(item.youtubeUrl)}" placeholder="Canal de YouTube" />${youtube ? `<a href="${escapeHtml(youtube)}" target="_blank" rel="noreferrer">Abrir ↗</a>` : ""}</div></label>
           <label>Notas<textarea data-field="notes" data-id="${item.id}" placeholder="Oferta, posicionamiento, puntos fuertes…">${escapeHtml(item.notes)}</textarea></label>
+          <button class="button danger small" data-action="delete" data-id="${item.id}" type="button">Eliminar competidor</button>
         </div>
         <div class="detailBlock followersBlock"><h3>Audiencia</h3><label>Seguidores de Instagram<input data-field="followers" data-id="${item.id}" type="number" min="0" value="${item.followers ?? ""}" placeholder="Ej. 125000" /></label><div class="automationNote"><span>◎</span><p><strong>Actualización automática preparada</strong>Para activarla hará falta conectar una fuente autorizada de datos de Instagram.</p></div></div>
         <div class="detailBlock csvBlock"><h3>Datos de Mailerfind</h3>${csvPanel}</div>
@@ -293,6 +316,17 @@
     competitors = ordered.sort((a, b) => a.manualOrder - b.manualOrder);
     saveData();
     render();
+  }
+
+  async function removeCompetitor(id) {
+    const item = competitors.find(candidate => candidate.id === id);
+    if (!item || !window.confirm(`¿Eliminar a ${item.name}? Esta acción no se puede deshacer.`)) return;
+    if (cloudSession && item.mailerfind?.storagePath) await cloudClient.storage.from(CLOUD_BUCKET).remove([item.mailerfind.storagePath]);
+    competitors = competitors.filter(item => item.id !== id).sort((a, b) => a.manualOrder - b.manualOrder).map((item, index) => ({ ...item, manualOrder: index + 1 }));
+    if (expandedId === id) expandedId = null;
+    saveData();
+    render();
+    notify("Competidor eliminado.");
   }
 
   function parseCsv(text) {
@@ -382,6 +416,7 @@
     if (button.dataset.action === "up") move(id, -1);
     if (button.dataset.action === "down") move(id, 1);
     if (button.dataset.action === "expand") { expandedId = expandedId === id ? null : id; render(); }
+    if (button.dataset.action === "delete") await removeCompetitor(id);
     if (button.dataset.action === "download-csv") {
       try {
         const item = competitors.find(candidate => candidate.id === id);
@@ -401,6 +436,10 @@
     if (!id) return;
     if (target.dataset.action === "priority") update(id, { priority: target.value });
     if (target.dataset.action === "studied") update(id, { studied: target.checked });
+    if (target.dataset.action === "channel") {
+      const item = competitors.find(candidate => candidate.id === id);
+      update(id, { channels: { ...(item?.channels || {}), [target.dataset.channel]: target.checked } });
+    }
     if (target.dataset.field) {
       const value = target.dataset.field === "followers" ? (target.value ? Number(target.value) : null) : target.value;
       const patch = { [target.dataset.field]: value };
@@ -437,7 +476,7 @@
     const instagramUrl = document.getElementById("newInstagram").value.trim();
     const username = (instagramUrl.match(/instagram\.com\/([^/?#]+)/i) || [])[1] || "";
     const id = `manual-${Date.now()}`;
-    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, notes: "", source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
+    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, notes: "", channels: { email: false, traffic: false, vsl: false }, source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
     saveData();
     elements.addForm.reset();
     elements.dialog.close();
