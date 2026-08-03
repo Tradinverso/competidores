@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dashboard de priorización, investigación y seguimiento de competidores." />
+    <meta property="og:title" content="Radar de Competidores | Tradingverso" />
+    <meta property="og:description" content="Prioriza, investiga y controla el avance de tu análisis competitivo." />
+    <meta property="og:image" content="public/og.png" />
+    <title>Radar de Competidores | Tradingverso</title>
+    <link rel="icon" href="public/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="inicio">
+      <div id="toast" class="toast" role="status" hidden></div>
+
+      <header class="topbar staticTopbar">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brandMark">TV</span>
+          <span><strong>Radar</strong><small>Competidores</small></span>
+        </a>
+        <div class="topActions">
+          <span class="saveState"><i></i> Guardado local</span>
+          <label class="button ghost fileButton">Importar copia<input id="backupInput" type="file" accept="application/json,.json" /></label>
+          <button id="exportButton" class="button ghost" type="button">Exportar</button>
+          <button id="openAddButton" class="button primary" type="button">+ Añadir competidor</button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">INTELIGENCIA DE MERCADO</p>
+          <h1>Tu mapa competitivo,<br /><em>en orden de acción.</em></h1>
+          <p class="heroCopy">Prioriza perfiles, registra seguidores, guarda la investigación de Mailerfind y no pierdas de vista lo que ya has estudiado.</p>
+        </div>
+        <div class="heroProgress">
+          <div id="progressRing" class="progressRing"><span id="progressPercent">0%</span></div>
+          <div><strong>Avance global</strong><span id="progressLabel">0 estudiados</span></div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Resumen">
+        <article><span>Total en radar</span><strong id="metricTotal">0</strong><small>perfiles limpios</small></article>
+        <article class="accent"><span>Prioridad crítica</span><strong id="metricCritical">0</strong><small>primero en Mailerfind</small></article>
+        <article><span>Ya estudiados</span><strong id="metricStudied">0</strong><small id="metricPending">0 pendientes</small></article>
+        <article><span>CSV cargados</span><strong id="metricCsv">0</strong><small>datos asociados</small></article>
+      </section>
+
+      <section class="workflow">
+        <span class="workflowTitle">Flujo recomendado</span>
+        <div><b>1</b><span><strong>Prioriza</strong><small>Ordena la cola</small></span></div><i>→</i>
+        <div><b>2</b><span><strong>Investiga</strong><small>Perfil y seguidores</small></span></div><i>→</i>
+        <div><b>3</b><span><strong>Sube el CSV</strong><small>Datos de Mailerfind</small></span></div><i>→</i>
+        <div><b>4</b><span><strong>Completa</strong><small>Marca estudiado</small></span></div>
+      </section>
+
+      <section class="workspace">
+        <div class="sectionHeading">
+          <div><p class="eyebrow">COLA DE INVESTIGACIÓN</p><h2>Competidores</h2></div>
+          <span id="resultsCount">0 resultados</span>
+        </div>
+
+        <div class="toolbar">
+          <label class="searchBox"><span>⌕</span><input id="searchInput" placeholder="Buscar nombre, usuario o nota…" aria-label="Buscar competidores" /></label>
+          <label><span>Prioridad</span><select id="priorityFilter"><option>Todas</option><option>Crítica</option><option>Alta</option><option>Media</option><option>Baja</option></select></label>
+          <label><span>Estado</span><select id="statusFilter"><option>Todos</option><option>Pendientes</option><option>Estudiados</option><option>Con CSV</option><option>Sin CSV</option></select></label>
+          <label><span>Orden</span><select id="sortSelect"><option value="manual">Mi orden manual</option><option value="priority">Nivel de prioridad</option><option value="followers">Más seguidores</option><option value="name">Nombre A–Z</option></select></label>
+        </div>
+
+        <div class="tableWrap">
+          <div class="tableHeader"><span>Orden</span><span>Competidor</span><span>Prioridad</span><span>Seguidores</span><span>Mailerfind</span><span>Estado</span><span></span></div>
+          <div id="competitorList" class="competitorList"></div>
+          <div id="emptyState" class="emptyState" hidden>No hay competidores que coincidan con estos filtros.</div>
+        </div>
+        <button id="loadMoreButton" class="loadMore" type="button" hidden>Mostrar 40 más</button>
+      </section>
+    </main>
+
+    <dialog id="addDialog" class="staticDialog">
+      <form id="addForm" class="modal" method="dialog">
+        <button id="closeAddButton" type="button" class="modalClose">×</button>
+        <p class="eyebrow">NUEVO PERFIL</p>
+        <h2>Añadir competidor</h2>
+        <p>Con la URL de Instagram extraeremos el usuario automáticamente.</p>
+        <label>Nombre<input id="newName" autofocus placeholder="Nombre o marca" /></label>
+        <label>Instagram<input id="newInstagram" placeholder="https://instagram.com/usuario" /></label>
+        <label>YouTube <small>opcional</small><input id="newYoutube" placeholder="https://youtube.com/@canal" /></label>
+        <label>Prioridad<select id="newPriority"><option>Crítica</option><option>Alta</option><option selected>Media</option><option>Baja</option></select></label>
+        <div class="modalActions"><button id="cancelAddButton" type="button" class="button ghost">Cancelar</button><button class="button primary" type="submit">Añadir a la cola</button></div>
+      </form>
+    </dialog>
+
+    <script src="competidores-data.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
