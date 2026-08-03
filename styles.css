@@ -88,7 +88,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .toolbar .searchBox input { font-size: 14px; font-weight: 450; padding: 0; }
 
 .tableWrap { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: 0 12px 35px rgba(22, 33, 29, .045); }
-.tableHeader, .competitorRow { display: grid; grid-template-columns: 84px minmax(230px, 1.65fr) 130px 130px 150px 126px 46px; align-items: center; gap: 13px; }
+.tableHeader, .competitorRow { display: grid; grid-template-columns: 70px minmax(210px, 1.65fr) 120px 120px repeat(3, 72px) 130px 105px 40px; align-items: center; gap: 10px; }
 .tableHeader { min-height: 42px; padding: 0 17px; background: #ecece7; color: #7b847f; text-transform: uppercase; font-family: var(--font-geist-mono); font-size: 9px; letter-spacing: .08em; }
 .competitor { border-top: 1px solid #e8e9e4; transition: background .15s ease; }
 .competitor:first-child { border-top: 0; }
@@ -106,6 +106,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .identity > span:last-child { display: flex; flex-direction: column; min-width: 0; }
 .identity strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
 .identity small { color: #89918d; font-size: 11px; margin-top: 4px; }
+.profileLink { min-width: 0; color: inherit; text-decoration: none; display: block; }
+.profileLink > span { display: flex; flex-direction: column; min-width: 0; }
+.profileLink:not(.isUnavailable):hover strong { color: var(--blue); text-decoration: underline; }
+.profileLink.isUnavailable { cursor: default; }
 .prioritySelect { width: 100%; border-radius: 999px; border: 1px solid transparent; height: 29px; padding: 0 9px; font-size: 10px; font-weight: 750; cursor: pointer; }
 .priority-crítica { color: #9b361d; background: #fff0e9; border-color: #ffd4c2; }
 .priority-alta { color: #785714; background: #fff8dc; border-color: #f1df96; }
@@ -121,6 +125,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .studiedToggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 10px; font-weight: 650; color: #717a75; }
 .studiedToggle input { width: 17px; height: 17px; accent-color: var(--green); }
 .isStudied .studiedToggle { color: var(--green); }
+.campaignToggle { min-height: 30px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid var(--line); border-radius: 8px; padding: 0 6px; color: var(--muted); font-size: 10px; font-weight: 720; cursor: pointer; background: #fff; }
+.campaignToggle:has(input:checked) { color: var(--green); border-color: #9fceb8; background: #edf8f1; }
+.campaignToggle input { accent-color: var(--green); margin: 0; }
+.button.danger { color: #a1372e; border-color: #efc0ba; background: #fff5f3; margin-top: 14px; }
+.button.danger:hover { color: #7c261f; border-color: #dc9389; background: #ffece8; }
 .expandButton { width: 34px; height: 34px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: #66716c; cursor: pointer; font-size: 12px; }
 .expandButton:hover { background: #edeee9; border-color: var(--line); }
 
@@ -175,7 +184,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @keyframes toastIn { from { opacity: 0; transform: translate(-50%, -8px); } }
 
 @media (max-width: 1120px) {
-  .tableHeader, .competitorRow { grid-template-columns: 70px minmax(210px, 1.5fr) 120px 110px 115px 105px 40px; gap: 8px; }
+  .tableHeader, .competitorRow { grid-template-columns: 60px minmax(185px, 1.5fr) 105px 100px repeat(3, 64px) 105px 92px 36px; gap: 7px; }
   .detailsPanel { padding-left: 88px; grid-template-columns: 1fr 1fr; }
   .csvBlock { grid-column: 1 / -1; }
   .workflowTitle { display: none; }
