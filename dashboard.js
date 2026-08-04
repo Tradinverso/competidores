@@ -215,7 +215,7 @@
     if (cloudSession) {
       elements.cloudButton.textContent = "Salir de la nube";
       elements.cloudButton.title = cloudSession.user.email || "Sesión activa";
-      setSaveState("Guardado en la nube", "cloud");
+      setSaveState("Nube · Sheet ≤ 5 min", "cloud");
     } else {
       elements.cloudButton.textContent = "Entrar";
       elements.cloudButton.removeAttribute("title");
@@ -247,7 +247,7 @@
       setSaveState("Error de sincronización", "offline");
       notify("No se pudo guardar en la nube. La copia local sigue intacta.");
     } else {
-      setSaveState("Guardado en la nube", "cloud");
+      setSaveState("Nube · Sheet ≤ 5 min", "cloud");
     }
     if (cloudSaveQueued) {
       cloudSaveQueued = false;
