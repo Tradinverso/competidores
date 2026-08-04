@@ -115,7 +115,8 @@ function writeDashboardSheet_(spreadsheet, competitors, codeOrder, masterValues,
     "Seguidos extraídos", "Seguidores extraídos", "Reels venta completos", "Nº reels venta",
     "URLs reels venta", "Reels recurso completos", "Nº reels recurso", "URLs reels recurso",
     "CSV cargados", "Emails", "Teléfonos", "Info extraída", "Campaña enviada",
-    "Email", "Tráfico", "VSL", "Notas", "Última sincronización"
+    "Email", "Tráfico", "VSL", "Notas", "Última sincronización",
+    "Carpeta Drive", "Carpeta Reels", "Carpeta Seguidores"
   ];
 
   const folderLinksByCode = new Map();
@@ -151,7 +152,8 @@ function writeDashboardSheet_(spreadsheet, competitors, codeOrder, masterValues,
       files.reduce((sum, file) => sum + Number(file.emails || 0), 0),
       files.reduce((sum, file) => sum + Number(file.phones || 0), 0),
       Boolean(competitor.studied), Boolean(competitor.campaignSent), Boolean(channels.email),
-      Boolean(channels.traffic), Boolean(channels.vsl), String(competitor.notes || ""), now
+      Boolean(channels.traffic), Boolean(channels.vsl), String(competitor.notes || ""), now,
+      "", "", ""
     ];
   });
 
@@ -169,6 +171,19 @@ function writeDashboardSheet_(spreadsheet, competitors, codeOrder, masterValues,
     .setWrap(true);
   if (rows.length) {
     [7, 8, 9, 12, 18, 19, 20, 21, 22].forEach(column => sheet.getRange(2, column, rows.length, 1).insertCheckboxes());
+    const usernames = sorted.map(competitor => {
+      const username = String(competitor.username || "").trim();
+      const richText = SpreadsheetApp.newRichTextValue().setText(username);
+      if (username) richText.setLinkUrl(`https://www.instagram.com/${encodeURIComponent(username)}/`);
+      return [richText.build()];
+    });
+    sheet.getRange(2, 2, rows.length, 1).setRichTextValues(usernames);
+
+    const folderFormulas = sorted.map(competitor => {
+      const links = folderLinksByCode.get(String(competitor.code || "").trim()) || {};
+      return [links.master || "", links.reels || "", links.followers || ""];
+    });
+    sheet.getRange(2, 25, rows.length, 3).setFormulas(folderFormulas);
     sheet.getRange(2, 11, rows.length, 1).setWrap(true);
     sheet.getRange(2, 14, rows.length, 1).setWrap(true);
     sheet.getRange(2, 24, rows.length, 1).setNumberFormat("yyyy-mm-dd hh:mm");
@@ -183,6 +198,7 @@ function writeDashboardSheet_(spreadsheet, competitors, codeOrder, masterValues,
   sheet.setColumnWidth(11, 280);
   sheet.setColumnWidth(14, 280);
   sheet.setColumnWidth(23, 260);
+  sheet.setColumnWidths(25, 3, 150);
 }
 
 function mirrorCsvFiles_(competitor, extraction, masterFolder, config) {
