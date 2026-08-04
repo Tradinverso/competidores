@@ -13,7 +13,6 @@
   const priorities = ["Crítica", "Alta", "Media", "Baja"];
   const priorityWeight = { "Crítica": 0, "Alta": 1, "Media": 2, "Baja": 3 };
   const repositoryCodes = window.COMPETITOR_CODES || {};
-
   function emptyExtractionStep() {
     return { done: false, mailerfind: null };
   }
