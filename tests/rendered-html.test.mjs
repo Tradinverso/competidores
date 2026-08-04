@@ -21,14 +21,21 @@ test("renderiza el radar actualizado", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Radar de Competidores \| Tradingverso<\/title>/i);
-  assert.match(html, /Tu mapa competitivo/);
-  assert.match(html, /282/);
-  assert.match(html, /Enrique Moris/);
-  assert.match(html, /@enrique\.vv/);
-  assert.match(html, /Mario Casanova/);
-  assert.match(html, /@amandix\.fx/);
-  assert.match(html, /TradingLab \| Academia de Trading/);
-  assert.match(html, /Iñigo Maldonado/);
+  assert.match(html, /\/radar\/index\.html/);
+});
+
+test("incluye el flujo completo de la segunda pestaña", async () => {
+  const [html, dashboard] = await Promise.all([
+    readFile(new URL("../index.html", import.meta.url), "utf8"),
+    readFile(new URL("../dashboard.js", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(html, /Seguidos y seguidores/);
+  assert.match(html, /Un CSV por extracción/);
+  assert.match(dashboard, /Reels de venta/);
+  assert.match(dashboard, /Reels de recurso/);
+  assert.match(dashboard, /countContacts/);
+  assert.match(dashboard, /emails y.*teléfonos/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {
@@ -48,16 +55,10 @@ test("mantiene la lista limpia y el orden prioritario", async () => {
 });
 
 test("elimina perfiles retirados sin borrar altas manuales", async () => {
-  const [page, dashboard] = await Promise.all([
-    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../dashboard.js", import.meta.url), "utf8"),
-  ]);
-
-  for (const source of [page, dashboard]) {
-    assert.match(source, /freshById\.has\(item\.id\) \|\| item\.source === "Añadido manualmente"/);
-    assert.match(source, /new Set\(merged\.map/);
-    assert.match(source, /SEED_ORDER_MIGRATION_KEY/);
-  }
+  const dashboard = await readFile(new URL("../dashboard.js", import.meta.url), "utf8");
+  assert.match(dashboard, /freshById\.has\(item\.id\) \|\| item\.source === "Añadido manualmente"/);
+  assert.match(dashboard, /new Set\(merged\.map/);
+  assert.match(dashboard, /SEED_ORDER_MIGRATION_KEY/);
 });
 
 test("sincroniza datos y CSV con Supabase sin exponer claves privadas", async () => {

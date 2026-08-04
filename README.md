@@ -16,8 +16,10 @@ Para publicarla en GitHub, sube el contenido de esta carpeta a un repositorio y 
 
 - Mantener una cola manual de prioridad.
 - Añadir y editar perfiles de Instagram y YouTube.
-- Registrar el número de seguidores y la fecha de actualización.
-- Asociar un CSV de Mailerfind a cada competidor.
+- Registrar el número visible de seguidores y seguidos.
+- Controlar por separado las extracciones de Seguidos, Seguidores, reels de venta y reels de recurso.
+- Guardar varias URL de reels y asociar un CSV de Mailerfind a cada extracción.
+- Contar automáticamente los emails y teléfonos detectados en cada CSV.
 - Marcar perfiles como estudiados.
 - Filtrar, buscar, importar y exportar una copia del seguimiento.
 
