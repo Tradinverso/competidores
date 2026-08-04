@@ -12,6 +12,13 @@
     : null;
   const priorities = ["Crítica", "Alta", "Media", "Baja"];
   const priorityWeight = { "Crítica": 0, "Alta": 1, "Media": 2, "Baja": 3 };
+  const repositoryCodes = window.COMPETITOR_CODES || {};
+  if (Array.isArray(window.SEED_COMPETITORS)) {
+    window.SEED_COMPETITORS = window.SEED_COMPETITORS.map(item => {
+      const username = String(item.username || (item.instagramUrl?.match(/instagram\.com\/([^/?#]+)/i) || [])[1] || "").toLowerCase();
+      return { ...item, code: item.code || repositoryCodes[username] || "" };
+    });
+  }
   let cloudSession = null;
   let cloudSaveTimer = null;
   let cloudSaving = false;
@@ -51,7 +58,7 @@
         if (!fresh) return item;
         const freshTime = fresh.followersUpdatedAt ? Date.parse(fresh.followersUpdatedAt) : 0;
         const savedTime = item.followersUpdatedAt ? Date.parse(item.followersUpdatedAt) : 0;
-        return { ...item, instagramStatus: fresh.instagramStatus, ...(fresh.followers != null && freshTime > savedTime ? { followers: fresh.followers, followersUpdatedAt: fresh.followersUpdatedAt } : {}) };
+        return { ...item, code: fresh.code || item.code || "", instagramStatus: fresh.instagramStatus, ...(fresh.followers != null && freshTime > savedTime ? { followers: fresh.followers, followersUpdatedAt: fresh.followersUpdatedAt } : {}) };
         });
       const savedIds = new Set(merged.map(item => item.id));
       let next = [...merged, ...seed.filter(item => !savedIds.has(item.id))];
@@ -227,7 +234,7 @@
   function getFiltered() {
     const term = elements.search.value.trim().toLowerCase();
     return [...competitors]
-      .filter(item => !term || `${item.name} ${item.username} ${item.notes}`.toLowerCase().includes(term))
+      .filter(item => !term || `${item.code || ""} ${item.name} ${item.username} ${item.notes}`.toLowerCase().includes(term))
       .filter(item => elements.priority.value === "Todas" || item.priority === elements.priority.value)
       .filter(item => {
         if (elements.status.value === "Pendientes") return !item.studied;
@@ -293,7 +300,7 @@
     return `<article class="competitor${item.studied ? " isStudied" : ""}" data-id="${item.id}" draggable="${elements.sort.value === "manual"}">
       <div class="competitorRow">
         <div class="orderCell"><strong>${item.manualOrder}</strong><span class="moveButtons"><button data-action="up" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↑</button><button data-action="down" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↓</button></span></div>
-        <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span>${profile}<span><strong>${escapeHtml(item.name)}</strong><small>${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span>${profileClose}</div>
+        <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span>${profile}<span><strong>${escapeHtml(item.name)}</strong><small>${item.code ? `<b class="competitorCode">${escapeHtml(item.code)}</b>` : ""}${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span>${profileClose}</div>
         <select class="prioritySelect priority-${item.priority.toLowerCase()}" data-action="priority" data-id="${item.id}">${priorityOptions}</select>
         <button class="followersButton" data-action="expand" data-id="${item.id}" type="button">${item.instagramStatus === "unavailable" ? "No disponible" : item.instagramStatus === "missing_url" ? "Sin URL" : formatFollowers(item.followers)}<small>${item.followersUpdatedAt ? "Instagram · 03 ago" : item.instagramStatus === "not_found" ? "contador no visible" : "revisar perfil"}</small></button>
         ${channelToggle("email", "Email")}
@@ -305,6 +312,7 @@
       </div>
       ${open ? `<div class="detailsPanel">
         <div class="detailBlock"><h3>Ficha del competidor</h3>
+          <label>Código<input value="${escapeHtml(item.code || "Sin asignar")}" readonly /></label>
           <label>Nombre<input data-field="name" data-id="${item.id}" value="${escapeHtml(item.name)}" /></label>
           <label>Instagram<div class="inputAction"><input data-field="instagramUrl" data-id="${item.id}" value="${escapeHtml(item.instagramUrl)}" placeholder="https://instagram.com/usuario" />${instagram ? `<a href="${escapeHtml(instagram)}" target="_blank" rel="noreferrer">Abrir ↗</a>` : ""}</div></label>
           <label>YouTube<div class="inputAction"><input data-field="youtubeUrl" data-id="${item.id}" value="${escapeHtml(item.youtubeUrl)}" placeholder="Canal de YouTube" />${youtube ? `<a href="${escapeHtml(youtube)}" target="_blank" rel="noreferrer">Abrir ↗</a>` : ""}</div></label>
@@ -547,7 +555,7 @@
     const instagramUrl = document.getElementById("newInstagram").value.trim();
     const username = (instagramUrl.match(/instagram\.com\/([^/?#]+)/i) || [])[1] || "";
     const id = `manual-${Date.now()}`;
-    competitors.push({ id, name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, campaignSent: false, notes: "", channels: { email: false, traffic: false, vsl: false }, source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
+    competitors.push({ id, code: "", name: document.getElementById("newName").value.trim() || username || "Nuevo competidor", username, instagramUrl, youtubeUrl: document.getElementById("newYoutube").value.trim(), priority: document.getElementById("newPriority").value, followers: null, followersUpdatedAt: null, studied: false, campaignSent: false, notes: "", channels: { email: false, traffic: false, vsl: false }, source: "Añadido manualmente", mailerfind: null, manualOrder: competitors.length + 1, instagramStatus: "not_checked" });
     saveData();
     elements.addForm.reset();
     elements.dialog.close();
