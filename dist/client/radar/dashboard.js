@@ -158,6 +158,10 @@
     return new Intl.NumberFormat("es-ES", { notation: Number(value) >= 10000 ? "compact" : "standard", maximumFractionDigits: 1 }).format(Number(value));
   }
 
+  function formatCount(value) {
+    return new Intl.NumberFormat("es-ES").format(Number(value) || 0);
+  }
+
   function extractionStats(item) {
     const extraction = normalizeExtraction(item.extraction);
     const steps = [extraction.followers.done, extraction.following.done, extraction.salesDone, extraction.resourcesDone];
@@ -172,30 +176,43 @@
       completed: steps.filter(Boolean).length,
       total: steps.length,
       files: files.length,
+      contacts: files.reduce((sum, file) => sum + Number(file.rows || 0), 0),
       emails: files.reduce((sum, file) => sum + Number(file.emails || 0), 0),
-      phones: files.reduce((sum, file) => sum + Number(file.phones || 0), 0)
+      phones: files.reduce((sum, file) => sum + Number(file.phones || 0), 0),
+      both: files.reduce((sum, file) => sum + Number(file.both || 0), 0)
     };
   }
 
   function countContacts(rows) {
     const emails = new Set();
     const phones = new Set();
+    const both = new Set();
     const headers = (rows[0] || []).map(value => String(value || "").toLowerCase());
     const emailColumns = headers.map((header, index) => /e-?mail|correo/.test(header) ? index : -1).filter(index => index >= 0);
     const phoneColumns = headers.map((header, index) => /phone|tel[eé]fono|mobile|m[oó]vil|whatsapp|celular/.test(header) ? index : -1).filter(index => index >= 0);
-    rows.slice(1).forEach(row => {
+    rows.slice(1).forEach((row, rowIndex) => {
       const emailCells = emailColumns.length ? emailColumns.map(index => row[index]) : row;
+      const rowEmails = new Set();
       emailCells.forEach(cell => {
         const matches = String(cell || "").match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi) || [];
-        matches.forEach(email => emails.add(email.toLowerCase()));
+        matches.forEach(email => {
+          const normalizedEmail = email.toLowerCase();
+          emails.add(normalizedEmail);
+          rowEmails.add(normalizedEmail);
+        });
       });
       const phoneCells = phoneColumns.length ? phoneColumns.map(index => row[index]) : [];
+      const rowPhones = new Set();
       phoneCells.forEach(cell => {
         const compactPhone = String(cell || "").trim().replace(/[^\d+]/g, "");
-        if (/^\+?\d{7,15}$/.test(compactPhone)) phones.add(compactPhone);
+        if (/^\+?\d{7,15}$/.test(compactPhone)) {
+          phones.add(compactPhone);
+          rowPhones.add(compactPhone);
+        }
       });
+      if (rowEmails.size && rowPhones.size) both.add(`${[...rowEmails].sort().join("|")}::${[...rowPhones].sort().join("|")}::${rowIndex}`);
     });
-    return { emails: emails.size, phones: phones.size };
+    return { emails: emails.size, phones: phones.size, both: both.size };
   }
 
   function notify(message) {
@@ -328,13 +345,25 @@
   function render() {
     const studied = competitors.filter(item => item.studied).length;
     const critical = competitors.filter(item => item.priority === "Crítica").length;
-    const csv = competitors.reduce((sum, item) => sum + extractionStats(item).files, 0);
+    const extractionTotals = competitors.reduce((totals, item) => {
+      const stats = extractionStats(item);
+      totals.files += stats.files;
+      totals.contacts += stats.contacts;
+      totals.emails += stats.emails;
+      totals.phones += stats.phones;
+      totals.both += stats.both;
+      return totals;
+    }, { files: 0, contacts: 0, emails: 0, phones: 0, both: 0 });
     const progress = competitors.length ? Math.round(studied / competitors.length * 100) : 0;
     document.getElementById("metricTotal").textContent = competitors.length;
     document.getElementById("metricCritical").textContent = critical;
     document.getElementById("metricStudied").textContent = studied;
     document.getElementById("metricPending").textContent = `${competitors.length - studied} pendientes`;
-    document.getElementById("metricCsv").textContent = csv;
+    document.getElementById("metricCsv").textContent = extractionTotals.files;
+    document.getElementById("metricContacts").textContent = formatCount(extractionTotals.contacts);
+    document.getElementById("metricEmails").textContent = formatCount(extractionTotals.emails);
+    document.getElementById("metricPhones").textContent = formatCount(extractionTotals.phones);
+    document.getElementById("metricBoth").textContent = formatCount(extractionTotals.both);
     document.getElementById("progressPercent").textContent = `${progress}%`;
     document.getElementById("progressLabel").textContent = `${studied} de ${competitors.length} estudiados`;
     document.getElementById("progressRing").style.setProperty("--progress", `${progress}%`);
@@ -349,7 +378,7 @@
 
   function csvMetaSummary(meta) {
     if (!meta) return "";
-    return `<div class="extractionFile"><span>CSV</span><p><strong>${escapeHtml(meta.fileName)}</strong><small>${meta.rows} registros · ${Number(meta.emails || 0)} emails · ${Number(meta.phones || 0)} teléfonos</small></p></div>`;
+    return `<div class="extractionFile"><span>CSV</span><p><strong>${escapeHtml(meta.fileName)}</strong><small>${formatCount(meta.rows)} contactos extraídos</small></p><div class="contactBreakdown"><span><b>${formatCount(meta.emails)}</b> emails</span><span><b>${formatCount(meta.phones)}</b> teléfonos</span></div></div>`;
   }
 
   function extractionUpload(item, step, meta, label) {
@@ -405,7 +434,10 @@
     const youtube = safeUrl(item.youtubeUrl);
     const priorityOptions = priorities.map(priority => `<option${priority === item.priority ? " selected" : ""}>${priority}</option>`).join("");
     const stats = extractionStats(item);
-    const csvState = `<span class="csvState${stats.completed === 4 ? " ready" : ""}"><b>${stats.completed}/4</b><span>${stats.files} CSV<small>${stats.emails} emails · ${stats.phones} teléfonos</small></span></span>`;
+    const contactSummary = stats.files
+      ? `<strong>${formatCount(stats.contacts)} contactos</strong><small><b>${formatCount(stats.emails)}</b> emails · <b>${formatCount(stats.phones)}</b> teléfonos</small><em>${stats.files} CSV</em>`
+      : `<strong>Sin contactos</strong><small>Sube un CSV</small><em>${stats.completed}/4 bloques</em>`;
+    const csvState = `<span class="csvState${stats.files ? " hasData" : ""}${stats.completed === 4 ? " ready" : ""}"><b>${stats.completed}/4</b><span>${contactSummary}</span></span>`;
     const csvPanel = item.mailerfind
       ? `<div class="fileSummary"><span>CSV</span><p><strong>${escapeHtml(item.mailerfind.fileName)}</strong><small>${item.mailerfind.rows} registros · ${item.mailerfind.columns.length} columnas</small></p></div><div class="csvActions"><button class="button ghost small" data-action="download-csv" data-id="${item.id}" type="button">Descargar</button><label class="button ghost small fileButton">Reemplazar<input type="file" accept=".csv,text/csv" data-action="csv" data-id="${item.id}" /></label></div><div class="csvColumns">${item.mailerfind.columns.slice(0, 6).map(column => `<span>${escapeHtml(column || "Sin título")}</span>`).join("")}</div>`
       : `<label class="dropCsv">＋<strong>Subir CSV de Mailerfind</strong><small>Se guardará asociado a este competidor</small><input type="file" accept=".csv,text/csv" data-action="csv" data-id="${item.id}" /></label>`;
@@ -425,9 +457,9 @@
     return `<article class="competitor${item.studied ? " isStudied" : ""}" data-id="${item.id}" draggable="${elements.sort.value === "manual"}">
       <div class="competitorRow">
         <div class="orderCell"><strong>${item.manualOrder}</strong><span class="moveButtons"><button data-action="up" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↑</button><button data-action="down" data-id="${item.id}"${elements.sort.value !== "manual" ? " disabled" : ""}>↓</button></span></div>
-        <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span>${profile}<span><strong>${escapeHtml(item.name)}</strong><small>${item.code ? `<b class="competitorCode">${escapeHtml(item.code)}</b>` : ""}${item.username ? `@${escapeHtml(item.username)}` : "Perfil pendiente"}</small></span>${profileClose}</div>
+        <div class="identity"><span class="avatarText">${escapeHtml((item.name || item.username).slice(0, 2).toUpperCase())}</span>${profile}<span><strong>${escapeHtml(item.name)}</strong><small class="identityMeta">${item.code ? `<b class="competitorCode">${escapeHtml(item.code)}</b>` : ""}${item.username ? `<span class="instagramHandle">@${escapeHtml(item.username)}</span>` : "Perfil pendiente"}</small></span>${profileClose}</div>
         <select class="prioritySelect priority-${item.priority.toLowerCase()}" data-action="priority" data-id="${item.id}">${priorityOptions}</select>
-        <button class="followersButton" data-action="expand" data-id="${item.id}" type="button">${item.instagramStatus === "unavailable" ? "No disponible" : item.instagramStatus === "missing_url" ? "Sin URL" : formatFollowers(item.followers)}<small>${item.followersUpdatedAt ? "Instagram · 03 ago" : item.instagramStatus === "not_found" ? "contador no visible" : "revisar perfil"}</small></button>
+        <button class="followersButton" data-action="expand" data-id="${item.id}" type="button"><strong>${item.instagramStatus === "unavailable" ? "No disponible" : item.instagramStatus === "missing_url" ? "Sin URL" : formatFollowers(item.followers)}</strong><small>${item.followersUpdatedAt ? "Instagram · 03 ago" : item.instagramStatus === "not_found" ? "contador no visible" : "revisar perfil"}</small></button>
         ${channelToggle("email", "Email")}
         ${channelToggle("traffic", "Tráfico")}
         ${channelToggle("vsl", "VSL")}
@@ -648,6 +680,7 @@
       preview: rows.slice(1, 5),
       emails: contacts.emails,
       phones: contacts.phones,
+      both: contacts.both,
       storagePath
     });
     notify(`CSV guardado: ${contacts.emails} emails y ${contacts.phones} teléfonos detectados.`);
@@ -793,11 +826,12 @@
       if (!rows.length) return notify("El CSV está vacío o no se ha podido leer.");
       try {
         const current = competitors.find(item => item.id === id);
+        const contacts = countContacts(rows);
         let storagePath = null;
         if (cloudSession) storagePath = await uploadCsvToCloud(id, file, text, current?.mailerfind?.storagePath);
         else await storeCsv(id, file.name, text);
-        update(id, { mailerfind: { fileName: file.name, importedAt: new Date().toISOString(), rows: Math.max(rows.length - 1, 0), columns: rows[0], preview: rows.slice(1, 5), storagePath } });
-        notify(cloudSession ? "CSV guardado en la nube." : "CSV asociado en este navegador.");
+        update(id, { mailerfind: { fileName: file.name, importedAt: new Date().toISOString(), rows: Math.max(rows.length - 1, 0), columns: rows[0], preview: rows.slice(1, 5), emails: contacts.emails, phones: contacts.phones, both: contacts.both, storagePath } });
+        notify(`CSV guardado: ${contacts.emails} emails y ${contacts.phones} teléfonos detectados.`);
       } catch (_) {
         notify("No se pudo guardar el CSV. Prueba de nuevo.");
       }

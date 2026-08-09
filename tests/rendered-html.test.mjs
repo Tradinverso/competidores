@@ -36,6 +36,12 @@ test("incluye el flujo completo de la segunda pestaña", async () => {
   assert.match(dashboard, /Reels de recurso/);
   assert.match(dashboard, /countContacts/);
   assert.match(dashboard, /emails y.*teléfonos/);
+  assert.match(dashboard, /both: contacts\.both/);
+  assert.match(dashboard, /contactBreakdown/);
+  assert.match(html, /id="metricContacts"/);
+  assert.match(html, /id="metricEmails"/);
+  assert.match(html, /id="metricPhones"/);
+  assert.match(html, /id="metricBoth"/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {

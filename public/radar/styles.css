@@ -58,8 +58,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .metrics { width: min(1400px, calc(100% - 40px)); margin: -1px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--panel); border: 1px solid var(--line); border-radius: 0 0 18px 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(22, 33, 29, .055); }
 .metrics article { min-height: 132px; padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; align-items: center; border-right: 1px solid var(--line); position: relative; }
-.metrics article:last-child { border-right: 0; }
+.metrics article:nth-child(4n) { border-right: 0; }
+.metrics article:nth-child(n+5) { border-top: 1px solid var(--line); }
 .metrics article.accent::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--lime); }
+.metrics article.contactMetric { background: #f8fbff; }
+.metrics article.contactMetric strong { color: #0756ac; }
+.metrics article.contactMetric:last-child { background: #eef8f2; }
+.metrics article.contactMetric:last-child strong { color: #087b4a; }
 .metrics span { font-size: 12px; color: var(--muted); font-weight: 650; }
 .metrics strong { font-size: 38px; letter-spacing: -.055em; grid-row: 1 / span 2; grid-column: 2; }
 .metrics small { color: #919994; font-size: 11px; }
@@ -88,7 +93,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .toolbar .searchBox input { font-size: 14px; font-weight: 450; padding: 0; }
 
 .tableWrap { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: 0 12px 35px rgba(22, 33, 29, .045); }
-.tableHeader, .competitorRow { display: grid; grid-template-columns: 70px minmax(210px, 1.65fr) 120px 120px repeat(3, 72px) 130px 105px 40px; align-items: center; gap: 10px; }
+.tableHeader, .competitorRow { display: grid; grid-template-columns: 70px minmax(225px, 1.65fr) 120px 120px repeat(3, 72px) 170px 105px 40px; align-items: center; gap: 10px; }
 .tableHeader { min-height: 42px; padding: 0 17px; background: #ecece7; color: #7b847f; text-transform: uppercase; font-family: var(--font-geist-mono); font-size: 9px; letter-spacing: .08em; }
 .competitor { border-top: 1px solid #e8e9e4; transition: background .18s ease, box-shadow .18s ease; }
 .competitor:first-child { border-top: 0; }
@@ -100,7 +105,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .competitor[draggable="true"], .competitor[draggable="true"] .competitorRow { cursor: default; }
 .competitor.isDragging { opacity: .45; }
 .competitor.isDropTarget { border-top: 3px solid var(--blue); }
-.competitorRow { min-height: 78px; padding: 10px 17px; }
+.competitorRow { min-height: 88px; padding: 10px 17px; }
 .orderCell { display: flex; align-items: center; gap: 8px; }
 .orderCell > strong { width: 28px; font-family: var(--font-geist-mono); font-size: 12px; color: #6b746f; }
 .moveButtons { display: flex; flex-direction: column; gap: 2px; opacity: 0; transition: opacity .15s; }
@@ -112,9 +117,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .competitor.isStudied .avatarText { background: #2d89ff; color: #ffffff; }
 .competitor:has(.campaignSentToggle input:checked) .avatarText { background: #0b8a57; color: #ffffff; }
 .identity > span:last-child { display: flex; flex-direction: column; min-width: 0; }
-.identity strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
-.identity small { color: #89918d; font-size: 11px; margin-top: 4px; }
-.competitorCode { display: inline-flex; align-items: center; margin-right: 7px; padding: 2px 6px; border-radius: 999px; background: #e6efff; color: #0756ac; font-family: var(--font-geist-mono); font-size: 9px; letter-spacing: .03em; }
+.identity strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 14px; }
+.identity small { color: #89918d; font-size: 12px; margin-top: 5px; }
+.identityMeta { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.competitorCode { display: inline-flex; flex: 0 0 auto; align-items: center; padding: 3px 7px; border-radius: 999px; background: #d9eaff; color: #0756ac; font-family: var(--font-geist-mono); font-size: 11px; font-weight: 850; letter-spacing: .03em; }
+.instagramHandle { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #43524b; font-size: 13px; font-weight: 720; }
 .profileLink { min-width: 0; color: inherit; text-decoration: none; display: block; }
 .profileLink > span { display: flex; flex-direction: column; min-width: 0; }
 .profileLink:not(.isUnavailable):hover strong { color: var(--blue); text-decoration: underline; }
@@ -124,13 +131,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .priority-alta { color: #785714; background: #fff8dc; border-color: #f1df96; }
 .priority-media { color: #275899; background: #edf5ff; border-color: #cddff7; }
 .priority-baja { color: #606964; background: #eff1ef; border-color: #dfe2df; }
-.followersButton { border: 0; background: transparent; padding: 0; text-align: left; display: flex; flex-direction: column; color: var(--ink); font-weight: 680; cursor: pointer; font-size: 12px; }
-.followersButton small { color: #969d99; font-size: 9px; margin-top: 3px; font-weight: 450; }
-.csvState { display: flex; align-items: center; gap: 8px; color: #8b938f; min-width: 0; }
-.csvState > b { width: 31px; height: 25px; display: grid; place-items: center; background: #f0f1ee; border-radius: 7px; font-size: 10px; }
-.csvState.ready > b { background: #dff5e8; color: var(--green); }
-.csvState > span { display: flex; flex-direction: column; min-width: 0; font-size: 10px; font-weight: 650; }
-.csvState small { color: #a0a6a2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100px; margin-top: 2px; font-size: 8px; font-weight: 450; }
+.followersButton { border: 0; background: transparent; padding: 0; text-align: left; display: flex; flex-direction: column; color: var(--ink); cursor: pointer; }
+.followersButton > strong { font-size: 17px; line-height: 1; font-weight: 820; letter-spacing: -.02em; }
+.followersButton small { color: #7e8983; font-size: 10px; margin-top: 5px; font-weight: 550; }
+.csvState { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 7px 8px; border: 1px solid transparent; border-radius: 10px; color: #77817c; }
+.csvState.hasData { background: #f8fbff; border-color: #b9d6f8; color: #163d69; }
+.csvState > b { flex: 0 0 auto; width: 34px; height: 30px; display: grid; place-items: center; background: #e9ece9; border-radius: 8px; font-size: 10px; }
+.csvState.ready > b { background: #2d89ff; color: #fff; }
+.csvState > span { display: flex; flex-direction: column; min-width: 0; }
+.csvState > span > strong { white-space: nowrap; font-size: 13px; line-height: 1.1; font-weight: 850; letter-spacing: -.015em; }
+.csvState small { color: #596b61; white-space: nowrap; margin-top: 4px; font-size: 9px; font-weight: 560; }
+.csvState small b { color: #0756ac; font-size: 10px; }
+.csvState em { margin-top: 3px; color: #8a9690; font-size: 8px; font-style: normal; font-weight: 600; }
 .studiedToggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 10px; font-weight: 650; color: #717a75; }
 .studiedToggle input { width: 17px; height: 17px; accent-color: var(--green); }
 .isStudied .statusCell .studiedToggle:first-child { color: #0756ac; font-weight: 800; }
@@ -188,6 +200,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .extractionFile p { min-width: 0; margin: 0; display: flex; flex-direction: column; }
 .extractionFile strong { max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 9px; }
 .extractionFile small { margin-top: 3px; color: #78837d; font-size: 8px; }
+.contactBreakdown { margin-left: auto; display: flex; align-items: stretch; gap: 6px; }
+.contactBreakdown span { min-width: 74px; padding: 7px 9px; border-radius: 7px; background: #fff; color: #69756f; font-size: 8px; text-align: center; }
+.contactBreakdown b { display: block; margin-bottom: 2px; color: #0756ac; font-size: 14px; line-height: 1; }
 .extractionActions { display: flex; gap: 6px; margin-top: 10px; }
 .fileNameHint { display: block; margin-top: 7px; color: #929a96; font-family: var(--font-geist-mono); font-size: 7px; overflow-wrap: anywhere; }
 .reelSection { margin-top: 10px; }
@@ -232,7 +247,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 @keyframes toastIn { from { opacity: 0; transform: translate(-50%, -8px); } }
 
 @media (max-width: 1120px) {
-  .tableHeader, .competitorRow { grid-template-columns: 60px minmax(185px, 1.5fr) 105px 100px repeat(3, 64px) 105px 92px 36px; gap: 7px; }
+  .tableHeader, .competitorRow { grid-template-columns: 60px minmax(205px, 1.5fr) 105px 100px repeat(3, 64px) 150px 92px 36px; gap: 7px; }
   .detailsPanel { padding-left: 88px; grid-template-columns: 1fr 1fr; }
   .csvBlock, .extractionBlock { grid-column: 1 / -1; }
   .workflowTitle { display: none; }
@@ -245,20 +260,21 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .hero h1 { font-size: 47px; }
   .heroProgress { padding: 0; }
   .metrics { grid-template-columns: 1fr 1fr; }
-  .metrics article:nth-child(2) { border-right: 0; }
-  .metrics article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .metrics article:nth-child(2n) { border-right: 0; }
+  .metrics article:nth-child(n+3) { border-top: 1px solid var(--line); }
   .workflow { display: none; }
   .workspace { margin-top: 40px; }
   .toolbar { grid-template-columns: 1fr 1fr; }
   .searchBox { grid-column: 1 / -1; }
   .toolbar > label:last-child { grid-column: 1 / -1; }
   .tableHeader { display: none; }
-  .competitorRow { grid-template-columns: 48px 1fr 110px 38px; grid-template-areas: "order identity priority more" "order followers csv state"; gap: 8px 12px; min-height: 105px; }
+  .competitorRow { grid-template-columns: 48px 1fr 140px 38px; grid-template-areas: "order identity priority more" "order followers csv state"; gap: 10px 12px; min-height: 124px; }
   .orderCell { grid-area: order; }
   .identity { grid-area: identity; }
   .prioritySelect { grid-area: priority; }
   .followersButton { grid-area: followers; margin-left: 49px; }
   .csvState { grid-area: csv; }
+  .csvState > b { display: none; }
   .statusCell { grid-area: state; }
   .statusCell .studiedToggle { grid-area: auto; }
   .expandButton { grid-area: more; }
@@ -287,5 +303,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .orderCell { align-items: flex-start; }
   .moveButtons { display: none; }
   .identity strong { font-size: 11px; }
+  .instagramHandle { font-size: 12px; }
+  .competitorCode { font-size: 10px; }
   .prioritySelect { font-size: 9px; padding: 0 5px; }
+  .contactBreakdown { width: 100%; margin: 8px 0 0; }
+  .extractionFile { flex-wrap: wrap; }
 }
