@@ -39,12 +39,15 @@ test("incluye el flujo completo de la segunda pestaña", async () => {
   assert.match(dashboard, /both: contacts\.both/);
   assert.match(dashboard, /backfillMissingContactCounts/);
   assert.match(dashboard, /filesMissingBoth/);
+  assert.match(dashboard, /CONTACT_COUNT_VERSION = 2/);
+  assert.match(dashboard, /Math\.min\(bothEmails\.size, bothPhones\.size\)/);
+  assert.match(dashboard, /contactCounts/);
   assert.match(dashboard, /contactBreakdown/);
   assert.match(html, /id="metricContacts"/);
   assert.match(html, /id="metricEmails"/);
   assert.match(html, /id="metricPhones"/);
   assert.match(html, /id="metricBoth"/);
-  assert.match(html, /styles\.css\?v=20260809-arial/);
+  assert.match(html, /styles\.css\?v=20260809-contact-wrap/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {

@@ -5,6 +5,7 @@
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const CLOUD_BUCKET = "mailerfind";
   const CLOUD_EMAIL = "tradinverso@gmail.com";
+  const CONTACT_COUNT_VERSION = 2;
   const MERY_ID = "ig-merytrader212";
   const cloudConfig = window.SUPABASE_CONFIG || {};
   const cloudClient = window.supabase && cloudConfig.url && cloudConfig.publishableKey
@@ -181,18 +182,19 @@
       emails: files.reduce((sum, file) => sum + Number(file.emails || 0), 0),
       phones: files.reduce((sum, file) => sum + Number(file.phones || 0), 0),
       both: files.reduce((sum, file) => sum + Number(file.both || 0), 0),
-      unknownBoth: files.some(file => file.both == null)
+      unknownBoth: files.some(file => file.both == null || file.contactCountVersion !== CONTACT_COUNT_VERSION)
     };
   }
 
   function countContacts(rows) {
     const emails = new Set();
     const phones = new Set();
-    const both = new Set();
+    const bothEmails = new Set();
+    const bothPhones = new Set();
     const headers = (rows[0] || []).map(value => String(value || "").toLowerCase());
     const emailColumns = headers.map((header, index) => /e-?mail|correo/.test(header) ? index : -1).filter(index => index >= 0);
     const phoneColumns = headers.map((header, index) => /phone|tel[eé]fono|mobile|m[oó]vil|whatsapp|celular/.test(header) ? index : -1).filter(index => index >= 0);
-    rows.slice(1).forEach((row, rowIndex) => {
+    rows.slice(1).forEach(row => {
       const emailCells = emailColumns.length ? emailColumns.map(index => row[index]) : row;
       const rowEmails = new Set();
       emailCells.forEach(cell => {
@@ -212,9 +214,12 @@
           rowPhones.add(compactPhone);
         }
       });
-      if (rowEmails.size && rowPhones.size) both.add(`${[...rowEmails].sort().join("|")}::${[...rowPhones].sort().join("|")}::${rowIndex}`);
+      if (rowEmails.size && rowPhones.size) {
+        rowEmails.forEach(email => bothEmails.add(email));
+        rowPhones.forEach(phone => bothPhones.add(phone));
+      }
     });
-    return { emails: emails.size, phones: phones.size, both: both.size };
+    return { emails: emails.size, phones: phones.size, both: Math.min(bothEmails.size, bothPhones.size) };
   }
 
   function notify(message) {
@@ -440,7 +445,7 @@
     const priorityOptions = priorities.map(priority => `<option${priority === item.priority ? " selected" : ""}>${priority}</option>`).join("");
     const stats = extractionStats(item);
     const contactSummary = stats.files
-      ? `<strong>${formatCount(stats.contacts)} contactos</strong><small><b>${formatCount(stats.emails)}</b> emails · <b>${formatCount(stats.phones)}</b> teléfonos</small><em>${stats.files} CSV</em>`
+      ? `<strong>${formatCount(stats.contacts)} contactos</strong><small class="contactCounts"><span><b>${formatCount(stats.emails)}</b> emails</span><i aria-hidden="true">·</i><span><b>${formatCount(stats.phones)}</b> teléfonos</span></small><em>${stats.files} CSV</em>`
       : `<strong>Sin contactos</strong><small>Sube un CSV</small><em>${stats.completed}/4 bloques</em>`;
     const csvState = `<span class="csvState${stats.files ? " hasData" : ""}${stats.completed === 4 ? " ready" : ""}"><b>${stats.completed}/4</b><span>${contactSummary}</span></span>`;
     const csvPanel = item.mailerfind
@@ -663,14 +668,14 @@
     const refs = [];
     competitors.forEach(item => {
       const extraction = normalizeExtraction(item.extraction);
-      if (item.mailerfind && item.mailerfind.both == null) refs.push({ competitorId: item.id, fileKey: item.id, meta: item.mailerfind, kind: "legacy" });
+      if (item.mailerfind && item.mailerfind.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: item.id, meta: item.mailerfind, kind: "legacy" });
       ["following", "followers"].forEach(step => {
         const meta = extraction[step].mailerfind;
-        if (meta && meta.both == null) refs.push({ competitorId: item.id, fileKey: `${item.id}__${step}`, meta, kind: "step", step });
+        if (meta && meta.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: `${item.id}__${step}`, meta, kind: "step", step });
       });
       [["salesReels", "sales"], ["resourceReels", "resources"]].forEach(([listName, type]) => {
         extraction[listName].forEach(reel => {
-          if (reel.mailerfind && reel.mailerfind.both == null) refs.push({ competitorId: item.id, fileKey: `${item.id}__${type}__${reel.id}`, meta: reel.mailerfind, kind: "reel", listName, reelId: reel.id });
+          if (reel.mailerfind && reel.mailerfind.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: `${item.id}__${type}__${reel.id}`, meta: reel.mailerfind, kind: "reel", listName, reelId: reel.id });
         });
       });
     });
@@ -698,7 +703,7 @@
         const rows = parseCsv(await file.blob.text());
         if (!rows.length) continue;
         const counts = countContacts(rows);
-        updates.push({ ref, meta: { ...ref.meta, rows: Math.max(rows.length - 1, 0), emails: counts.emails, phones: counts.phones, both: counts.both } });
+        updates.push({ ref, meta: { ...ref.meta, rows: Math.max(rows.length - 1, 0), emails: counts.emails, phones: counts.phones, both: counts.both, contactCountVersion: CONTACT_COUNT_VERSION } });
       } catch (_) {
         // Se reintentará en la próxima sesión si el archivo no está disponible.
       }
@@ -741,6 +746,7 @@
       emails: contacts.emails,
       phones: contacts.phones,
       both: contacts.both,
+      contactCountVersion: CONTACT_COUNT_VERSION,
       storagePath
     });
     notify(`CSV guardado: ${contacts.emails} emails y ${contacts.phones} teléfonos detectados.`);
@@ -890,7 +896,7 @@
         let storagePath = null;
         if (cloudSession) storagePath = await uploadCsvToCloud(id, file, text, current?.mailerfind?.storagePath);
         else await storeCsv(id, file.name, text);
-        update(id, { mailerfind: { fileName: file.name, importedAt: new Date().toISOString(), rows: Math.max(rows.length - 1, 0), columns: rows[0], preview: rows.slice(1, 5), emails: contacts.emails, phones: contacts.phones, both: contacts.both, storagePath } });
+        update(id, { mailerfind: { fileName: file.name, importedAt: new Date().toISOString(), rows: Math.max(rows.length - 1, 0), columns: rows[0], preview: rows.slice(1, 5), emails: contacts.emails, phones: contacts.phones, both: contacts.both, contactCountVersion: CONTACT_COUNT_VERSION, storagePath } });
         notify(`CSV guardado: ${contacts.emails} emails y ${contacts.phones} teléfonos detectados.`);
       } catch (_) {
         notify("No se pudo guardar el CSV. Prueba de nuevo.");

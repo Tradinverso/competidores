@@ -139,10 +139,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .csvState.hasData { background: #f8fbff; border-color: #b9d6f8; color: #163d69; }
 .csvState > b { flex: 0 0 auto; width: 34px; height: 30px; display: grid; place-items: center; background: #e9ece9; border-radius: 8px; font-size: 10px; }
 .csvState.ready > b { background: #2d89ff; color: #fff; }
-.csvState > span { display: flex; flex-direction: column; min-width: 0; }
+.csvState > span { display: flex; flex: 1 1 auto; flex-direction: column; min-width: 0; overflow: hidden; }
 .csvState > span > strong { white-space: nowrap; font-size: 13px; line-height: 1.1; font-weight: 850; letter-spacing: -.015em; }
-.csvState small { color: #596b61; white-space: nowrap; margin-top: 4px; font-size: 9px; font-weight: 560; }
+.csvState small { color: #596b61; margin-top: 4px; font-size: 9px; font-weight: 560; }
 .csvState small b { color: #0756ac; font-size: 10px; }
+.contactCounts { display: flex; flex-wrap: wrap; align-items: center; column-gap: 4px; row-gap: 1px; line-height: 1.2; }
+.contactCounts span { white-space: nowrap; }
+.contactCounts i { display: none; }
 .csvState em { margin-top: 3px; color: #8a9690; font-size: 8px; font-style: normal; font-weight: 600; }
 .studiedToggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 10px; font-weight: 650; color: #717a75; }
 .studiedToggle input { width: 17px; height: 17px; accent-color: var(--green); }
