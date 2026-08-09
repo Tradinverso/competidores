@@ -37,11 +37,14 @@ test("incluye el flujo completo de la segunda pestaña", async () => {
   assert.match(dashboard, /countContacts/);
   assert.match(dashboard, /emails y.*teléfonos/);
   assert.match(dashboard, /both: contacts\.both/);
+  assert.match(dashboard, /backfillMissingContactCounts/);
+  assert.match(dashboard, /filesMissingBoth/);
   assert.match(dashboard, /contactBreakdown/);
   assert.match(html, /id="metricContacts"/);
   assert.match(html, /id="metricEmails"/);
   assert.match(html, /id="metricPhones"/);
   assert.match(html, /id="metricBoth"/);
+  assert.match(html, /styles\.css\?v=20260809-arial/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {

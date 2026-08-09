@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --font-ui: Arial, Helvetica, sans-serif;
   --ink: #16211d;
   --muted: #66716c;
   --paper: #f4f3ee;
@@ -15,7 +16,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-geist-sans), Arial, sans-serif; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-ui); }
 .radarShell { width: 100%; height: 100vh; overflow: hidden; }
 .radarFrame { width: 100%; height: 100%; border: 0; display: block; background: var(--paper); }
 button, input, select, textarea { font: inherit; }
@@ -44,7 +45,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .hero { min-height: 330px; padding: 62px clamp(20px, 5vw, 82px) 54px; background: var(--green); color: white; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; position: relative; overflow: hidden; }
 .hero::before { content: ""; position: absolute; width: 520px; height: 520px; border: 1px solid rgba(215, 243, 107, .18); border-radius: 50%; right: -110px; top: -245px; box-shadow: 0 0 0 84px rgba(215, 243, 107, .035), 0 0 0 168px rgba(215, 243, 107, .025); }
 .hero > * { position: relative; z-index: 1; }
-.eyebrow { margin: 0 0 15px; color: #729182; font-family: var(--font-geist-mono), monospace; font-size: 10px; letter-spacing: .17em; font-weight: 750; }
+.eyebrow { margin: 0 0 15px; color: #729182; font-family: var(--font-ui); font-size: 11px; letter-spacing: .1em; font-weight: 700; }
 .hero .eyebrow { color: var(--lime); }
 .hero h1 { margin: 0; max-width: 740px; font-size: clamp(43px, 5vw, 72px); letter-spacing: -.065em; line-height: .98; font-weight: 730; }
 .hero h1 em { color: var(--lime); font-style: normal; font-weight: 420; }
@@ -68,7 +69,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .workflow { width: min(1400px, calc(100% - 40px)); margin: 26px auto 0; min-height: 78px; background: #e9e8e2; border: 1px solid #dcddd7; border-radius: 14px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 23px; }
 .workflowTitle { color: var(--muted); text-transform: uppercase; letter-spacing: .13em; font-size: 9px; font-weight: 750; }
 .workflow > div { display: flex; align-items: center; gap: 10px; }
-.workflow b { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #c9ccc5; border-radius: 50%; font-family: var(--font-geist-mono); font-size: 11px; }
+.workflow b { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid #c9ccc5; border-radius: 50%; font-family: var(--font-ui); font-size: 11px; }
 .workflow > div:first-of-type b { background: var(--green); color: var(--lime); border-color: var(--green); }
 .workflow div span { display: flex; flex-direction: column; }
 .workflow strong { font-size: 12px; }
@@ -90,14 +91,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 .tableWrap { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--panel); box-shadow: 0 12px 35px rgba(22, 33, 29, .045); }
 .tableHeader, .competitorRow { display: grid; grid-template-columns: 84px minmax(230px, 1.65fr) 130px 130px 150px 126px 46px; align-items: center; gap: 13px; }
-.tableHeader { min-height: 42px; padding: 0 17px; background: #ecece7; color: #7b847f; text-transform: uppercase; font-family: var(--font-geist-mono); font-size: 9px; letter-spacing: .08em; }
+.tableHeader { min-height: 42px; padding: 0 17px; background: #ecece7; color: #66716c; text-transform: uppercase; font-family: var(--font-ui); font-size: 10px; letter-spacing: .04em; font-weight: 700; }
 .competitor { border-top: 1px solid #e8e9e4; transition: background .15s ease; }
 .competitor:first-child { border-top: 0; }
 .competitor:hover { background: #fbfbf8; }
 .competitor.isStudied { background: #f7faf7; }
 .competitorRow { min-height: 78px; padding: 10px 17px; }
 .orderCell { display: flex; align-items: center; gap: 8px; }
-.orderCell > strong { width: 28px; font-family: var(--font-geist-mono); font-size: 12px; color: #6b746f; }
+.orderCell > strong { width: 28px; font-family: var(--font-ui); font-size: 13px; color: #59635e; }
 .moveButtons { display: flex; flex-direction: column; gap: 2px; opacity: 0; transition: opacity .15s; }
 .competitor:hover .moveButtons, .moveButtons:focus-within { opacity: 1; }
 .moveButtons button { width: 21px; height: 18px; border: 1px solid var(--line); background: white; border-radius: 4px; cursor: pointer; font-size: 10px; line-height: 1; }
@@ -149,7 +150,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .fileSummary small { color: #858e89; font-size: 8px; margin-top: 3px; }
 .csvActions { display: flex; gap: 6px; margin-top: 9px; }
 .csvColumns { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
-.csvColumns span { border-radius: 5px; padding: 4px 6px; background: #e4e6e2; color: #707874; font-family: var(--font-geist-mono); font-size: 7px; }
+.csvColumns span { border-radius: 5px; padding: 4px 6px; background: #e4e6e2; color: #59635e; font-family: var(--font-ui); font-size: 8px; }
 .emptyState { min-height: 180px; display: grid; place-items: center; color: var(--muted); font-size: 13px; }
 .loadMore { width: 100%; margin-top: 12px; height: 48px; border: 1px solid var(--line); border-radius: 11px; background: rgba(255,255,255,.65); color: var(--ink); cursor: pointer; font-size: 12px; font-weight: 700; }
 .loadMore span { color: #929995; margin-left: 7px; font-weight: 450; }

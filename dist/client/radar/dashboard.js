@@ -55,6 +55,7 @@
   let cloudSaveTimer = null;
   let cloudSaving = false;
   let cloudSaveQueued = false;
+  let contactBackfillRunning = false;
   let competitors = loadData();
   let expandedId = null;
   let visibleCount = 40;
@@ -179,7 +180,8 @@
       contacts: files.reduce((sum, file) => sum + Number(file.rows || 0), 0),
       emails: files.reduce((sum, file) => sum + Number(file.emails || 0), 0),
       phones: files.reduce((sum, file) => sum + Number(file.phones || 0), 0),
-      both: files.reduce((sum, file) => sum + Number(file.both || 0), 0)
+      both: files.reduce((sum, file) => sum + Number(file.both || 0), 0),
+      unknownBoth: files.some(file => file.both == null)
     };
   }
 
@@ -284,6 +286,7 @@
       competitors = applyMeryPriority(removeSmallProfiles(mergeSavedData(data.competitors, false)));
       localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
       render();
+      await backfillMissingContactCounts();
       scheduleCloudSave();
       return;
     }
@@ -308,6 +311,7 @@
     if (!cloudClient) return;
     const { data } = await cloudClient.auth.getSession();
     if (data.session) await activateCloud(data.session);
+    else await backfillMissingContactCounts();
     cloudClient.auth.onAuthStateChange((_event, session) => {
       setTimeout(async () => {
         if (session && session.user.id !== cloudSession?.user?.id) await activateCloud(session);
@@ -352,8 +356,9 @@
       totals.emails += stats.emails;
       totals.phones += stats.phones;
       totals.both += stats.both;
+      totals.unknownBoth = totals.unknownBoth || stats.unknownBoth;
       return totals;
-    }, { files: 0, contacts: 0, emails: 0, phones: 0, both: 0 });
+    }, { files: 0, contacts: 0, emails: 0, phones: 0, both: 0, unknownBoth: false });
     const progress = competitors.length ? Math.round(studied / competitors.length * 100) : 0;
     document.getElementById("metricTotal").textContent = competitors.length;
     document.getElementById("metricCritical").textContent = critical;
@@ -363,7 +368,7 @@
     document.getElementById("metricContacts").textContent = formatCount(extractionTotals.contacts);
     document.getElementById("metricEmails").textContent = formatCount(extractionTotals.emails);
     document.getElementById("metricPhones").textContent = formatCount(extractionTotals.phones);
-    document.getElementById("metricBoth").textContent = formatCount(extractionTotals.both);
+    document.getElementById("metricBoth").textContent = extractionTotals.unknownBoth ? "…" : extractionTotals.files ? formatCount(extractionTotals.both) : "—";
     document.getElementById("progressPercent").textContent = `${progress}%`;
     document.getElementById("progressLabel").textContent = `${studied} de ${competitors.length} estudiados`;
     document.getElementById("progressRing").style.setProperty("--progress", `${progress}%`);
@@ -652,6 +657,61 @@
     const stored = await retrieveCsv(fileKey);
     if (!stored) return null;
     return { fileName: stored.fileName, blob: new Blob([stored.text], { type: "text/csv;charset=utf-8" }) };
+  }
+
+  function filesMissingBoth() {
+    const refs = [];
+    competitors.forEach(item => {
+      const extraction = normalizeExtraction(item.extraction);
+      if (item.mailerfind && item.mailerfind.both == null) refs.push({ competitorId: item.id, fileKey: item.id, meta: item.mailerfind, kind: "legacy" });
+      ["following", "followers"].forEach(step => {
+        const meta = extraction[step].mailerfind;
+        if (meta && meta.both == null) refs.push({ competitorId: item.id, fileKey: `${item.id}__${step}`, meta, kind: "step", step });
+      });
+      [["salesReels", "sales"], ["resourceReels", "resources"]].forEach(([listName, type]) => {
+        extraction[listName].forEach(reel => {
+          if (reel.mailerfind && reel.mailerfind.both == null) refs.push({ competitorId: item.id, fileKey: `${item.id}__${type}__${reel.id}`, meta: reel.mailerfind, kind: "reel", listName, reelId: reel.id });
+        });
+      });
+    });
+    return refs;
+  }
+
+  function applyBackfilledMeta(item, ref, meta) {
+    if (ref.kind === "legacy") return normalizeCompetitor({ ...item, mailerfind: meta });
+    const extraction = normalizeExtraction(item.extraction);
+    if (ref.kind === "step") extraction[ref.step] = { ...extraction[ref.step], mailerfind: meta };
+    if (ref.kind === "reel") extraction[ref.listName] = extraction[ref.listName].map(reel => reel.id === ref.reelId ? { ...reel, mailerfind: meta } : reel);
+    return normalizeCompetitor({ ...item, extraction });
+  }
+
+  async function backfillMissingContactCounts() {
+    if (contactBackfillRunning) return;
+    const refs = filesMissingBoth();
+    if (!refs.length) return;
+    contactBackfillRunning = true;
+    const updates = [];
+    for (const ref of refs) {
+      try {
+        const file = await downloadExtractionFile(ref.fileKey, ref.meta);
+        if (!file) continue;
+        const rows = parseCsv(await file.blob.text());
+        if (!rows.length) continue;
+        const counts = countContacts(rows);
+        updates.push({ ref, meta: { ...ref.meta, rows: Math.max(rows.length - 1, 0), emails: counts.emails, phones: counts.phones, both: counts.both } });
+      } catch (_) {
+        // Se reintentará en la próxima sesión si el archivo no está disponible.
+      }
+    }
+    updates.forEach(({ ref, meta }) => {
+      competitors = competitors.map(item => item.id === ref.competitorId ? applyBackfilledMeta(item, ref, meta) : item);
+    });
+    contactBackfillRunning = false;
+    if (updates.length) {
+      saveData();
+      render();
+      notify(`Datos completos calculados en ${updates.length} CSV anteriores.`);
+    }
   }
 
   async function importExtractionCsv(target, file) {
