@@ -9,7 +9,7 @@
     <meta property="og:image" content="public/og.png" />
     <title>Radar de Competidores | Tradingverso</title>
     <link rel="icon" href="public/favicon.svg" />
-  <link rel="stylesheet" href="styles.css?v=20260809-contact-wrap" />
+  <link rel="stylesheet" href="styles.css?v=20260809-kpi-coverage" />
   </head>
   <body>
     <main id="inicio">
@@ -22,6 +22,7 @@
         </a>
         <div class="topActions">
           <span id="saveState" class="saveState"><i></i><span>Guardado local</span></span>
+          <button id="themeToggle" class="button ghost themeButton" type="button" aria-pressed="false" title="Cambiar tema"><span aria-hidden="true">◐</span><span class="themeLabel">Modo oscuro</span></button>
           <button id="cloudAccessButton" class="button ghost cloudButton" type="button">Entrar</button>
           <label class="button ghost fileButton">Importar copia<input id="backupInput" type="file" accept="application/json,.json" /></label>
           <button id="exportButton" class="button ghost" type="button">Exportar</button>
@@ -31,13 +32,7 @@
 
       <section class="hero">
         <div>
-          <p class="eyebrow">INTELIGENCIA DE MERCADO</p>
-          <h1>Tu mapa competitivo,<br /><em>en orden de acción.</em></h1>
-          <p class="heroCopy">Prioriza perfiles y controla cada extracción de Mailerfind: seguidos, seguidores, reels de venta y reels de recurso.</p>
-        </div>
-        <div class="heroProgress">
-          <div id="progressRing" class="progressRing"><span id="progressPercent">0%</span></div>
-          <div><strong>Avance global</strong><span id="progressLabel">0 estudiados</span></div>
+          <h1>Tu mapa competitivo.</h1>
         </div>
       </section>
 
@@ -46,18 +41,11 @@
         <article class="accent"><span>Prioridad crítica</span><strong id="metricCritical">0</strong><small>primero en Mailerfind</small></article>
         <article><span>Info extraída</span><strong id="metricStudied">0</strong><small id="metricPending">0 pendientes</small></article>
         <article><span>CSV cargados</span><strong id="metricCsv">0</strong><small>datos asociados</small></article>
-        <article class="contactMetric"><span>Contactos extraídos</span><strong id="metricContacts">0</strong><small>registros importados</small></article>
-        <article class="contactMetric"><span>Correos detectados</span><strong id="metricEmails">0</strong><small>emails disponibles</small></article>
-        <article class="contactMetric"><span>Teléfonos detectados</span><strong id="metricPhones">0</strong><small>números disponibles</small></article>
-        <article class="contactMetric accent"><span>Con ambos datos</span><strong id="metricBoth">0</strong><small>email y teléfono</small></article>
-      </section>
-
-      <section class="workflow">
-        <span class="workflowTitle">Flujo recomendado</span>
-        <div><b>1</b><span><strong>Prioriza</strong><small>Ordena la cola</small></span></div><i>→</i>
-        <div><b>2</b><span><strong>Localiza</strong><small>Venta y recursos</small></span></div><i>→</i>
-        <div><b>3</b><span><strong>Extrae</strong><small>Seguidos y seguidores</small></span></div><i>→</i>
-        <div><b>4</b><span><strong>Sube</strong><small>Un CSV por extracción</small></span></div>
+        <article class="audienceMetric"><span>Audiencia de cuentas extraídas</span><strong id="metricAudience">0</strong><small id="metricAudienceAccounts">0 cuentas con audiencia registrada</small></article>
+        <article class="contactMetric"><span>Contactos extraídos</span><strong id="metricContacts">0</strong><small><b id="metricContactsPct">—</b> de la audiencia</small></article>
+        <article class="contactMetric"><span>Correos detectados</span><strong id="metricEmails">0</strong><small><b id="metricEmailsPct">—</b> de la audiencia</small></article>
+        <article class="contactMetric"><span>Teléfonos detectados</span><strong id="metricPhones">0</strong><small><b id="metricPhonesPct">—</b> de la audiencia</small></article>
+        <article class="contactMetric accent"><span>Con ambos datos</span><strong id="metricBoth">0</strong><small><b id="metricBothPct">—</b> de la audiencia</small></article>
       </section>
 
       <section class="workspace">
@@ -112,6 +100,6 @@
   <script src="supabase-config.js?v=20260803-key"></script>
     <script src="competidores-codes.js?v=20260804-codigos"></script>
     <script src="competidores-data.js"></script>
-    <script src="dashboard.js?v=20260809-contact-count-v2"></script>
+    <script src="dashboard.js?v=20260809-kpi-coverage"></script>
   </body>
 </html>

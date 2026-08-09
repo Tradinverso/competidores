@@ -2,6 +2,7 @@
   "use strict";
 
   const STORAGE_KEY = "radar-competidores-github-v1";
+  const THEME_KEY = "radar-competidores-theme";
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const CLOUD_BUCKET = "mailerfind";
   const CLOUD_EMAIL = "tradinverso@gmail.com";
@@ -75,11 +76,19 @@
     toast: document.getElementById("toast"),
     saveState: document.getElementById("saveState"),
     cloudButton: document.getElementById("cloudAccessButton"),
+    themeButton: document.getElementById("themeToggle"),
     cloudDialog: document.getElementById("cloudDialog"),
     cloudForm: document.getElementById("cloudForm"),
     cloudPassword: document.getElementById("cloudPassword"),
     cloudMessage: document.getElementById("cloudMessage")
   };
+
+  function applyTheme(theme) {
+    const dark = theme === "dark";
+    document.documentElement.dataset.theme = dark ? "dark" : "light";
+    elements.themeButton.setAttribute("aria-pressed", String(dark));
+    elements.themeButton.querySelector(".themeLabel").textContent = dark ? "Modo claro" : "Modo oscuro";
+  }
 
   function mergeSavedData(saved, migrateSeedOrder) {
       const seed = structuredClone(window.SEED_COMPETITORS || []);
@@ -164,19 +173,20 @@
     return new Intl.NumberFormat("es-ES").format(Number(value) || 0);
   }
 
+  function formatPercent(value, total) {
+    if (!Number.isFinite(total) || total <= 0) return "—";
+    const percentage = Number(value || 0) / total * 100;
+    if (percentage > 0 && percentage < 0.1) return "<0,1%";
+    return `${new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 }).format(percentage)}%`;
+  }
+
   function extractionStats(item) {
     const extraction = normalizeExtraction(item.extraction);
-    const steps = [extraction.followers.done, extraction.following.done, extraction.salesDone, extraction.resourcesDone];
-    const files = [
-      extraction.followers.mailerfind,
-      extraction.following.mailerfind,
-      ...extraction.salesReels.map(reel => reel.mailerfind),
-      ...extraction.resourceReels.map(reel => reel.mailerfind),
-      item.mailerfind
-    ].filter(Boolean);
+    const primaryFile = extraction.followers.mailerfind || item.mailerfind || null;
+    const files = primaryFile ? [primaryFile] : [];
     return {
-      completed: steps.filter(Boolean).length,
-      total: steps.length,
+      completed: files.length,
+      total: 1,
       files: files.length,
       contacts: files.reduce((sum, file) => sum + Number(file.rows || 0), 0),
       emails: files.reduce((sum, file) => sum + Number(file.emails || 0), 0),
@@ -339,8 +349,8 @@
         if (elements.status.value === "Información extraída") return item.studied;
         if (elements.status.value === "Con CSV") return extractionStats(item).files > 0;
         if (elements.status.value === "Sin CSV") return extractionStats(item).files === 0;
-        if (elements.status.value === "Extracción completa") return extractionStats(item).completed === 4;
-        if (elements.status.value === "Extracción incompleta") return extractionStats(item).completed < 4;
+        if (elements.status.value === "Extracción completa") return extractionStats(item).completed === extractionStats(item).total;
+        if (elements.status.value === "Extracción incompleta") return extractionStats(item).completed < extractionStats(item).total;
         return true;
       })
       .sort((a, b) => {
@@ -364,20 +374,24 @@
       totals.unknownBoth = totals.unknownBoth || stats.unknownBoth;
       return totals;
     }, { files: 0, contacts: 0, emails: 0, phones: 0, both: 0, unknownBoth: false });
-    const progress = competitors.length ? Math.round(studied / competitors.length * 100) : 0;
+    const accountsWithCsv = competitors.filter(item => extractionStats(item).files > 0);
+    const accountsWithAudience = accountsWithCsv.filter(item => Number.isFinite(Number(item.followers)) && Number(item.followers) > 0);
+    const audienceTotal = accountsWithAudience.reduce((sum, item) => sum + Number(item.followers), 0);
     document.getElementById("metricTotal").textContent = competitors.length;
     document.getElementById("metricCritical").textContent = critical;
     document.getElementById("metricStudied").textContent = studied;
     document.getElementById("metricPending").textContent = `${competitors.length - studied} pendientes`;
     document.getElementById("metricCsv").textContent = extractionTotals.files;
+    document.getElementById("metricAudience").textContent = formatCount(audienceTotal);
+    document.getElementById("metricAudienceAccounts").textContent = `${accountsWithAudience.length} cuentas con audiencia registrada`;
     document.getElementById("metricContacts").textContent = formatCount(extractionTotals.contacts);
     document.getElementById("metricEmails").textContent = formatCount(extractionTotals.emails);
     document.getElementById("metricPhones").textContent = formatCount(extractionTotals.phones);
     document.getElementById("metricBoth").textContent = extractionTotals.unknownBoth ? "…" : extractionTotals.files ? formatCount(extractionTotals.both) : "—";
-    document.getElementById("progressPercent").textContent = `${progress}%`;
-    document.getElementById("progressLabel").textContent = `${studied} de ${competitors.length} estudiados`;
-    document.getElementById("progressRing").style.setProperty("--progress", `${progress}%`);
-
+    document.getElementById("metricContactsPct").textContent = formatPercent(extractionTotals.contacts, audienceTotal);
+    document.getElementById("metricEmailsPct").textContent = formatPercent(extractionTotals.emails, audienceTotal);
+    document.getElementById("metricPhonesPct").textContent = formatPercent(extractionTotals.phones, audienceTotal);
+    document.getElementById("metricBothPct").textContent = extractionTotals.unknownBoth ? "…" : formatPercent(extractionTotals.both, audienceTotal);
     const filtered = getFiltered();
     document.getElementById("resultsCount").textContent = `${filtered.length} resultados`;
     elements.list.innerHTML = filtered.slice(0, visibleCount).map(renderCompetitor).join("");
@@ -391,8 +405,8 @@
     return `<div class="extractionFile"><span>CSV</span><p><strong>${escapeHtml(meta.fileName)}</strong><small>${formatCount(meta.rows)} contactos extraídos</small></p><div class="contactBreakdown"><span><b>${formatCount(meta.emails)}</b> emails</span><span><b>${formatCount(meta.phones)}</b> teléfonos</span></div></div>`;
   }
 
-  function extractionUpload(item, step, meta, label) {
-    const fileKey = `${item.id}__${step}`;
+  function extractionUpload(item, step, meta, label, storedFileKey = null) {
+    const fileKey = storedFileKey || `${item.id}__${step}`;
     const recommended = `${item.code || "CXXX"}__${item.username || "usuario"}__${label}__${new Date().toISOString().slice(0, 10)}.csv`;
     return `${csvMetaSummary(meta)}<div class="extractionActions">
       ${meta ? `<button class="button ghost small" data-action="download-extraction" data-id="${item.id}" data-file-key="${escapeHtml(fileKey)}" data-step="${step}" type="button">Descargar</button>` : ""}
@@ -402,27 +416,23 @@
 
   function renderAudienceStep(item, step, title, typeLabel) {
     const data = item.extraction[step];
+    const legacyMeta = step === "followers" && !data.mailerfind ? item.mailerfind : null;
+    const meta = data.mailerfind || legacyMeta;
     return `<article class="extractionCard${data.done ? " isDone" : ""}">
       <header><label><input type="checkbox" data-action="extraction-step" data-id="${item.id}" data-step="${step}"${data.done ? " checked" : ""} /><span>${title}</span></label><b>${data.done ? "Hecho" : "Pendiente"}</b></header>
-      ${extractionUpload(item, step, data.mailerfind, typeLabel)}
+      ${extractionUpload(item, step, meta, typeLabel, legacyMeta ? item.id : null)}
     </article>`;
   }
 
   function renderReelItem(item, reel, type) {
-    const typeLabel = type === "sales" ? "VENTA" : "RECURSO";
     const listName = type === "sales" ? "salesReels" : "resourceReels";
-    const fileKey = `${item.id}__${type}__${reel.id}`;
     const reelUrl = safeUrl(reel.url);
-    const recommended = `${item.code || "CXXX"}__${item.username || "usuario"}__${typeLabel}__${reel.label || "reel"}__${new Date().toISOString().slice(0, 10)}.csv`;
     return `<article class="reelItem${reel.done ? " isDone" : ""}">
       <div class="reelFields">
         <label>URL del reel<div class="inputAction"><input data-action="reel-field" data-id="${item.id}" data-reel-list="${listName}" data-reel-id="${reel.id}" data-reel-field="url" value="${escapeHtml(reel.url)}" placeholder="https://instagram.com/reel/..." />${reelUrl ? `<a href="${escapeHtml(reelUrl)}" target="_blank" rel="noreferrer">Abrir ↗</a>` : ""}</div></label>
         <label>De qué iba<input data-action="reel-field" data-id="${item.id}" data-reel-list="${listName}" data-reel-id="${reel.id}" data-reel-field="label" value="${escapeHtml(reel.label)}" placeholder="webinar, guía IFVG…" /></label>
       </div>
       <div class="reelStatus"><label><input type="checkbox" data-action="reel-done" data-id="${item.id}" data-reel-list="${listName}" data-reel-id="${reel.id}"${reel.done ? " checked" : ""} />Extraído</label><button data-action="remove-reel" data-id="${item.id}" data-reel-list="${listName}" data-reel-id="${reel.id}" type="button" aria-label="Eliminar reel">×</button></div>
-      ${csvMetaSummary(reel.mailerfind)}
-      <div class="extractionActions">${reel.mailerfind ? `<button class="button ghost small" data-action="download-extraction" data-id="${item.id}" data-file-key="${escapeHtml(fileKey)}" data-reel-list="${listName}" data-reel-id="${reel.id}" type="button">Descargar</button>` : ""}<label class="button ghost small fileButton">${reel.mailerfind ? "Reemplazar" : "Subir CSV"}<input type="file" accept=".csv,text/csv" data-action="reel-csv" data-id="${item.id}" data-reel-list="${listName}" data-reel-id="${reel.id}" /></label></div>
-      <small class="fileNameHint">Nombre recomendado: ${escapeHtml(recommended)}</small>
     </article>`;
   }
 
@@ -446,11 +456,8 @@
     const stats = extractionStats(item);
     const contactSummary = stats.files
       ? `<strong>${formatCount(stats.contacts)} contactos</strong><small class="contactCounts"><span><b>${formatCount(stats.emails)}</b> emails</span><i aria-hidden="true">·</i><span><b>${formatCount(stats.phones)}</b> teléfonos</span></small><em>${stats.files} CSV</em>`
-      : `<strong>Sin contactos</strong><small>Sube un CSV</small><em>${stats.completed}/4 bloques</em>`;
-    const csvState = `<span class="csvState${stats.files ? " hasData" : ""}${stats.completed === 4 ? " ready" : ""}"><b>${stats.completed}/4</b><span>${contactSummary}</span></span>`;
-    const csvPanel = item.mailerfind
-      ? `<div class="fileSummary"><span>CSV</span><p><strong>${escapeHtml(item.mailerfind.fileName)}</strong><small>${item.mailerfind.rows} registros · ${item.mailerfind.columns.length} columnas</small></p></div><div class="csvActions"><button class="button ghost small" data-action="download-csv" data-id="${item.id}" type="button">Descargar</button><label class="button ghost small fileButton">Reemplazar<input type="file" accept=".csv,text/csv" data-action="csv" data-id="${item.id}" /></label></div><div class="csvColumns">${item.mailerfind.columns.slice(0, 6).map(column => `<span>${escapeHtml(column || "Sin título")}</span>`).join("")}</div>`
-      : `<label class="dropCsv">＋<strong>Subir CSV de Mailerfind</strong><small>Se guardará asociado a este competidor</small><input type="file" accept=".csv,text/csv" data-action="csv" data-id="${item.id}" /></label>`;
+      : `<strong>Sin contactos</strong><small>Sube el CSV</small><em>Seguidores</em>`;
+    const csvState = `<span class="csvState${stats.files ? " hasData ready" : ""}"><b>${stats.files ? "CSV" : "0/1"}</b><span>${contactSummary}</span></span>`;
 
     const channels = item.channels || {};
     const profile = instagram
@@ -486,8 +493,8 @@
           <label>Notas<textarea data-field="notes" data-id="${item.id}" placeholder="Oferta, posicionamiento, puntos fuertes…">${escapeHtml(item.notes)}</textarea></label>
           <button class="button danger small" data-action="delete" data-id="${item.id}" type="button">Eliminar competidor</button>
         </div>
-        <div class="detailBlock followersBlock"><h3>Audiencia visible</h3><label>Seguidores en Instagram<input data-field="followers" data-id="${item.id}" type="number" min="0" value="${item.followers ?? ""}" placeholder="Ej. 125000" /></label><label>Seguidos en Instagram<input data-field="following" data-id="${item.id}" type="number" min="0" value="${item.following ?? ""}" placeholder="Ej. 820" /></label><div class="automationNote"><span>◎</span><p><strong>Dato del perfil</strong>Estas cifras son distintas de los CSV que Mailerfind extrae de Seguidores y Seguidos.</p></div></div>
-        <div class="detailBlock extractionBlock"><h3>Plan de extracción Mailerfind</h3><p class="extractionIntro">Guarda cada extracción por separado para que después pueda cruzarse sin confundir seguidores, seguidos y comentaristas.</p><div class="audienceExtractionGrid">${renderAudienceStep(item, "following", "Seguidos", "SIGUE")}${renderAudienceStep(item, "followers", "Seguidores", "SEGUIDORES")}</div>${renderReelSection(item, "sales", "Reels de venta", "Webinar, plazas, programa o llamada de venta.")}${renderReelSection(item, "resources", "Reels de recurso", "Guías, PDFs o publicaciones tipo «comenta GUÍA».")}${item.mailerfind ? `<div class="legacyCsv"><strong>CSV anterior</strong><p>Este archivo se conserva como carga general.</p>${csvPanel}</div>` : ""}</div>
+        <div class="detailBlock followersBlock"><h3>Audiencia visible</h3><label>Seguidores en Instagram<input data-field="followers" data-id="${item.id}" type="number" min="0" value="${item.followers ?? ""}" placeholder="Ej. 125000" /></label><div class="automationNote"><span>◎</span><p><strong>Total de referencia</strong>Este número se usa para calcular los porcentajes de contactos, correos y teléfonos extraídos.</p></div></div>
+        <div class="detailBlock extractionBlock"><h3>Extracción de seguidores</h3><p class="extractionIntro">Sube un único CSV de Mailerfind por competidor: el de sus seguidores.</p><div class="audienceExtractionGrid singleExtraction">${renderAudienceStep(item, "followers", "Seguidores", "SEGUIDORES")}</div>${renderReelSection(item, "sales", "Reels de venta", "Webinar, plazas, programa o llamada de venta.")}${renderReelSection(item, "resources", "Reels de recurso", "Guías, PDFs o publicaciones tipo «comenta GUÍA».")}</div>
       </div>` : ""}
     </article>`;
   }
@@ -668,16 +675,9 @@
     const refs = [];
     competitors.forEach(item => {
       const extraction = normalizeExtraction(item.extraction);
-      if (item.mailerfind && item.mailerfind.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: item.id, meta: item.mailerfind, kind: "legacy" });
-      ["following", "followers"].forEach(step => {
-        const meta = extraction[step].mailerfind;
-        if (meta && meta.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: `${item.id}__${step}`, meta, kind: "step", step });
-      });
-      [["salesReels", "sales"], ["resourceReels", "resources"]].forEach(([listName, type]) => {
-        extraction[listName].forEach(reel => {
-          if (reel.mailerfind && reel.mailerfind.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: `${item.id}__${type}__${reel.id}`, meta: reel.mailerfind, kind: "reel", listName, reelId: reel.id });
-        });
-      });
+      const followerMeta = extraction.followers.mailerfind;
+      if (followerMeta && followerMeta.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: `${item.id}__followers`, meta: followerMeta, kind: "step", step: "followers" });
+      else if (!followerMeta && item.mailerfind && item.mailerfind.contactCountVersion !== CONTACT_COUNT_VERSION) refs.push({ competitorId: item.id, fileKey: item.id, meta: item.mailerfind, kind: "legacy" });
     });
     return refs;
   }
@@ -929,6 +929,12 @@
     const link = document.createElement("a"); link.href = url; link.download = `competidores-${new Date().toISOString().slice(0, 10)}.json`; link.click(); URL.revokeObjectURL(url);
   });
 
+  elements.themeButton.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, nextTheme);
+    applyTheme(nextTheme);
+  });
+
   document.getElementById("backupInput").addEventListener("change", async event => {
     const file = event.target.files && event.target.files[0];
     if (!file) return;
@@ -978,6 +984,7 @@
     elements.cloudDialog.close();
   });
 
+  applyTheme(localStorage.getItem(THEME_KEY) || "light");
   render();
   setupCloud();
 })();

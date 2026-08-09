@@ -24,14 +24,17 @@ test("renderiza el radar actualizado", async () => {
   assert.match(html, /\/radar\/index\.html/);
 });
 
-test("incluye el flujo completo de la segunda pestaña", async () => {
+test("incluye la extracción simplificada y los KPI de cobertura", async () => {
   const [html, dashboard] = await Promise.all([
     readFile(new URL("../index.html", import.meta.url), "utf8"),
     readFile(new URL("../dashboard.js", import.meta.url), "utf8"),
   ]);
 
-  assert.match(html, /Seguidos y seguidores/);
-  assert.match(html, /Un CSV por extracción/);
+  assert.match(html, /Tu mapa competitivo\./);
+  assert.doesNotMatch(html, /Flujo recomendado|en orden de acción/);
+  assert.match(dashboard, /Sube un único CSV de Mailerfind por competidor/);
+  assert.doesNotMatch(dashboard, /renderAudienceStep\(item, "following"/);
+  assert.doesNotMatch(dashboard, /data-action="reel-csv"/);
   assert.match(dashboard, /Reels de venta/);
   assert.match(dashboard, /Reels de recurso/);
   assert.match(dashboard, /countContacts/);
@@ -47,7 +50,15 @@ test("incluye el flujo completo de la segunda pestaña", async () => {
   assert.match(html, /id="metricEmails"/);
   assert.match(html, /id="metricPhones"/);
   assert.match(html, /id="metricBoth"/);
-  assert.match(html, /styles\.css\?v=20260809-contact-wrap/);
+  assert.match(html, /id="metricAudience"/);
+  assert.match(html, /id="metricContactsPct"/);
+  assert.match(html, /id="metricEmailsPct"/);
+  assert.match(html, /id="metricPhonesPct"/);
+  assert.match(html, /id="metricBothPct"/);
+  assert.match(html, /id="themeToggle"/);
+  assert.match(dashboard, /function formatPercent/);
+  assert.match(dashboard, /THEME_KEY/);
+  assert.match(html, /styles\.css\?v=20260809-kpi-coverage/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {
