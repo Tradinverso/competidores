@@ -35,8 +35,7 @@ test("incluye la extracción simplificada y los KPI de cobertura", async () => {
   assert.match(dashboard, /Sube aquí el archivo de Mailerfind/);
   assert.doesNotMatch(dashboard, /renderAudienceStep\(item, "following"/);
   assert.doesNotMatch(dashboard, /data-action="reel-csv"/);
-  assert.match(dashboard, /Reels de venta/);
-  assert.match(dashboard, /Reels de recurso/);
+  assert.doesNotMatch(dashboard, /\$\{renderReelSection\(item/);
   assert.match(dashboard, /countContacts/);
   assert.match(dashboard, /emails y.*teléfonos/);
   assert.match(dashboard, /both: contacts\.both/);
@@ -58,14 +57,15 @@ test("incluye la extracción simplificada y los KPI de cobertura", async () => {
   assert.match(html, /id="themeToggle"/);
   assert.match(dashboard, /function formatPercent/);
   assert.match(dashboard, /THEME_KEY/);
-  assert.match(html, /styles\.css\?v=20260809-kpi-coverage/);
+  assert.match(html, /styles\.css\?v=20260811-three-cards/);
   assert.match(html, /competidores-folders\.js\?v=20260811-drive-links/);
-  assert.match(html, /dashboard\.js\?v=20260811-simple-csv/);
+  assert.match(html, /dashboard\.js\?v=20260811-three-cards/);
   assert.match(dashboard, /COMPETITOR_FOLDERS/);
   assert.match(dashboard, /Abrir la carpeta de seguidores en Drive/);
   assert.match(dashboard, /function renderSingleCsvPanel/);
   assert.match(dashboard, /Abrir carpeta ↗/);
   assert.match(dashboard, /Reemplazar CSV/);
+  assert.match(dashboard, /class="csvDetailBlock"/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {

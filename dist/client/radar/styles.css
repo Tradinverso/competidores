@@ -199,6 +199,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .audienceExtractionGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .audienceExtractionGrid.singleExtraction { grid-template-columns: 1fr; }
 .singleCsvPanel { display: grid; gap: 12px; margin: 10px 0 16px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: #f8faf9; }
+.csvDetailBlock { min-width: 0; }
+.csvDetailBlock .singleCsvPanel { box-sizing: border-box; height: 100%; margin: 0; }
 .singleCsvPanel.hasData { border-color: #7eb9f5; background: #eef6ff; }
 .singleCsvHeading { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
 .singleCsvHeading span { display: block; margin-bottom: 3px; color: #44796b; font-size: 9px; font-weight: 800; letter-spacing: .1em; }

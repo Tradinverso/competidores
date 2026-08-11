@@ -595,7 +595,7 @@
           <button class="button danger small" data-action="delete" data-id="${item.id}" type="button">Eliminar competidor</button>
         </div>
         <div class="detailBlock followersBlock"><h3>Audiencia visible</h3><label>Seguidores en Instagram<input data-field="followers" data-id="${item.id}" type="number" min="0" value="${item.followers ?? ""}" placeholder="Ej. 125000" /></label><div class="automationNote"><span>◎</span><p><strong>Total de referencia</strong>Este número se usa para calcular los porcentajes de contactos, correos y teléfonos extraídos.</p></div></div>
-        <div class="detailBlock extractionBlock"><h3>Datos del competidor</h3>${renderSingleCsvPanel(item, followersFolder)}${renderReelSection(item, "sales", "Reels de venta", "Webinar, plazas, programa o llamada de venta.")}${renderReelSection(item, "resources", "Reels de recurso", "Guías, PDFs o publicaciones tipo «comenta GUÍA».")}</div>
+        <div class="csvDetailBlock">${renderSingleCsvPanel(item, followersFolder)}</div>
       </div>` : ""}
     </article>`;
   }
