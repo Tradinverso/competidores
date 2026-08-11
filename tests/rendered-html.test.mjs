@@ -59,6 +59,7 @@ test("incluye la extracción simplificada y los KPI de cobertura", async () => {
   assert.match(dashboard, /function formatPercent/);
   assert.match(dashboard, /THEME_KEY/);
   assert.match(html, /styles\.css\?v=20260809-kpi-coverage/);
+  assert.match(html, /dashboard\.js\?v=20260811-auto-sync/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {
@@ -98,4 +99,9 @@ test("sincroniza datos y CSV con Supabase sin exponer claves privadas", async ()
   assert.match(dashboard, /signInWithPassword/);
   assert.match(dashboard, /from\("dashboard_state"\)\.upsert/);
   assert.match(dashboard, /storage\.from\(CLOUD_BUCKET\)\.upload/);
+  assert.match(dashboard, /mergeLocalProgressIntoCloud/);
+  assert.match(dashboard, /CLOUD_MERGE_KEY/);
+  assert.match(dashboard, /setInterval\(pollCloudData, 2500\)/);
+  assert.match(dashboard, /Los cambios ya se comparten automáticamente/);
+  assert.match(html, /Solo hace falta la primera vez en este ordenador/);
 });

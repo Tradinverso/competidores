@@ -2,6 +2,7 @@
   "use strict";
 
   const STORAGE_KEY = "radar-competidores-github-v1";
+  const CLOUD_MERGE_KEY = "radar-competidores-cloud-merge-v1";
   const THEME_KEY = "radar-competidores-theme";
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const CLOUD_BUCKET = "mailerfind";
@@ -57,6 +58,8 @@
   let cloudSaveTimer = null;
   let cloudSaving = false;
   let cloudSaveQueued = false;
+  let cloudPollTimer = null;
+  let lastCloudUpdatedAt = 0;
   let contactBackfillRunning = false;
   let competitors = loadData();
   let expandedId = null;
@@ -88,6 +91,62 @@
     document.documentElement.dataset.theme = dark ? "dark" : "light";
     elements.themeButton.setAttribute("aria-pressed", String(dark));
     elements.themeButton.querySelector(".themeLabel").textContent = dark ? "Modo claro" : "Modo oscuro";
+  }
+
+  function mergeExtractionProgress(cloudValue, localValue) {
+    const cloud = normalizeExtraction(cloudValue);
+    const local = normalizeExtraction(localValue);
+    const mergeStep = (remote, device) => ({
+      ...remote,
+      done: Boolean(remote.done || device.done),
+      mailerfind: remote.mailerfind || device.mailerfind || null
+    });
+    const mergeReels = (remoteList, deviceList) => {
+      const byId = new Map(deviceList.map(reel => [reel.id, reel]));
+      remoteList.forEach(reel => {
+        const device = byId.get(reel.id);
+        byId.set(reel.id, device ? { ...device, ...reel, done: Boolean(reel.done || device.done), mailerfind: reel.mailerfind || device.mailerfind || null } : reel);
+      });
+      return [...byId.values()];
+    };
+    return {
+      followers: mergeStep(cloud.followers, local.followers),
+      following: mergeStep(cloud.following, local.following),
+      salesDone: Boolean(cloud.salesDone || local.salesDone),
+      resourcesDone: Boolean(cloud.resourcesDone || local.resourcesDone),
+      salesReels: mergeReels(cloud.salesReels, local.salesReels),
+      resourceReels: mergeReels(cloud.resourceReels, local.resourceReels)
+    };
+  }
+
+  function mergeLocalProgressIntoCloud(cloudItems, localItems) {
+    const cloudPrepared = applyMeryPriority(removeSmallProfiles(mergeSavedData(cloudItems, false)));
+    const localById = new Map((localItems || []).map(item => [item.id, normalizeCompetitor(item)]));
+    const cloudIds = new Set(cloudPrepared.map(item => item.id));
+    const merged = cloudPrepared.map(item => {
+      const local = localById.get(item.id);
+      if (!local) return item;
+      const remoteFollowersTime = item.followersUpdatedAt ? Date.parse(item.followersUpdatedAt) : 0;
+      const localFollowersTime = local.followersUpdatedAt ? Date.parse(local.followersUpdatedAt) : 0;
+      return normalizeCompetitor({
+        ...item,
+        studied: Boolean(item.studied || local.studied),
+        campaignSent: Boolean(item.campaignSent || local.campaignSent),
+        channels: {
+          email: Boolean(item.channels?.email || local.channels?.email),
+          traffic: Boolean(item.channels?.traffic || local.channels?.traffic),
+          vsl: Boolean(item.channels?.vsl || local.channels?.vsl)
+        },
+        notes: item.notes || local.notes || "",
+        mailerfind: item.mailerfind || local.mailerfind || null,
+        extraction: mergeExtractionProgress(item.extraction, local.extraction),
+        ...(localFollowersTime > remoteFollowersTime ? { followers: local.followers, followersUpdatedAt: local.followersUpdatedAt } : {})
+      });
+    });
+    localById.forEach(item => {
+      if (!cloudIds.has(item.id) && item.source === "Añadido manualmente") merged.push(item);
+    });
+    return applyMeryPriority(removeSmallProfiles(merged));
   }
 
   function mergeSavedData(saved, migrateSeedOrder) {
@@ -247,13 +306,13 @@
 
   function renderCloudAccount() {
     if (cloudSession) {
-      elements.cloudButton.textContent = "Salir de la nube";
+      elements.cloudButton.textContent = "Conectado";
       elements.cloudButton.title = cloudSession.user.email || "Sesión activa";
-      setSaveState("Nube · Sheet ≤ 5 min", "cloud");
+      setSaveState("Sincronizado · Sheet ≤ 5 min", "cloud");
     } else {
-      elements.cloudButton.textContent = "Entrar";
+      elements.cloudButton.textContent = "Conectar";
       elements.cloudButton.removeAttribute("title");
-      setSaveState("Guardado local", "offline");
+      setSaveState("Conexión necesaria", "offline");
     }
   }
 
@@ -264,45 +323,54 @@
   }
 
   async function saveCloudData() {
-    if (!cloudClient || !cloudSession) return;
+    if (!cloudClient || !cloudSession) return false;
     if (cloudSaving) {
       cloudSaveQueued = true;
       return;
     }
     cloudSaving = true;
     const snapshot = structuredClone(competitors);
+    const updatedAt = new Date().toISOString();
     const { error } = await cloudClient.from("dashboard_state").upsert({
       user_id: cloudSession.user.id,
       competitors: snapshot,
-      updated_at: new Date().toISOString()
+      updated_at: updatedAt
     }, { onConflict: "user_id" });
     cloudSaving = false;
     if (error) {
       setSaveState("Error de sincronización", "offline");
       notify("No se pudo guardar en la nube. La copia local sigue intacta.");
     } else {
-      setSaveState("Nube · Sheet ≤ 5 min", "cloud");
+      lastCloudUpdatedAt = Date.parse(updatedAt);
+      setSaveState("Sincronizado · Sheet ≤ 5 min", "cloud");
     }
     if (cloudSaveQueued) {
       cloudSaveQueued = false;
       scheduleCloudSave();
     }
+    return !error;
   }
 
   async function loadCloudData(session) {
     setSaveState("Cargando nube…", "syncing");
     const { data, error } = await cloudClient
       .from("dashboard_state")
-      .select("competitors")
+      .select("competitors, updated_at")
       .eq("user_id", session.user.id)
       .maybeSingle();
     if (error) throw error;
     if (data && Array.isArray(data.competitors)) {
-      competitors = applyMeryPriority(removeSmallProfiles(mergeSavedData(data.competitors, false)));
+      const remote = applyMeryPriority(removeSmallProfiles(mergeSavedData(data.competitors, false)));
+      const shouldRecoverLocalProgress = localStorage.getItem(CLOUD_MERGE_KEY) !== "done";
+      const merged = shouldRecoverLocalProgress ? mergeLocalProgressIntoCloud(remote, competitors) : remote;
+      const recoveredLocalProgress = JSON.stringify(merged) !== JSON.stringify(remote);
+      competitors = merged;
+      lastCloudUpdatedAt = Date.parse(data.updated_at || "") || 0;
       localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
       render();
       await backfillMissingContactCounts();
-      scheduleCloudSave();
+      const recovered = recoveredLocalProgress ? await saveCloudData() : true;
+      if (recovered) localStorage.setItem(CLOUD_MERGE_KEY, "done");
       return;
     }
     await saveCloudData();
@@ -314,7 +382,8 @@
     renderCloudAccount();
     try {
       await loadCloudData(session);
-      notify("Radar sincronizado con la nube.");
+      startCloudPolling();
+      notify("Radar sincronizado. Los cambios ya se comparten automáticamente.");
     } catch (_) {
       setSaveState("Error de sincronización", "offline");
       notify("No se pudo cargar la nube. La copia local sigue disponible.");
@@ -326,11 +395,17 @@
     if (!cloudClient) return;
     const { data } = await cloudClient.auth.getSession();
     if (data.session) await activateCloud(data.session);
-    else await backfillMissingContactCounts();
+    else {
+      await backfillMissingContactCounts();
+      setTimeout(() => {
+        if (!cloudSession && !elements.cloudDialog.open) elements.cloudDialog.showModal();
+      }, 350);
+    }
     cloudClient.auth.onAuthStateChange((_event, session) => {
       setTimeout(async () => {
         if (session && session.user.id !== cloudSession?.user?.id) await activateCloud(session);
         if (!session && cloudSession) {
+          clearInterval(cloudPollTimer);
           cloudSession = null;
           renderCloudAccount();
           notify("Has salido de la nube. Esta copia queda guardada en el navegador.");
@@ -422,6 +497,28 @@
       <header><label><input type="checkbox" data-action="extraction-step" data-id="${item.id}" data-step="${step}"${data.done ? " checked" : ""} /><span>${title}</span></label><b>${data.done ? "Hecho" : "Pendiente"}</b></header>
       ${extractionUpload(item, step, meta, typeLabel, legacyMeta ? item.id : null)}
     </article>`;
+  }
+
+  async function pollCloudData() {
+    if (!cloudClient || !cloudSession || cloudSaving || document.visibilityState !== "visible") return;
+    const { data, error } = await cloudClient
+      .from("dashboard_state")
+      .select("competitors, updated_at")
+      .eq("user_id", cloudSession.user.id)
+      .maybeSingle();
+    if (error || !data || !Array.isArray(data.competitors)) return;
+    const remoteUpdatedAt = Date.parse(data.updated_at || "") || 0;
+    if (remoteUpdatedAt <= lastCloudUpdatedAt) return;
+    competitors = applyMeryPriority(removeSmallProfiles(mergeSavedData(data.competitors, false)));
+    lastCloudUpdatedAt = remoteUpdatedAt;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(competitors));
+    render();
+    setSaveState("Sincronizado · Sheet ≤ 5 min", "cloud");
+  }
+
+  function startCloudPolling() {
+    clearInterval(cloudPollTimer);
+    cloudPollTimer = setInterval(pollCloudData, 2500);
   }
 
   function renderReelItem(item, reel, type) {
@@ -948,10 +1045,7 @@
 
   elements.cloudButton.addEventListener("click", async () => {
     if (cloudSession) {
-      clearTimeout(cloudSaveTimer);
-      await saveCloudData();
-      await cloudClient.auth.signOut();
-      return;
+      return notify("Todo está sincronizado y compartido con el equipo.");
     }
     elements.cloudMessage.hidden = true;
     elements.cloudMessage.classList.remove("isError");
