@@ -140,6 +140,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .followersButton small { color: #7e8983; font-size: 10px; margin-top: 5px; font-weight: 550; }
 .csvState { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 7px 8px; border: 1px solid transparent; border-radius: 10px; color: #77817c; }
 .csvState.hasData { background: #f8fbff; border-color: #b9d6f8; color: #163d69; }
+.csvState.isLink { cursor: pointer; text-decoration: none; transition: background-color .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease; }
+.csvState.isLink:hover, .csvState.isLink:focus-visible { background: #e5f1ff; border-color: #2d89ff; box-shadow: 0 5px 15px rgba(24, 104, 194, .14); outline: none; transform: translateY(-1px); }
 .csvState > b { flex: 0 0 auto; width: 34px; height: 30px; display: grid; place-items: center; background: #e9ece9; border-radius: 8px; font-size: 10px; }
 .csvState.ready > b { background: #2d89ff; color: #fff; }
 .csvState > span { display: flex; flex: 1 1 auto; flex-direction: column; min-width: 0; overflow: hidden; }
@@ -278,6 +280,7 @@ html[data-theme="dark"] { color-scheme: dark; --ink: #edf5f1; --muted: #a3afa9; 
 [data-theme="dark"] .priority-media { background: #1d3651; border-color: #31577e; color: #b8d8ff; }
 [data-theme="dark"] .priority-baja { background: #27312c; border-color: #414e47; color: #c4cec8; }
 [data-theme="dark"] .csvState.hasData { background: #172b40; border-color: #315b87; color: #c5defa; }
+[data-theme="dark"] .csvState.isLink:hover, [data-theme="dark"] .csvState.isLink:focus-visible { background: #1d3a58; border-color: #66a9f5; box-shadow: 0 5px 16px rgba(0, 0, 0, .28); }
 [data-theme="dark"] .csvState > b { background: #29352f; color: #c7d2cc; }
 [data-theme="dark"] .csvState small, [data-theme="dark"] .csvState em { color: #aab7b0; }
 [data-theme="dark"] .csvState small b { color: #82baff; }

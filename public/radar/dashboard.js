@@ -16,6 +16,7 @@
   const priorities = ["Crítica", "Alta", "Media", "Baja"];
   const priorityWeight = { "Crítica": 0, "Alta": 1, "Media": 2, "Baja": 3 };
   const repositoryCodes = window.COMPETITOR_CODES || {};
+  const competitorFolders = window.COMPETITOR_FOLDERS || {};
   function emptyExtractionStep() {
     return { done: false, mailerfind: null };
   }
@@ -535,7 +536,11 @@
     const contactSummary = stats.files
       ? `<strong>${formatCount(stats.contacts)} contactos</strong><small class="contactCounts"><span><b>${formatCount(stats.emails)}</b> emails</span><i aria-hidden="true">·</i><span><b>${formatCount(stats.phones)}</b> teléfonos</span></small><em>${stats.files} CSV</em>`
       : `<strong>Sin contactos</strong><small>Sube el CSV</small><em>Seguidores</em>`;
-    const csvState = `<span class="csvState${stats.files ? " hasData ready" : ""}"><b>${stats.files ? "CSV" : "0/1"}</b><span>${contactSummary}</span></span>`;
+    const followersFolder = safeUrl(competitorFolders[item.code]?.followers);
+    const csvStateContent = `<b>${stats.files ? "CSV" : "0/1"}</b><span>${contactSummary}</span>`;
+    const csvState = stats.files && followersFolder
+      ? `<a class="csvState hasData ready isLink" href="${escapeHtml(followersFolder)}" target="_blank" rel="noreferrer" title="Abrir la carpeta de seguidores en Drive" draggable="false">${csvStateContent}</a>`
+      : `<span class="csvState${stats.files ? " hasData ready" : ""}">${csvStateContent}</span>`;
 
     const channels = item.channels || {};
     const profile = instagram

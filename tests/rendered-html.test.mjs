@@ -59,7 +59,10 @@ test("incluye la extracción simplificada y los KPI de cobertura", async () => {
   assert.match(dashboard, /function formatPercent/);
   assert.match(dashboard, /THEME_KEY/);
   assert.match(html, /styles\.css\?v=20260809-kpi-coverage/);
-  assert.match(html, /dashboard\.js\?v=20260811-no-password/);
+  assert.match(html, /competidores-folders\.js\?v=20260811-drive-links/);
+  assert.match(html, /dashboard\.js\?v=20260811-drive-links/);
+  assert.match(dashboard, /COMPETITOR_FOLDERS/);
+  assert.match(dashboard, /Abrir la carpeta de seguidores en Drive/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {
