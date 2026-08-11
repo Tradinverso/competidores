@@ -23,7 +23,7 @@
         <div class="topActions">
           <span id="saveState" class="saveState"><i></i><span>Guardado local</span></span>
           <button id="themeToggle" class="button ghost themeButton" type="button" aria-pressed="false" title="Cambiar tema"><span aria-hidden="true">◐</span><span class="themeLabel">Modo oscuro</span></button>
-          <button id="cloudAccessButton" class="button ghost cloudButton" type="button">Entrar</button>
+          <button id="cloudAccessButton" class="button ghost cloudButton" type="button">Conectando…</button>
           <label class="button ghost fileButton">Importar copia<input id="backupInput" type="file" accept="application/json,.json" /></label>
           <button id="exportButton" class="button ghost" type="button">Exportar</button>
           <button id="openAddButton" class="button primary" type="button">+ Añadir competidor</button>
@@ -84,22 +84,10 @@
       </form>
     </dialog>
 
-    <dialog id="cloudDialog" class="staticDialog">
-      <form id="cloudForm" class="modal cloudModal" method="dialog">
-        <button id="closeCloudButton" type="button" class="modalClose">×</button>
-        <p class="eyebrow">ACCESO PRIVADO</p>
-        <h2>Entrar al radar</h2>
-        <p>Solo hace falta la primera vez en este ordenador. Después el radar se conectará solo y mostrará los cambios del equipo automáticamente.</p>
-        <label>Contraseña<input id="cloudPassword" type="password" autocomplete="current-password" required /></label>
-        <p id="cloudMessage" class="cloudMessage" hidden></p>
-        <div class="modalActions"><button id="cancelCloudButton" type="button" class="button ghost">Cancelar</button><button id="sendCloudLinkButton" class="button primary" type="submit">Entrar</button></div>
-      </form>
-    </dialog>
-
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.111.0/dist/umd/supabase.js"></script>
   <script src="supabase-config.js?v=20260803-key"></script>
     <script src="competidores-codes.js?v=20260804-codigos"></script>
     <script src="competidores-data.js"></script>
-    <script src="dashboard.js?v=20260811-auto-sync"></script>
+    <script src="dashboard.js?v=20260811-no-password"></script>
   </body>
 </html>

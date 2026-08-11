@@ -59,7 +59,7 @@ test("incluye la extracción simplificada y los KPI de cobertura", async () => {
   assert.match(dashboard, /function formatPercent/);
   assert.match(dashboard, /THEME_KEY/);
   assert.match(html, /styles\.css\?v=20260809-kpi-coverage/);
-  assert.match(html, /dashboard\.js\?v=20260811-auto-sync/);
+  assert.match(html, /dashboard\.js\?v=20260811-no-password/);
 });
 
 test("mantiene la lista limpia y el orden prioritario", async () => {
@@ -85,7 +85,7 @@ test("elimina perfiles retirados sin borrar altas manuales", async () => {
   assert.match(dashboard, /SEED_ORDER_MIGRATION_KEY/);
 });
 
-test("sincroniza datos y CSV con Supabase sin exponer claves privadas", async () => {
+test("sincroniza datos y CSV con Supabase sin contraseña y sin exponer claves privadas", async () => {
   const [html, dashboard, config] = await Promise.all([
     readFile(new URL("../index.html", import.meta.url), "utf8"),
     readFile(new URL("../dashboard.js", import.meta.url), "utf8"),
@@ -96,12 +96,14 @@ test("sincroniza datos y CSV con Supabase sin exponer claves privadas", async ()
   assert.ok(html.indexOf("@supabase/supabase-js@2.111.0") < html.indexOf("dashboard.js"));
   assert.match(config, /sb_publishable_/);
   assert.doesNotMatch(config, /service_role|sb_secret_/);
-  assert.match(dashboard, /signInWithPassword/);
+  assert.doesNotMatch(html, /cloudPassword|Entrar al radar/);
+  assert.doesNotMatch(dashboard, /signInWithPassword|CLOUD_EMAIL/);
+  assert.match(dashboard, /CLOUD_WORKSPACE_ID/);
   assert.match(dashboard, /from\("dashboard_state"\)\.upsert/);
   assert.match(dashboard, /storage\.from\(CLOUD_BUCKET\)\.upload/);
   assert.match(dashboard, /mergeLocalProgressIntoCloud/);
   assert.match(dashboard, /CLOUD_MERGE_KEY/);
   assert.match(dashboard, /setInterval\(pollCloudData, 2500\)/);
   assert.match(dashboard, /Los cambios ya se comparten automáticamente/);
-  assert.match(html, /Solo hace falta la primera vez en este ordenador/);
+  assert.match(html, /Conectando…/);
 });

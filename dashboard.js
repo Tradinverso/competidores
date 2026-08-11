@@ -6,7 +6,7 @@
   const THEME_KEY = "radar-competidores-theme";
   const SEED_ORDER_MIGRATION_KEY = "radar-competidores-seed-order-2026-08-03-user-priority";
   const CLOUD_BUCKET = "mailerfind";
-  const CLOUD_EMAIL = "tradinverso@gmail.com";
+  const CLOUD_WORKSPACE_ID = "5133aad4-2344-4002-a79b-e51f46616ed7";
   const CONTACT_COUNT_VERSION = 2;
   const MERY_ID = "ig-merytrader212";
   const cloudConfig = window.SUPABASE_CONFIG || {};
@@ -79,11 +79,7 @@
     toast: document.getElementById("toast"),
     saveState: document.getElementById("saveState"),
     cloudButton: document.getElementById("cloudAccessButton"),
-    themeButton: document.getElementById("themeToggle"),
-    cloudDialog: document.getElementById("cloudDialog"),
-    cloudForm: document.getElementById("cloudForm"),
-    cloudPassword: document.getElementById("cloudPassword"),
-    cloudMessage: document.getElementById("cloudMessage")
+    themeButton: document.getElementById("themeToggle")
   };
 
   function applyTheme(theme) {
@@ -307,12 +303,12 @@
   function renderCloudAccount() {
     if (cloudSession) {
       elements.cloudButton.textContent = "Conectado";
-      elements.cloudButton.title = cloudSession.user.email || "Sesión activa";
+      elements.cloudButton.title = "Espacio compartido del equipo";
       setSaveState("Sincronizado · Sheet ≤ 5 min", "cloud");
     } else {
-      elements.cloudButton.textContent = "Conectar";
+      elements.cloudButton.textContent = "Conectando…";
       elements.cloudButton.removeAttribute("title");
-      setSaveState("Conexión necesaria", "offline");
+      setSaveState("Conectando con la nube…", "syncing");
     }
   }
 
@@ -392,26 +388,11 @@
 
   async function setupCloud() {
     renderCloudAccount();
-    if (!cloudClient) return;
-    const { data } = await cloudClient.auth.getSession();
-    if (data.session) await activateCloud(data.session);
-    else {
-      await backfillMissingContactCounts();
-      setTimeout(() => {
-        if (!cloudSession && !elements.cloudDialog.open) elements.cloudDialog.showModal();
-      }, 350);
+    if (!cloudClient) {
+      setSaveState("Nube no disponible", "offline");
+      return;
     }
-    cloudClient.auth.onAuthStateChange((_event, session) => {
-      setTimeout(async () => {
-        if (session && session.user.id !== cloudSession?.user?.id) await activateCloud(session);
-        if (!session && cloudSession) {
-          clearInterval(cloudPollTimer);
-          cloudSession = null;
-          renderCloudAccount();
-          notify("Has salido de la nube. Esta copia queda guardada en el navegador.");
-        }
-      }, 0);
-    });
+    await activateCloud({ user: { id: CLOUD_WORKSPACE_ID } });
   }
 
   function getFiltered() {
@@ -1047,35 +1028,7 @@
     if (cloudSession) {
       return notify("Todo está sincronizado y compartido con el equipo.");
     }
-    elements.cloudMessage.hidden = true;
-    elements.cloudMessage.classList.remove("isError");
-    elements.cloudDialog.showModal();
-  });
-  document.getElementById("closeCloudButton").addEventListener("click", () => elements.cloudDialog.close());
-  document.getElementById("cancelCloudButton").addEventListener("click", () => elements.cloudDialog.close());
-
-  elements.cloudForm.addEventListener("submit", async event => {
-    event.preventDefault();
-    if (!cloudClient) return notify("La conexión con la nube no está disponible.");
-    const button = document.getElementById("sendCloudLinkButton");
-    button.disabled = true;
-    button.textContent = "Entrando…";
-    elements.cloudMessage.hidden = true;
-    elements.cloudMessage.classList.remove("isError");
-    const { error } = await cloudClient.auth.signInWithPassword({
-      email: CLOUD_EMAIL,
-      password: elements.cloudPassword.value
-    });
-    button.disabled = false;
-    button.textContent = "Entrar";
-    elements.cloudMessage.hidden = false;
-    if (error) {
-      elements.cloudMessage.textContent = `No se pudo entrar: ${error.message}`;
-      elements.cloudMessage.classList.add("isError");
-      return;
-    }
-    elements.cloudPassword.value = "";
-    elements.cloudDialog.close();
+    notify("La nube está conectándose automáticamente. No necesitas contraseña.");
   });
 
   applyTheme(localStorage.getItem(THEME_KEY) || "light");
