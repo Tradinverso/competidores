@@ -198,6 +198,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .extractionIntro { margin: -5px 0 14px; color: #6f7974; font-size: 10px; line-height: 1.5; }
 .audienceExtractionGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .audienceExtractionGrid.singleExtraction { grid-template-columns: 1fr; }
+.singleCsvPanel { display: grid; gap: 12px; margin: 10px 0 16px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: #f8faf9; }
+.singleCsvPanel.hasData { border-color: #7eb9f5; background: #eef6ff; }
+.singleCsvHeading { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
+.singleCsvHeading span { display: block; margin-bottom: 3px; color: #44796b; font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.singleCsvHeading h4 { margin: 0; color: var(--ink); font-size: 16px; }
+.singleCsvHeading p { max-width: 600px; margin: 5px 0 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.singleCsvHeading > b { flex: 0 0 auto; padding: 6px 9px; border-radius: 999px; background: #e7ebe8; color: #66746c; font-size: 10px; }
+.singleCsvPanel.hasData .singleCsvHeading > b { background: #2d89ff; color: #fff; }
+.singleCsvEmpty { margin: 0; padding: 12px; border: 1px dashed #cbd4cf; border-radius: 10px; color: var(--muted); font-size: 11px; }
+.singleCsvActions { display: flex; flex-wrap: wrap; gap: 8px; }
+.singleCsvActions .button { min-height: 34px; }
+.driveFolderButton { color: #0756ac; border-color: #91bff0; background: #fff; }
+.singleCsvSyncNote { color: #718077; font-size: 9px; }
 .extractionCard, .reelSection { border: 1px solid #d9ddd8; border-radius: 11px; background: #fff; padding: 13px; }
 .extractionCard.isDone, .reelSection.isDone { border-color: #8cc7ae; background: #edf8f2; }
 .extractionCard > header, .reelSection > header { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
@@ -284,6 +297,10 @@ html[data-theme="dark"] { color-scheme: dark; --ink: #edf5f1; --muted: #a3afa9; 
 [data-theme="dark"] .csvState > b { background: #29352f; color: #c7d2cc; }
 [data-theme="dark"] .csvState small, [data-theme="dark"] .csvState em { color: #aab7b0; }
 [data-theme="dark"] .csvState small b { color: #82baff; }
+[data-theme="dark"] .singleCsvPanel { background: #18221d; border-color: #33443b; }
+[data-theme="dark"] .singleCsvPanel.hasData { background: #172b40; border-color: #315b87; }
+[data-theme="dark"] .singleCsvEmpty { border-color: #415249; }
+[data-theme="dark"] .driveFolderButton { color: #9bc9ff; border-color: #315b87; background: #16231d; }
 [data-theme="dark"] .detailBlock { background: #141d19; border-color: #34423b; }
 [data-theme="dark"] .detailBlock input, [data-theme="dark"] .detailBlock textarea, [data-theme="dark"] .modal input, [data-theme="dark"] .modal select { background: #1d2923; border-color: #405148; color: #edf5f1; }
 [data-theme="dark"] .automationNote { background: #213029; color: #b1beb7; }

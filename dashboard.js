@@ -481,6 +481,24 @@
     </article>`;
   }
 
+  function renderSingleCsvPanel(item, folderUrl) {
+    const extraction = normalizeExtraction(item.extraction);
+    const legacyMeta = !extraction.followers.mailerfind ? item.mailerfind : null;
+    const meta = extraction.followers.mailerfind || legacyMeta;
+    const fileKey = legacyMeta ? item.id : `${item.id}__followers`;
+    const folder = safeUrl(folderUrl);
+    return `<section class="singleCsvPanel${meta ? " hasData" : ""}">
+      <div class="singleCsvHeading"><div><span>ARCHIVO ÚNICO</span><h4>CSV de seguidores</h4><p>Sube aquí el archivo de Mailerfind. Se guardará en la nube y se copiará automáticamente a Drive.</p></div><b>${meta ? "Cargado" : "Pendiente"}</b></div>
+      ${meta ? csvMetaSummary(meta) : `<p class="singleCsvEmpty">Todavía no hay ningún CSV cargado para este competidor.</p>`}
+      <div class="singleCsvActions">
+        ${folder ? `<a class="button ghost small driveFolderButton" href="${escapeHtml(folder)}" target="_blank" rel="noreferrer">Abrir carpeta ↗</a>` : ""}
+        ${meta ? `<button class="button ghost small" data-action="download-extraction" data-id="${item.id}" data-file-key="${escapeHtml(fileKey)}" data-step="followers" type="button">Descargar actual</button>` : ""}
+        <label class="button primary small fileButton">${meta ? "Reemplazar CSV" : "Subir CSV"}<input type="file" accept=".csv,text/csv" data-action="extraction-csv" data-id="${item.id}" data-step="followers" /></label>
+      </div>
+      <small class="singleCsvSyncNote">La copia de Drive se actualiza automáticamente en la siguiente sincronización.</small>
+    </section>`;
+  }
+
   async function pollCloudData() {
     if (!cloudClient || !cloudSession || cloudSaving || document.visibilityState !== "visible") return;
     const { data, error } = await cloudClient
@@ -577,7 +595,7 @@
           <button class="button danger small" data-action="delete" data-id="${item.id}" type="button">Eliminar competidor</button>
         </div>
         <div class="detailBlock followersBlock"><h3>Audiencia visible</h3><label>Seguidores en Instagram<input data-field="followers" data-id="${item.id}" type="number" min="0" value="${item.followers ?? ""}" placeholder="Ej. 125000" /></label><div class="automationNote"><span>◎</span><p><strong>Total de referencia</strong>Este número se usa para calcular los porcentajes de contactos, correos y teléfonos extraídos.</p></div></div>
-        <div class="detailBlock extractionBlock"><h3>Extracción de seguidores</h3><p class="extractionIntro">Sube un único CSV de Mailerfind por competidor: el de sus seguidores.</p><div class="audienceExtractionGrid singleExtraction">${renderAudienceStep(item, "followers", "Seguidores", "SEGUIDORES")}</div>${renderReelSection(item, "sales", "Reels de venta", "Webinar, plazas, programa o llamada de venta.")}${renderReelSection(item, "resources", "Reels de recurso", "Guías, PDFs o publicaciones tipo «comenta GUÍA».")}</div>
+        <div class="detailBlock extractionBlock"><h3>Datos del competidor</h3>${renderSingleCsvPanel(item, followersFolder)}${renderReelSection(item, "sales", "Reels de venta", "Webinar, plazas, programa o llamada de venta.")}${renderReelSection(item, "resources", "Reels de recurso", "Guías, PDFs o publicaciones tipo «comenta GUÍA».")}</div>
       </div>` : ""}
     </article>`;
   }
